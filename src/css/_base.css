@@ -30,6 +30,8 @@ body { font-family:"tech", Arial, sans-serif; position:relative; height:100vh; b
 
 p { font-size:2.1rem; }
 
+canvas { position:absolute; }
+
 
 
 

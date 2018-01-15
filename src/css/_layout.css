@@ -1,0 +1,7 @@
+main { position:relative; box-sizing:border-box; padding:13rem 0 0 15rem; }
+  
+  .page { width:100%; min-height:100vw; }
+
+  .section-title-container { margin-bottom:6rem; }
+    .section-title { font-size:3.5rem; margin-bottom:1rem; }
+    .section-subtitle { font-size:1.6rem; }

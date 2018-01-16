@@ -1,7 +1,11 @@
-main { position:relative; box-sizing:border-box; padding:13rem 0 0 15rem; }
-  
-  .page { width:100%; min-height:100vw; }
+main { position:relative; max-width:150rem; box-sizing:border-box; padding:13rem 0 0 15rem; }
+  .page { width:100%; min-height:100%; }
 
   .section-title-container { margin-bottom:6rem; }
     .section-title { font-size:3.5rem; margin-bottom:1rem; }
     .section-subtitle { font-size:1.6rem; }
+
+@media all and (min-width:1445px) {
+  main { margin:0 auto; }
+   .main-elements-container { left:50%; transform:translateX(-50%); }
+}

@@ -1,8 +1,8 @@
 .info-boxes { position:relative; width:100%; min-height:15rem; }
   
   .info-box { position:absolute; }
-    .info-box.grey { width:50vw; padding:6vw; top:4rem; left:14vw; box-sizing:border-box; line-height:3.7rem; background-color:#282727; }
-    .info-box.green { width:59vw; height:46vw; top:42rem; right:0; background-color:#105130; opacity:.7; }
+    .info-box.grey { width:50vw; padding:4vw; top:4rem; left:14vw; box-sizing:border-box; line-height:3.6rem; background-color:#232323; }
+    .info-box.green { width:59vw; height:34vw; top:42rem; right:0; background-color:#105130; opacity:.7; }
     .info-box.transparent { width:48vw; height:35vw; padding:5vw; top:81rem; left:11vw; box-sizing:border-box; }
     .info-box.black { width:53vw; height:35vw; padding:5vw; top:101rem; left:5vw; box-sizing:border-box; background-color:#000000a3; }
 
@@ -11,4 +11,5 @@
 @media all and (min-width:1426px) {
   .info-box.green { width:85rem; }
   .info-box.grey, .info-box.transparent { width:72rem; }
+  .info-box.black { width:72rem; height:55rem; }
 }

@@ -1,5 +1,5 @@
-.home { position:relative; }
-	.text-container { position: relative; /*top:50%; transform:translateY(-50%); */z-index:1; }
+.home { position:relative; height:400rem; }
+	.text-container { position: relative; /*top:50%; transform:translateY(-50%); */z-index:1; margin-top:50rem; }
 	.intro-secondary-headline { font-size:3rem; margin:1.5rem 0; line-height:1.4; }
 		.intro-secondary-headline span { font-family:Arial; font-weight:800; }
 		.intro-secondary-headline:first-child span { text-transform:uppercase; }

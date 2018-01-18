@@ -1,4 +1,4 @@
-.main-elements-container { position:fixed; width:calc(100% - 6rem); margin:0 3rem; height:100%; max-width:170rem; transform:translateZ(0); }
+.main-elements-container { position:fixed; width:calc(100% - 6rem); margin:0 3rem; height:100%; max-width:170rem; transform:translateZ(0); z-index:1; }
 
   header { position:fixed; width:calc(100%); padding-top:3rem; padding-bottom:3rem; }
     .logo {  }

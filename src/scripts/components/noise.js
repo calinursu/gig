@@ -43,10 +43,9 @@ class Noise {
   // Loop
   loop() {
     this.paintNoise(this.frame);
-    const that = this;
 
     this.loopTimeout = window.setTimeout(() => {
-      window.requestAnimationFrame(that.loop.bind(that));
+      window.requestAnimationFrame(this.loop.bind(this));
     }, (1000 / 25));
   };
 

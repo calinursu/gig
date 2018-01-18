@@ -1,5 +1,5 @@
 .case-container { position:relative; width:55vw; margin:15rem 0 25rem; }
-  .case-faded-text:before{ content:attr(data-text); position:absolute; z-index:-1; width:141rem; height:58rem; left:50%; top:-12rem; transform:translateX(calc(-50% + 3rem)); font-size:55rem; color:#1a1a1a; text-align:center; }
+  .case-faded-text:before{ content:attr(data-text); position:absolute; z-index:-1; height:58rem; left:50%; top:-12rem; transform:translateX(calc(-50% + 3rem)); font-size:55rem; color:#1a1a1a; text-align:center; }
 
   .case-image { padding-top:56.25%; background-position:center; background-size:cover; background-repeat:no-repeat; }
 
@@ -13,3 +13,6 @@
 @media all and (min-width:1440px) {
  .case-container { width:76.8rem; } 
 }
+
+@keyframes slide-off-canvas {  }
+@keyframes slide-in-canvas { }

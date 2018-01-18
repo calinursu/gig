@@ -1,6 +1,9 @@
 @import "base";
 @import "fonts";
+@import "home";
 @import "nav";
 @import "layout";
 @import "about";
 @import "cases";
+
+

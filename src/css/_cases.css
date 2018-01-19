@@ -1,0 +1,18 @@
+.case-container { position:relative; width:55vw; margin:15rem 0 25rem; }
+  .case-faded-text:before{ content:attr(data-text); position:absolute; z-index:-1; height:58rem; left:50%; top:-12rem; transform:translateX(calc(-50% + 3rem)); font-size:55rem; color:#1a1a1a; text-align:center; }
+
+  .case-image { padding-top:56.25%; background-position:center; background-size:cover; background-repeat:no-repeat; }
+
+  .case-text-container { position:absolute; width:52rem; top:50%; right:0; transform:translate(50%, -50%); }
+    .case-title { margin-bottom:1rem; font-size:8rem; }
+    .case-subtitle { margin-bottom:2rem; font-size:2.4rem; color:#3ae285; }
+    .case-excerpt { font-size:2rem; line-height:2.8rem; }
+  
+    .case-button-container { position:absolute; width:22rem; padding:1.8rem 0; left:15rem; bottom:-4.5rem; font-size:1.5rem; box-sizing:border-box; text-align:center; border:.2rem solid #3ae285; background:none; color:#3ae285; cursor:pointer; }
+
+@media all and (min-width:1440px) {
+ .case-container { width:76.8rem; } 
+}
+
+@keyframes slide-off-canvas {  }
+@keyframes slide-in-canvas { }

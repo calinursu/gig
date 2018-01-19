@@ -12,7 +12,7 @@
 
   .services { font-size:2rem; list-style:none; line-height:4.2rem; }
 
-@media all and (min-width:1426px) {
+@media all and (min-width:1445px) {
   .info-box.green { width:85rem; }
   .info-box.grey, .info-box.transparent { width:72rem; }
   .info-box.black { width:72rem; height:55rem; }

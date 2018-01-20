@@ -9,8 +9,9 @@
 				.intro-list li:before { content:"*"; display:block; width:1rem; height:1rem; position:absolute; left:0; top:50%; transform:translateY(-50%); color:red; }
 
 		.intro-box-container {  }
-			.intro-large-box { opacity:.3; display:block; position:absolute; left:5rem; right:5rem; top:10rem; bottom:10rem; background-color:#232323; }
-			.intro-medium-box { opacity:.5; display:block; width:40vw; height:46vh; position:absolute; left:23%; top:5rem; background-color:#232323; }
+      .intro-large-box { opacity:.1; display:block; position:absolute; left:5rem; right:5rem; top:10rem; bottom:10rem; background-color:#232323; background:url("../images/antenna.jpg"); background-size:cover; background-position:center; }
+        .intro-large-box .overlay { position:absolute; background:#000; width:100%; height:100%; opacity:.7; }
+			.intro-medium-box { display:block; width:40vw; height:46vh; position:absolute; left:23%; top:5rem; background-color:#232323; }
 			.intro-small-box { opacity:.2; display:block; width:47vw; height:19vh; position:absolute; top:13rem; right:20vw; background-color:cyan; }
 
 
@@ -23,12 +24,6 @@
 	.text-container { position:relative; transform:none; }
 		.intro-secondary-headline { font-size:2rem; }
 }
-
-
-
-
-
-
 
 .slide { width:40vw; height:60vw; position:relative; position:absolute; top:-15rem; left:6vw; opacity:.8; }
 	.slide > span {  animation-name:show; visibility:hidden; animation-fill-mode:forwards; animation-duration:1.2s; animation-timing-function:cubic-bezier(.785,.135,.15,.86); }

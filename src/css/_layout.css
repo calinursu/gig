@@ -13,18 +13,18 @@ main { max-width:150rem; box-sizing:border-box; padding:13rem 0 0 26rem;}
 }
 
 @media all and (max-width:1280px) { 
-  main { padding-left:14vw; }
+  main { padding-left:14vw; padding-right:3rem; }
 }
 
 @media all and (max-width:768px) {
    nav, .page-description { display:none; }
-   main { padding:10rem 2rem 2rem; }
+   main { padding:6rem 2rem 0; }
 }
 
 @media all and (max-width:540px) {  
-  main { padding:18rem 2.9rem; }
+  main { padding:5rem 2.9rem; }
 }
 
 @media all and (max-width:420px) {  
-  main { padding:15rem 2rem; }
+  main { padding:4rem 2rem; }
 }

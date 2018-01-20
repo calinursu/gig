@@ -1,4 +1,4 @@
-.main-elements-container { display:none; position:fixed; width:calc(100% - 6rem); margin:0 3rem; height:100%; max-width:170rem; transform:translateZ(0); z-index:1; }
+.main-elements-container { display:none; position:fixed; width:calc(100% - 6rem); margin:0 3rem; height:100%; max-width:256rem; transform:translateZ(0); z-index:1; }
 .mobile-menu-container { display:block; position: absolute; left:0; top:0; right:0; bottom:0; background-color:#212121; z-index:2; }
   .mobile-menu {  }
      .mobile-menu a { display:block; font-size:1.4rem; padding:.7rem 0; margin:.7rem 0; }

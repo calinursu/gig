@@ -10,12 +10,16 @@
 
 		.intro-box-container {  }
 			.intro-large-box { opacity:.3; display:block; position:absolute; left:5rem; right:5rem; top:10rem; bottom:10rem; background-color:#232323; }
-			.intro-medium-box { opacity:.5; display:block; width:40vw; height:46vw; position:absolute; left:23%; top:5rem; background-color:#232323; }
-			.intro-small-box { opacity:.2; display:block; width:47vw; height:19vw; position:absolute; top:13rem; right:20vw; background-color:cyan; }
-
+			.intro-medium-box { opacity:.5; display:block; width:40vw; height:46vh; position:absolute; left:23%; top:5rem; background-color:#232323; }
+			.intro-small-box { opacity:.2; display:block; width:47vw; height:19vh; position:absolute; top:13rem; right:20vw; background-color:cyan; }
 
 
 @media all and (max-width:768px) {
+	/*.intro-secondary-headline { font-size:2rem; }*/
+	.intro-small-box { height:17vh; top:30rem; }
+}
+
+@media all and (max-width:540px) {
 	.text-container { position:relative; transform:none; }
 		.intro-secondary-headline { font-size:2rem; }
 }

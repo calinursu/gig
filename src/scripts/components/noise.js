@@ -12,6 +12,8 @@ class Noise {
       this.canvas = document.querySelector('.with-noise');
       this.ctx = this.canvas.getContext('2d');
 
+      window.addEventListener('resize', this.resize.bind(this));
+
       this.setup();
   }
 
@@ -63,6 +65,14 @@ class Noise {
 
     this.loop();
   };
+
+  resize() {
+    this.wWidth = window.innerWidth;
+    this.wHeight = window.innerHeight;
+
+    this.canvas.width = this.wWidth;
+    this.canvas.height = this.wHeight;
+  }
 
 
   // Reset

@@ -9,3 +9,12 @@ main { position:relative; max-width:150rem; box-sizing:border-box; padding:13rem
   main { margin:0 auto; }
    .main-elements-container { left:50%; transform:translateX(-50%); margin:0; }
 }
+
+@media all and (max-width:1280px) { 
+  main { padding-left:14vw; }
+}
+
+@media all and (max-width:768px) {
+   nav, .page-description { display:none; }
+   main { padding-left:3rem; }
+}

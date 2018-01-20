@@ -14,6 +14,9 @@ body { font-family:"tech", Arial, sans-serif; position:relative; height:100vh; b
 button { font-family:"tech", Arial, sans-serif; }
 
 body { overflow-x:hidden; }
+main { width:100%; min-height:100%; }
+canvas { position:fixed; z-index:-2; }
+p { font-size:2.1rem; }
 
 .svg-icon { width:inherit; height:inherit; position:absolute; }
 
@@ -27,14 +30,15 @@ body { overflow-x:hidden; }
 .no-select { -webkit-touch-callout:none; -webkit-user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none; }
 .responsive-image { max-width:100%; height:auto; }
 
-main { width:100%; min-height:100%; }
-
-@media all and (max-width:1024px) { html { -webkit-text-size-adjust:100%; } .hide-mobile { display:none; } }
-
 .section-content-wrapper { padding:0 10rem; }
 
-p { font-size:2.1rem; }
-canvas { position:fixed; z-index:-2; }
+@media all and (max-width:1024px) { 
+  html { -webkit-text-size-adjust:100%; } .hide-mobile { display:none; } 
+}
+
+@media all and (max-width:768px) { 
+  p { font-size:1.8rem; } 
+}
 
 
 

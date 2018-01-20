@@ -17,7 +17,6 @@ main { max-width:150rem; box-sizing:border-box; padding:13rem 0 0 26rem;}
 }
 
 @media all and (max-width:768px) {
-   nav, .page-description { display:none; }
    main { padding:6rem 2rem 0; }
 }
 

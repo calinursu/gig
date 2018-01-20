@@ -1,4 +1,4 @@
-main { max-width:150rem; box-sizing:border-box; padding:10rem 2rem 2rem; }
+main { max-width:150rem; box-sizing:border-box; padding:13rem 0 0 26rem;}
   .page { width:100%; min-height:100%; display:none; }
   .page.is-visible { display:block; }
 
@@ -8,10 +8,23 @@ main { max-width:150rem; box-sizing:border-box; padding:10rem 2rem 2rem; }
 
 
 @media all and (min-width:1445px) {
-  main { margin:0 auto; padding:13rem 0 0 26rem;  }
+  main { margin:0 auto; }
    .main-elements-container { left:50%; transform:translateX(-50%); margin:0; }
 }
 
-@media all and (min-width:768px) {
-  main { padding:13rem 0 0 17rem;  }
+@media all and (max-width:1280px) { 
+  main { padding-left:14vw; }
+}
+
+@media all and (max-width:768px) {
+   nav, .page-description { display:none; }
+   main { padding:10rem 2rem 2rem; }
+}
+
+@media all and (max-width:540px) {  
+  main { padding:18rem 2.9rem; }
+}
+
+@media all and (max-width:420px) {  
+  main { padding:15rem 2rem; }
 }

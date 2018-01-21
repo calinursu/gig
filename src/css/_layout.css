@@ -1,10 +1,22 @@
 main { max-width:150rem; box-sizing:border-box; padding:13rem 0 0 26rem;}
-  .page { width:100%; min-height:100%; display:none; }
-  .page.is-visible { display:block; }
+  .page { width:100%; min-height:100%; animation-name:page-fade-out; animation-duration:.5s; animation-fill-mode:forwards; }
+      .page.is-hidden { display:none; }
+      .page.is-visible { visibility:visible; opacity:1; animation-name:page-fade-in; }
 
   .section-title-container { margin-bottom:6rem; }
     .section-title { font-size:3.5rem; margin-bottom:1rem; }
     .section-subtitle { font-size:1.6rem; }
+
+    
+@keyframes page-fade-in {
+  from { opacity:0; visibility:hidden; }
+  to { opacity:1; visibility:visible; }
+}
+
+@keyframes page-fade-out {
+  from { opacity:1; visibility:visible; }
+  to { opacity:0; visibility:hidden;  }
+}
 
 
 @media all and (min-width:1445px) {

@@ -12,19 +12,23 @@
 
 
   /* Mobile menu */
-  .mobile-menu-container { display:none; position:fixed; z-index:3; width:100%; height:100%;/*display:block; position:absolute; left:0; top:0; right:0; bottom:0; background-color:#212121; z-index:2; */}
-  .mobile-menu-container.is-visible { display:block; }
+  .mobile-menu-container { position:fixed; top:0; left:0; right:0; bottom:0; width:100%; z-index:1; }
+  .mobile-menu-container.is-hidden { display:none; }
 
-  .mobile-menu-container .mobile-menu-inner-container { visibility:hidden; }
-  .mobile-menu-container.is-visible .mobile-menu-inner-container { /*animation-iteration-count:infinite;*/ position:relative; z-index:3; height:100%; animation-name:show; animation-fill-mode:forwards; animation-duration:.8s; animation-delay:1.2s; animation-timing-function:cubic-bezier(.785,.135,.15,.86); }
-  .mobile-menu-container.is-visible:after { /*animation-iteration-count:infinite;*/ content:''; display:block; position:absolute; top:0; left:0; right:0; bottom:0; width:100%; animation-duration:1.2s; animation-fill-mode:forwards; animation-timing-function:cubic-bezier(.785,.135,.15,.86); background:#232323; animation-name:slidee; }
-    
+  .mobile-menu-container .mobile-menu-inner-container { animation-name:hideText; visibility:hidden; position:relative; z-index:3; height:100%; animation-fill-mode:forwards; animation-duration:.3s; animation-delay:.5s; animation-timing-function:cubic-bezier(.785,.135,.15,.86); }
+  .mobile-menu-container.is-visible .mobile-menu-inner-container { animation-name:showText; }  
+
+  .mobile-menu-container .background { position:absolute; top:0; left:0; right:0; bottom:0; width:100%; background-color:#232323; animation-duration:.5s; animation-fill-mode:forwards; animation-timing-function:cubic-bezier(.785,.135,.15,.86); animation-name:slideUp; }
+  .mobile-menu-container.is-visible .background { animation-name:slideDown; }
+
     .mobile-menu-container .link { position:absolute; left:3rem; top:5rem; font-size:1.5rem; }
     .mobile-menu-container .logo { position:absolute; left:50%; transform:translateX(-50%); top:5rem; font-size:1.3rem; opacity:.3; }
-    .mobile-menu-container .close-mobile-menu { position:absolute; display:block; right:3rem; top:5rem; width:4rem; height:.5rem; background-color:white; }
+    
+    .close-mobile-menu { position:absolute; right:2rem; top:4rem; cursor:pointer; padding:1.5rem 1rem; }
+      .close-mobile-menu span { display:block;  width:4rem; height:.5rem; background-color:white; }
 
-    .open-mobile-menu { cursor:pointer; position:fixed; z-index:1; right:3rem; top:5rem; }
-      .open-mobile-menu span{ display:block; width:4rem; height:.5rem; background-color:white; }
+    .open-mobile-menu { cursor:pointer; position:fixed; z-index:1; right:2rem; top:4rem; padding:1rem; }
+      .open-mobile-menu span { display:block; width:4rem; height:.5rem; background-color:white; }
       .open-mobile-menu span:nth-child(2) { margin-top:1.5rem; }
 
     .mobile-menu { position:absolute; left:3rem; top:50%; transform:translateY(-50%); }
@@ -34,9 +38,23 @@
         .mobile-secondary-menu a { display:block; color:#aeaeae; font-size:1.8rem; padding:.7rem 0; }
 
 
-  @keyframes slidee {
+  @keyframes slideDown {
       0% { top:0; bottom:100%; }
       100% { bottom:0; top:0; }
+  }
+
+  @keyframes slideUp {
+      0% { bottom:0; top:0; }
+      100% { top:0; bottom:100%; display:none; }
+  }
+
+  @keyframes showText{
+    0%,50% { visibility:hidden; }
+    50.1%, 100% { visibility:visible; }
+  }
+  @keyframes hideTest{
+    0%,50% { visibility:visible; }
+    50.1%, 100% { visibility:hidden; }
   }
 
 

@@ -16,16 +16,16 @@
 
   <div class="main-elements-container">
     <header>
-      <a href="#" class="logo">
-        <img src="images/logo-web.png"
+      <a href="" class="logo main-menu-item" data-url="home">
+        <img src="images/logo-web.png">
       </a>
-      <a href="#" class="hire-us-button">Hire us</a>
+      <a href="" class="hire-us-button">Hire us</a>
     </header>
     
     <nav class="main-menu">
-      <a href="">About us</a>
-      <a href="">Cases</a>
-      <a href="">Contact</a>
+      <a href="" class="main-menu-item" data-url="about">About us</a>
+      <a href="" class="main-menu-item" data-url="cases">Cases</a>
+      <a href="" class="main-menu-item" data-url="contact">Contact</a>
     </nav>
     
     <div class="page-description">
@@ -61,7 +61,7 @@
   </div>
 
 	<main class="content">
-    <section class="page home is-visible">
+    <section class="page home is-visible" data-url="home">
       <div class="text-container">
         <!-- <h2 class="intro-secondary-headline"><span>Obscurial</span> is a software consultancy company</h2>
         <h2 class="intro-secondary-headline"><span>we</span> craft great experiences and we love internet technologies</h2>
@@ -83,7 +83,7 @@
       </div>
     </section>
 
-    <section class="page about">
+    <section class="page about is-hidden" data-url="about">
       <div class="section-title-container">
         <div class="section-title">Interactive & Identity</div>
         <div class="section-subtitle">Software agency web at heart</div>
@@ -119,7 +119,7 @@
       </div>
     </section>
 
-    <section class="page cases">
+    <section class="page cases is-hidden" data-url="cases">
       <div class="section-title-container">
         <div class="section-title">Interactive & Identity</div>
         <div class="section-subtitle">Software agency web at heart</div>

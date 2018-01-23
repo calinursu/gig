@@ -16,7 +16,7 @@ class Menu {
 
   close() {
     this.el.classList.remove('is-visible');
-    setTimeout( ()=> this.el.classList.add('is-hidden'), 800 );
+    setTimeout( () => this.el.classList.add('is-hidden'), 800 );
   }
 
   animationEvent(el) {

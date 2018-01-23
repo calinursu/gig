@@ -37,5 +37,5 @@ main { max-width:150rem; box-sizing:border-box; padding:13rem 0 0 26rem;}
 }
 
 @media all and (max-width:420px) {  
-  main { padding:4rem 2rem; }
+  main { padding:9rem 2rem; }
 }

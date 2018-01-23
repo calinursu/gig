@@ -23,7 +23,9 @@
 			.intro-medium-box { display:block; width:40vw; height:46vh; max-width:54rem; position:absolute; left:23%; top:5rem; background-color:#1f1f1f; }
       .intro-small-box { opacity:.2; display:block; width:47vw; height:19vh; position:absolute; top:13rem; right:20vw; background-color:cyan; }
       
+      .console-break { margin-top:1.8rem; }
       .contact-line { color:cyan; }
+      
 
 
 @media all and (max-width:770px) {

@@ -10,7 +10,7 @@ class Typewritter {
         "text":" is a software consultancy company",
         "tag":"span",
         "class":"intro-secondary-headline",
-        "newLine": "true"
+        "newLine": true
       },
       {
         "text": "",
@@ -26,7 +26,7 @@ class Typewritter {
         "text": " craft great experiences and love internet technologies",
         "tag": "span",
         "class": "intro-secondary-headline",
-        "newLine": "true"
+        "newLine":true
       },
       {
         "text": "",
@@ -42,7 +42,7 @@ class Typewritter {
         "text": " help businesses with",
         "tag": "span",
         "class": "intro-secondary-headline",
-        "newLine": "true"
+        "newLine":true
       },
       {
         "text": "Web application development",
@@ -50,26 +50,45 @@ class Typewritter {
         "class": "console-list-item first translate same-line"
       },
       {
-        "text": "Web application development",
-        "tag": "div",
-        "class": "console-list-item translate"
+        "text": "",
+        "tag": "br",
+        "class": "console-list-item"
       },
       {
         "text": "Web application development",
-        "tag": "div",
+        "tag": "span",
         "class": "console-list-item translate"
       },
       {
+        "text": "",
+        "tag": "br",
+        "class": "console-list-item"
+      },
+      {
         "text": "Web application development",
-        "tag": "div",
+        "tag": "span",
+        "class": "console-list-item translate"
+      },
+      {
+        "text": "",
+        "tag": "br",
+        "class": "console-list-item"
+      },
+      {
+        "text": "Web application development",
+        "tag": "span",
         "class": "console-list-item last translate"
       },
       {
-        "text": "get in touch with us at ",
-        "tag": "div",
+        "text": "",
+        "tag": "br",
         "class": "intro-secondary-headline",
-        "href": "mailto:hello@obscurial.dk",
-        "newLine": true
+      },
+      {
+        "text": "get in touch with us at ",
+        "tag": "span",
+        "class": "intro-secondary-headline",
+        "href": "mailto:hello@obscurial.dk"
       },
       {
         "text": "hello@obscurial.dk",
@@ -87,12 +106,12 @@ class Typewritter {
 
       setTimeout(() => {
         this.typewritter(text, i + 1, newLine, line, cb);
-      }, 20);
+      }, 40);
     }
-    else if (newLine === true) {
+    else if(newLine === true) {
       setTimeout(() => {
         cb();
-      }, 200)
+      }, 400);
     }
     else {
       cb();
@@ -101,8 +120,9 @@ class Typewritter {
 
   startTypewritter(i) {
     const line = document.createElement(this.data[i].tag);
+    const cursor = document.querySelector(".console-cursor");
     line.className = this.data[i].class;
-    document.querySelector(".text-container").appendChild(line);
+    document.querySelector(".text-container").insertBefore(line, cursor);
 
     this.typewritter(this.data[i].text, 0, this.data[i].newLine, line, () => {
       this.startTypewritter(i + 1);

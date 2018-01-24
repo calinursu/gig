@@ -26,8 +26,8 @@
       .console-break { margin-top:1.8rem; }
       .contact-line { color:#18b176; }
       
-      .console-list-item.translate{ display:inline-block; width:50%; position:relative; transform:translateX(100%); }
-      .console-list-item.translate.same-line { transform: translateX(66.4%); }
+      .console-list-item.translate { display:inline-block; width:50%; position:relative; transform:translateX(58%); }
+      .console-list-item.translate.same-line { transform: translateX(10.4%); }
 
 
 @media all and (max-width:770px) {

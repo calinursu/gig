@@ -45,35 +45,31 @@ class Typewritter {
         "newLine": "true"
       },
       {
-        "text": "",
-        "tag": "div",
-        "class": "intro-secondary-headline"
+        "text": "Web application development",
+        "tag": "span",
+        "class": "console-list-item first translate same-line"
       },
       {
         "text": "Web application development",
         "tag": "div",
-        "class": "console-list-item first"
+        "class": "console-list-item translate"
       },
       {
         "text": "Web application development",
         "tag": "div",
-        "class": "console-list-item"
+        "class": "console-list-item translate"
       },
       {
         "text": "Web application development",
         "tag": "div",
-        "class": "console-list-item"
-      },
-      {
-        "text": "Web application development",
-        "tag": "div",
-        "class": "console-list-item last"
+        "class": "console-list-item last translate"
       },
       {
         "text": "get in touch with us at ",
-        "tag": "a",
+        "tag": "div",
         "class": "intro-secondary-headline",
-        "href": "mailto:hello@obscurial.dk"
+        "href": "mailto:hello@obscurial.dk",
+        "newLine": true
       },
       {
         "text": "hello@obscurial.dk",
@@ -85,18 +81,18 @@ class Typewritter {
     this.startTypewritter(0, "h2", "intro-secondary-headline");
   }
 
-  typewritter(text, newLine, i, line, cb) {
+  typewritter(text, i, newLine, line, cb) {
     if (i < text.length) {
       line.innerHTML += text.substring(i, i + 1);
 
       setTimeout(() => {
-        this.typewritter(text, newLine, i + 1, line, cb);
-      }, 50);
+        this.typewritter(text, i + 1, newLine, line, cb);
+      }, 20);
     }
-    else if(newLine === "true"){
+    else if (newLine === true) {
       setTimeout(() => {
         cb();
-      }, 400)
+      }, 200)
     }
     else {
       cb();
@@ -105,15 +101,10 @@ class Typewritter {
 
   startTypewritter(i) {
     const line = document.createElement(this.data[i].tag);
-    
-    if (this.data[i].tag === "a"){
-      line.href = this.data[i].href;
-    }
-
     line.className = this.data[i].class;
-    document.querySelector(".text-container").appendChild(line);    
+    document.querySelector(".text-container").appendChild(line);
 
-    this.typewritter(this.data[i].text, this.data[i].newLine, 0, line, () => {
+    this.typewritter(this.data[i].text, 0, this.data[i].newLine, line, () => {
       this.startTypewritter(i + 1);
     });
   }

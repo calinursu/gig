@@ -1,3 +1,5 @@
+import animationEvent from './animationEvent';
+
 class Menu {
   constructor(el) {
     this.el = el; 
@@ -19,20 +21,6 @@ class Menu {
     setTimeout( () => this.el.classList.add('is-hidden'), 800 );
   }
 
-  animationEvent(el) {
-      const transitions = {
-        'animation':'animationend',
-        'OAnimation':'oAnimationEnd',
-        'MozAnimation':'animationend',
-        'WebkitAnimation':'webkitAnimationEnd'
-      }
-
-      for(let t in transitions) {
-        if(el.style[t] !== undefined) {
-          return transitions[t];
-        }
-      }
-    }
 
   static init(selector = ".mobile-menu-container", base = document) {
     base.querySelectorAll(selector).forEach(element => {

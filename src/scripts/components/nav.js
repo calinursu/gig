@@ -1,3 +1,5 @@
+import animationEvent from './animationEvent';
+
 class Nav {
   constructor(el) {
     this.el = el; 
@@ -17,7 +19,7 @@ class Nav {
 
     if(nextPage && !nextPage.classList.contains('is-visible')) {
 
-      history.pushState(null, null, this.locationOrigin + '/' + this.el.dataset.url);
+      //history.pushState(null, null, this.locationOrigin + '/' + this.el.dataset.url);
       this.currentPage = this.el.dataset.url;
 
       // verify if mobile menu is expanded, so the page animations will wait
@@ -37,10 +39,10 @@ class Nav {
       
       
 
-      var animationEvent = this.whichAnimationEvent(activePage);
+      var wanimationEvent = animationEvent(activePage);
 
-      animationEvent && activePage.addEventListener(animationEvent, function showNextPage() {
-        activePage.removeEventListener(animationEvent, showNextPage, false);
+      wanimationEvent && activePage.addEventListener(wanimationEvent, function showNextPage() {
+        activePage.removeEventListener(wanimationEvent, showNextPage, false);
 
         activePage.classList.add('is-hidden');
 
@@ -54,20 +56,6 @@ class Nav {
     
   }
 
-  whichAnimationEvent(el) {
-      const transitions = {
-        'animation':'animationend',
-        'OAnimation':'oAnimationEnd',
-        'MozAnimation':'animationend',
-        'WebkitAnimation':'webkitAnimationEnd'
-      }
-
-      for(let t in transitions) {
-        if(el.style[t] !== undefined) {
-          return transitions[t];
-        }
-      }
-    }
 
   static init(selector = ".main-menu-item", base = document) {
     base.querySelectorAll(selector).forEach(element => {

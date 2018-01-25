@@ -6,15 +6,15 @@
 			.intro-secondary-headline:first-child span { text-transform:uppercase; }
 			.intro-secondary-headline a { color:#18b176; }
     
-    /* .intro-list { font-size:1.8rem; margin:5rem 0; list-style:none; }
+     .intro-list { font-size:1.8rem; margin:5rem 0; list-style:none; }
 			.intro-list li { position:relative; padding:.5rem 0 .5rem 2.5rem; font-size:1.8rem; }
-				.intro-list li:before { content:"*"; display:block; width:1rem; height:1rem; position:absolute; left:0; top:50%; transform:translateY(-50%); color:red; } */
+				.intro-list li:before { content:"*"; display:block; width:1rem; height:1rem; position:absolute; left:0; top:50%; transform:translateY(-50%); color:red; } 
 
 
-    .intro-list { font-size:1.8rem; margin:5rem 0; list-style:none; }
+    /*.intro-list { font-size:1.8rem; margin:5rem 0; list-style:none; }
 			.console-list-item { position:relative; padding:.5rem 0 .5rem 2.5rem; font-size:1.8rem; }
         .console-list-item:before { content:"*"; display:block; width:1rem; height:1rem; position:absolute; left:0; top:50%; transform:translateY(-50%); color:#18b176; }
-       /* .console-list-item.first { margin-top:5rem; }
+        .console-list-item.first { margin-top:5rem; }
         .console-list-item.last { margin-bottom:5rem; }*/
 
 		.intro-box-container {  }

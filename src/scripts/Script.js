@@ -8,6 +8,6 @@ window.addEventListener('load', () => {
   Noise.init();
   Scroll.init();
   Menu.init();
-  Typewritter.init();
+  //Typewritter.init();
   Nav.init();
 });

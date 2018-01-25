@@ -47,42 +47,38 @@ class Typewritter {
       {
         "text": "Web application development",
         "tag": "span",
-        "class": "console-list-item first translate same-line"
+        "class": "intro-secondary-headline first translate same-line console-list-item"
       },
       {
         "text": "",
         "tag": "br",
-        "class": "console-list-item"
       },
       {
         "text": "Web application development",
         "tag": "span",
-        "class": "console-list-item translate"
+        "class": "intro-secondary-headline translate console-list-item"
       },
       {
         "text": "",
         "tag": "br",
-        "class": "console-list-item"
       },
       {
         "text": "Web application development",
         "tag": "span",
-        "class": "console-list-item translate"
+        "class": "intro-secondary-headline translate console-list-item"
       },
       {
         "text": "",
         "tag": "br",
-        "class": "console-list-item"
       },
       {
         "text": "Web application development",
         "tag": "span",
-        "class": "console-list-item last translate"
+        "class": "intro-secondary-headline last translate console-list-item last"
       },
       {
         "text": "",
         "tag": "br",
-        "class": "intro-secondary-headline",
       },
       {
         "text": "get in touch with us at ",

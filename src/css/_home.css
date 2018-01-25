@@ -6,16 +6,16 @@
 			.intro-secondary-headline:first-child span { text-transform:uppercase; }
 			.intro-secondary-headline a { color:#18b176; }
     
-     .intro-list { font-size:1.8rem; margin:5rem 0; list-style:none; }
+     /* .intro-list { font-size:1.8rem; margin:5rem 0; list-style:none; }
 			.intro-list li { position:relative; padding:.5rem 0 .5rem 2.5rem; font-size:1.8rem; }
-				.intro-list li:before { content:"*"; display:block; width:1rem; height:1rem; position:absolute; left:0; top:50%; transform:translateY(-50%); color:red; } 
+				.intro-list li:before { content:"*"; display:block; width:1rem; height:1rem; position:absolute; left:0; top:50%; transform:translateY(-50%); color:red; }  */
 
 
-    /*.intro-list { font-size:1.8rem; margin:5rem 0; list-style:none; }
+    .intro-list { font-size:1.8rem; margin:5rem 0; list-style:none; }
 			.console-list-item { position:relative; padding:.5rem 0 .5rem 2.5rem; font-size:1.8rem; }
         .console-list-item:before { content:"*"; display:block; width:1rem; height:1rem; position:absolute; left:0; top:50%; transform:translateY(-50%); color:#18b176; }
         .console-list-item.first { margin-top:5rem; }
-        .console-list-item.last { margin-bottom:5rem; }*/
+        .console-list-item.last { margin-bottom:5rem; }
 
 		.intro-box-container {  }
       .intro-large-box { opacity:.6; display:block; position:absolute; max-width:180rem; min-height:83rem; left:5rem; right:5rem; top:10rem; bottom:10rem; background-color:#232323; background:url("../images/antenna.jpg"); background-size:cover; background-position:center; }
@@ -26,8 +26,8 @@
       .console-break { margin-top:1.8rem; }
       .contact-line { color:#18b176; }
       
-      .console-list-item.translate { position:relative; margin-left:31rem; }
-      .console-list-item.translate.same-line { margin-left:3.6rem; }
+      .intro-secondary-headline.translate { position:relative; margin-left:31rem; }
+      .intro-secondary-headline.translate.same-line { margin-left:3.6rem; }
 
       .console-cursor { width:1.5rem; height:.2rem; display:inline-block; margin:0 0 -0.3rem 1rem; background:#fff; animation:blink .7s infinite; }
 

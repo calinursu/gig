@@ -26,6 +26,10 @@
       .console-break { margin-top:1.8rem; }
       .contact-line { color:#18b176; }
       
+      .console-list-item.translate { position:relative; margin-left:31rem; }
+      .console-list-item.translate.same-line { margin-left:3.6rem; }
+
+      .console-cursor { width:1.5rem; height:.2rem; display:inline-block; margin:0 0 -0.3rem 1rem; background:#fff; animation:blink .7s infinite; }
 
 
 @media all and (max-width:770px) {
@@ -38,6 +42,8 @@
 	.text-container { position:relative; transform:none; min-height:50rem; padding:0; }
 		.intro-secondary-headline { font-size:2rem; }
 }
+
+@keyframes blink { 0% { opacity:1; } 40%{ opacity:1; } 100% { opacity:0; } }
 
 
 

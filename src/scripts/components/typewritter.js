@@ -10,7 +10,7 @@ class Typewritter {
         "text":" is a software consultancy company",
         "tag":"span",
         "class":"intro-secondary-headline",
-        "newLine": "true"
+        "newLine": true
       },
       {
         "text": "",
@@ -26,7 +26,7 @@ class Typewritter {
         "text": " craft great experiences and love internet technologies",
         "tag": "span",
         "class": "intro-secondary-headline",
-        "newLine": "true"
+        "newLine":true
       },
       {
         "text": "",
@@ -42,36 +42,51 @@ class Typewritter {
         "text": " help businesses with",
         "tag": "span",
         "class": "intro-secondary-headline",
-        "newLine": "true"
+        "newLine":true
+      },
+      {
+        "text": "Web application development",
+        "tag": "span",
+        "class": "console-list-item first translate same-line"
       },
       {
         "text": "",
-        "tag": "div",
-        "class": "intro-secondary-headline"
-      },
-      {
-        "text": "Web application development",
-        "tag": "div",
-        "class": "console-list-item first"
-      },
-      {
-        "text": "Web application development",
-        "tag": "div",
+        "tag": "br",
         "class": "console-list-item"
       },
       {
         "text": "Web application development",
-        "tag": "div",
+        "tag": "span",
+        "class": "console-list-item translate"
+      },
+      {
+        "text": "",
+        "tag": "br",
         "class": "console-list-item"
       },
       {
         "text": "Web application development",
-        "tag": "div",
-        "class": "console-list-item last"
+        "tag": "span",
+        "class": "console-list-item translate"
+      },
+      {
+        "text": "",
+        "tag": "br",
+        "class": "console-list-item"
+      },
+      {
+        "text": "Web application development",
+        "tag": "span",
+        "class": "console-list-item last translate"
+      },
+      {
+        "text": "",
+        "tag": "br",
+        "class": "intro-secondary-headline",
       },
       {
         "text": "get in touch with us at ",
-        "tag": "a",
+        "tag": "span",
         "class": "intro-secondary-headline",
         "href": "mailto:hello@obscurial.dk"
       },
@@ -85,18 +100,18 @@ class Typewritter {
     this.startTypewritter(0, "h2", "intro-secondary-headline");
   }
 
-  typewritter(text, newLine, i, line, cb) {
+  typewritter(text, i, newLine, line, cb) {
     if (i < text.length) {
       line.innerHTML += text.substring(i, i + 1);
 
       setTimeout(() => {
-        this.typewritter(text, newLine, i + 1, line, cb);
-      }, 50);
+        this.typewritter(text, i + 1, newLine, line, cb);
+      }, 40);
     }
-    else if(newLine === "true"){
+    else if(newLine === true) {
       setTimeout(() => {
         cb();
-      }, 400)
+      }, 400);
     }
     else {
       cb();
@@ -105,15 +120,11 @@ class Typewritter {
 
   startTypewritter(i) {
     const line = document.createElement(this.data[i].tag);
-    
-    if (this.data[i].tag === "a"){
-      line.href = this.data[i].href;
-    }
-
+    const cursor = document.querySelector(".console-cursor");
     line.className = this.data[i].class;
-    document.querySelector(".text-container").appendChild(line);    
+    document.querySelector(".text-container").insertBefore(line, cursor);
 
-    this.typewritter(this.data[i].text, this.data[i].newLine, 0, line, () => {
+    this.typewritter(this.data[i].text, 0, this.data[i].newLine, line, () => {
       this.startTypewritter(i + 1);
     });
   }

@@ -13,7 +13,7 @@
     .case-preview { transition:opacity 1s; }
       .case-expanded .case-preview { opacity:0; }
     
-    .case-image-full { opacity:0; transition:opacity 1s 1s; }
+    .case-image-full { opacity:0; transition:opacity 1s 1s; z-index:-1; }
       .case.active .case-image-full { opacity:1; }
       .case-container.active .case-button-container { width:80vw; height:80vw; background:black; }
 

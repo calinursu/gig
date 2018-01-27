@@ -1,9 +1,9 @@
-main { position:relative; max-width:150rem; box-sizing:border-box; padding:13rem 0 0 26rem; }
-  .page { width:100%; min-height:100%; animation-name:page-fade-out; animation-duration:.5s; animation-fill-mode:forwards; }
+main { padding:15rem 0 0 23rem; box-sizing:border-box; }
+  .page { width:100%; min-height:100%; margin:0 auto; max-width:140rem; animation-name:page-fade-out; animation-duration:.5s; animation-fill-mode:forwards; }
       .page.is-hidden { display:none; }
       .page.is-visible { visibility:visible; opacity:1; animation-name:page-fade-in; }
 
-  .section-title-container { margin-bottom:6rem; }
+  .section-title-container { margin-bottom:10rem; }
     .section-title { font-size:3.5rem; margin-bottom:1rem; }
     .section-subtitle { font-size:1.6rem; }
 
@@ -17,23 +17,16 @@ main { position:relative; max-width:150rem; box-sizing:border-box; padding:13rem
   to { opacity:0; visibility:hidden;  }
 }
 
-@media all and (min-width:1445px) {
-  main { margin:0 auto; }
-}
-
-@media all and (max-width:1280px) { 
-  main { padding-left:14vw; padding-right:3rem; }
+@media all and (max-width:1024px) {
+  main { padding:11rem 0 0 0; }
+    .page { padding:0 3.5rem; }
 }
 
 @media all and (max-width:768px) {
-   main { padding:6rem 2rem 0; }
-    .main-elements-container { display:none; }
+  .page { padding:0 2.5rem; }
+    .section-title-container { margin:0rem 2.5rem 6rem; }
 }
 
 @media all and (max-width:540px) {  
-  main { padding:5rem 2.9rem; }
-}
-
-@media all and (max-width:420px) {  
-  main { padding:9rem 2rem; }
+  .page { padding:0; }
 }

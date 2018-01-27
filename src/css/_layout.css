@@ -1,5 +1,5 @@
-main { padding:15rem 0 0 23rem; box-sizing:border-box; }
-  .page { width:100%; min-height:100%; margin:0 auto; max-width:140rem; animation-name:page-fade-out; animation-duration:.5s; animation-fill-mode:forwards; }
+main { position:relative; padding:15rem 0 0 23rem; box-sizing:border-box; }
+  .page { width:100%; min-height:100%; margin:0 auto; max-width:140rem; box-sizing:border-box; animation-name:page-fade-out; animation-duration:.5s; animation-fill-mode:forwards; }
       .page.is-hidden { display:none; }
       .page.is-visible { visibility:visible; opacity:1; animation-name:page-fade-in; }
 
@@ -19,7 +19,7 @@ main { padding:15rem 0 0 23rem; box-sizing:border-box; }
 
 @media all and (max-width:1024px) {
   main { padding:11rem 0 0 0; }
-    .page { padding:0 3.5rem; }
+    .page { padding:0 3.5rem; } 
 }
 
 @media all and (max-width:768px) {

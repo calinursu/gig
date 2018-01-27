@@ -1,9 +1,7 @@
-.cases { padding-top:15rem; }
-
 .case-items { margin-top:10rem; }
 
 .case-container { position:relative; width:55vw; margin-bottom:25rem; }
-  .case-faded-text:before{ content:attr(data-text); position:absolute; z-index:-3; height:58rem; left:50%; top:-12rem; transform:translateX(calc(-50% + 3rem)); font-size:55rem; color:#272727; text-align:center; }
+.case-faded-text{ position:absolute; z-index:-3; height:58rem; top:20rem; left:0; font-size:55rem; color:#272727; text-align:center; }
 
   .case-image { padding-top:56.25%; background-position:center; background-size:cover; background-repeat:no-repeat; }
 
@@ -57,4 +55,9 @@
 @keyframes scale-forward {
     0% { transform:scale(1); }
     100% { transform:scale(2.4); }
+}
+
+@keyframes slide-off-canvas {
+  0% {  }
+  100% {  }
 }

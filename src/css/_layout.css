@@ -1,5 +1,5 @@
 main { position:relative; max-width:150rem; box-sizing:border-box; padding:13rem 0 0 26rem; }
-  .page { width:100%; min-height:100%; animation-name:page-fade-out; animation-duration:.5s; animation-fill-mode:forwards; }
+  .page { position:relative; z-index:1; width:100%; min-height:100%; animation-name:page-fade-out; animation-duration:.5s; animation-fill-mode:forwards; }
       .page.is-hidden { display:none; }
       .page.is-visible { visibility:visible; opacity:1; animation-name:page-fade-in; }
 

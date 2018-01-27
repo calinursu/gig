@@ -1,7 +1,12 @@
   header { position:fixed; width:calc(100%); padding-top:3rem; padding-bottom:3rem; }
 
-  .main-elements-container header, .main-elements-container nav, .main-elements-container div { z-index:1; }
+  .main-elements-container header, 
+  .main-elements-container nav, 
+  .main-elements-container div { z-index:2; }
 
+  .main-elements-container .secondary-menu-item, .main-elements-container .page-description { animation-fill-mode:forwards; animation-duration:.3s; animation-delay:.5s; animation-timing-function:cubic-bezier(.785,.135,.15,.86); }
+    .main-elements-container.has-overlay .secondary-menu-item { animation-name:exit-top; }
+    .main-elements-container.has-overlay .page-description { animation-name:exit-bottom; }
     /*header a { font-size:1.4rem; }
     header a + a { margin-left:3rem; }
     .hire-us-button { float:right; font-size:1.4rem; padding:2.2rem 2rem; border:.1rem solid white; }*/
@@ -24,8 +29,8 @@
   .mobile-menu-container { position:fixed; top:0; left:0; right:0; bottom:0; width:100%; z-index:2; }
   .mobile-menu-container.is-hidden { display:none; }
 
-  .mobile-menu-container .mobile-menu-inner-container { animation-name:hideText; visibility:hidden; position:relative; z-index:3; height:100%; animation-fill-mode:forwards; animation-duration:.3s; animation-delay:.5s; animation-timing-function:cubic-bezier(.785,.135,.15,.86); }
-  .mobile-menu-container.is-visible .mobile-menu-inner-container { animation-name:showText; }  
+  .mobile-menu-container .mobile-menu-inner-container { animation-name:hide-text; visibility:hidden; opacity:0; position:relative; z-index:3; height:100%; animation-fill-mode:forwards; animation-duration:.3s; animation-delay:.5s; animation-timing-function:cubic-bezier(.785,.135,.15,.86); }
+  .mobile-menu-container.is-visible .mobile-menu-inner-container { animation-name:show-text; }  
 
   .mobile-menu-container .background { position:absolute; top:0; left:0; right:0; bottom:0; width:100%; background-color:#232323; animation-name:slideUp; animation-delay:.3s; animation-duration:.5s; animation-fill-mode:forwards; animation-timing-function:cubic-bezier(.785,.135,.15,.86); }
   .mobile-menu-container.is-visible .background { animation-name:slideDown; animation-delay:0s; }
@@ -35,10 +40,6 @@
     
     .close-mobile-menu { position:absolute; right:2rem; top:2rem; cursor:pointer; padding:1.5rem 1rem; }
       .close-mobile-menu span { display:block;  width:4rem; height:.2rem; background-color:white; }
-
-    .open-mobile-menu { cursor:pointer; position:fixed; z-index:2; right:2rem; top:2rem; padding:1rem; }
-      .open-mobile-menu span { display:block; width:4rem; height:.5rem; background-color:white; }
-      .open-mobile-menu span:nth-child(2) { margin-top:1rem; }
 
     .mobile-menu { position:absolute; left:3rem; top:50%; transform:translateY(-50%); }
       .mobile-main-menu a { display:block; font-size:2.5rem; padding:.7rem 0; margin:.7rem 0; }
@@ -59,17 +60,16 @@
       100% { top:0; bottom:100%; display:none; }
   }
 
-  @keyframes showText {
-    0%,50% { visibility:hidden; }
-    50.1%, 100% { visibility:visible; }
+  @keyframes show-text {
+    0% { visibility:hidden; opacity:0; }
+    100% { visibility:visible; opacity:1; }
   }
 
-  @keyframes hideTest {
+  @keyframes hide-text {
     0%,50% { visibility:visible; }
     50.1%, 100% { visibility:hidden; }
   }
 
-  
 
 
   .page-description { position:fixed; left:5.5rem; bottom:10rem; width:3rem; }
@@ -82,9 +82,4 @@
 
 @media all and (min-width:1445px) {
   header { width:100%; left:50%; transform:translateX(-50%); }
-}
-
-@media all and (min-width:770px) {
-  .mobile-menu-container { display:none; }
-  .open-mobile-menu { display:none; }
 }

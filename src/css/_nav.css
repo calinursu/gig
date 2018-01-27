@@ -83,3 +83,12 @@
 @media all and (min-width:1445px) {
   header { width:100%; left:50%; transform:translateX(-50%); }
 }
+
+@media all and (max-width:1024px) {
+  nav, .secondary-menu-item { display:none; }
+  .page-description { display:none; }
+} 
+
+@media all and (max-width:768px) {
+  .menu-button-container { margin:.7rem 2.5rem 0 0; }
+}

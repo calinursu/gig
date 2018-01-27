@@ -1,20 +1,19 @@
 class CasesPage {
   constructor(el) {
     this.el = el;
-    this.cases = this.el.querySelectorAll(".case-container");
+    this.caseImage = this.el.querySelector(".case-image");
+    this.menu = document.querySelector(".main-elements-container");
 
-    this.cases.forEach((item) => {
-      item.addEventListener("click", this.onCaseClick.bind(this));
-    });
+    this.caseImage.addEventListener('click', this.loadCase.bind(this));
+
   }
 
-  onCaseClick(e) {
-    // this.activeCase = this.cases[Array.from(this.cases).indexOf(e.currentTarget)];
-    // this.activeCase.classList.add("active");
-    // this.el.classList.add("case-expanded");
+  loadCase(e) {
+    this.caseImage.classList.add('is-selected');
+    this.menu.classList.add('has-overlay');
   }
 
-  static init(selector = ".cases", base = document) {
+  static init(selector = ".case-container", base = document) {
     base.querySelectorAll(selector).forEach(element => {
       new CasesPage(element);
     });

@@ -4,7 +4,7 @@ class Typewritter {
       {
         "text": "Obscurial",
         "tag": "span",
-        "class": "intro-secondary-headline contact-line"
+        "class": "intro-secondary-headline color-line"
       },
       { 
         "text":" is a software consultancy company",
@@ -15,12 +15,12 @@ class Typewritter {
       {
         "text": "",
         "tag": "div",
-        "class": "intro-secondary-headline",
+        "class": "hr hide-desktop",
       },
       {
         "text": "we",
         "tag": "span",
-        "class": "intro-secondary-headline contact-line"
+        "class": "intro-secondary-headline color-line"
       },
       {
         "text": " craft great experiences and love internet technologies",
@@ -31,18 +31,23 @@ class Typewritter {
       {
         "text": "",
         "tag": "div",
-        "class": "intro-secondary-headline"
+        "class": "hr"
       },
       {
         "text": "we ",
         "tag": "span",
-        "class": "intro-secondary-headline contact-line"
+        "class": "intro-secondary-headline color-line"
       },
       {
         "text": " help businesses with",
         "tag": "span",
         "class": "intro-secondary-headline",
         "newLine":true
+      },
+      {
+        "text": "",
+        "tag": "div",
+        "class": "pre-list"
       },
       {
         "text": "Web application development",
@@ -74,7 +79,7 @@ class Typewritter {
       {
         "text": "Web application development",
         "tag": "span",
-        "class": "intro-secondary-headline last translate console-list-item last"
+        "class": "intro-secondary-headline translate console-list-item"
       },
       {
         "text": "",
@@ -83,14 +88,18 @@ class Typewritter {
       {
         "text": "get in touch with us at ",
         "tag": "span",
-        "class": "intro-secondary-headline",
+        "class": "intro-secondary-headline last",
         "href": "mailto:hello@obscurial.dk"
       },
       {
         "text": "hello@obscurial.dk",
         "tag": "a",
-        "class": "intro-secondary-headline contact-line",
+        "class": "intro-secondary-headline last contact-line",
         "href": "mailto:hello@obscurial.dk"
+      },
+      {
+        "text": "",
+        "tag": "div",
       }
     ];
     this.startTypewritter(0, "h2", "intro-secondary-headline");
@@ -102,7 +111,7 @@ class Typewritter {
 
       setTimeout(() => {
         this.typewritter(text, i + 1, newLine, line, cb);
-      }, 40);
+      }, 20);
     }
     else if(newLine === true) {
       setTimeout(() => {

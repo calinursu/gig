@@ -1,7 +1,8 @@
 main { position:relative; padding:15rem 0 0 23rem; box-sizing:border-box; }
   .page { width:100%; min-height:100%; margin:0 auto; max-width:140rem; box-sizing:border-box; animation-name:page-fade-out; animation-duration:.5s; animation-fill-mode:forwards; }
-      .page.is-hidden { display:none; }
-      .page.is-visible { visibility:visible; opacity:1; animation-name:page-fade-in; }
+    .page.home { padding:0; }
+    .page.is-hidden { display:none; }
+    .page.is-visible { visibility:visible; opacity:1; animation-name:page-fade-in; }
 
   .section-title-container { margin-bottom:10rem; }
     .section-title { font-size:3.5rem; margin-bottom:1rem; }

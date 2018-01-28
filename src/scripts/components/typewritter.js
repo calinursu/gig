@@ -87,7 +87,7 @@ class Typewritter {
       },
       {
         "text": "get in touch with us at ",
-        "tag": "span",
+        "tag": "a",
         "class": "intro-secondary-headline last",
         "href": "mailto:hello@obscurial.dk"
       },
@@ -95,7 +95,8 @@ class Typewritter {
         "text": "hello@obscurial.dk",
         "tag": "a",
         "class": "intro-secondary-headline last contact-line",
-        "href": "mailto:hello@obscurial.dk"
+        "href": "mailto:hello@obscurial.dk",
+        "newLine": "true"
       },
       {
         "text": "",
@@ -111,7 +112,7 @@ class Typewritter {
 
       setTimeout(() => {
         this.typewritter(text, i + 1, newLine, line, cb);
-      }, 20);
+      }, 10);
     }
     else if(newLine === true) {
       setTimeout(() => {
@@ -126,7 +127,15 @@ class Typewritter {
   startTypewritter(i) {
     const line = document.createElement(this.data[i].tag);
     const cursor = document.querySelector(".console-cursor");
-    line.className = this.data[i].class;
+
+    if (this.data[i].class) {
+      line.className = this.data[i].class;
+    }
+    
+    if (this.data[i].href) {
+      line.href = this.data[i].href;
+    }
+
     document.querySelector(".text-container").insertBefore(line, cursor);
 
     this.typewritter(this.data[i].text, 0, this.data[i].newLine, line, () => {

@@ -21,7 +21,7 @@
         .menu-button-container:hover .menu-button-bottom { transform:translateX(-.6rem); }
 
   /* Primary menu */
-  .main-menu { position:fixed; left:3.5rem; top:50%; transform:translateY(-50%); }
+  .main-menu { position:fixed; left:3.5rem; top:50%; transform:translateY(-50%); display:none; }
     .main-menu-item, .secondary-menu-item { display:block; font-size:1.4rem; padding:.7rem 0; margin:.7rem 0; }
       .secondary-menu-item { display:inline-block; margin-left:3.5rem; }
 
@@ -46,9 +46,6 @@
 
       .mobile-secondary-menu { margin-top:2rem; }
         .mobile-secondary-menu a { display:block; color:#aeaeae; font-size:1.8rem; padding:.7rem 0; }
-
-
-    
 
   @keyframes slideDown {
       0% { top:0; bottom:100%; }

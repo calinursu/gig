@@ -34,10 +34,7 @@ class Nav {
         .forEach(page => page.classList.remove('is-visible'));
       }
 
-      
-
-      
-      
+  
 
       var wanimationEvent = animationEvent(activePage);
 

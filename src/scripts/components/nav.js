@@ -34,12 +34,11 @@ class Nav {
         .forEach(page => page.classList.remove('is-visible'));
       }
 
-  
 
-      var wanimationEvent = animationEvent(activePage);
+      let animation = animationEvent(activePage);
 
-      wanimationEvent && activePage.addEventListener(wanimationEvent, function showNextPage() {
-        activePage.removeEventListener(wanimationEvent, showNextPage, false);
+      animation && activePage.addEventListener(animation, function showNextPage() {
+        activePage.removeEventListener(animation, showNextPage, false);
 
         activePage.classList.add('is-hidden');
 

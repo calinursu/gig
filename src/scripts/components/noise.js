@@ -1,5 +1,7 @@
+import HomePage from './homePage';
 class Noise {
   constructor(el) {    
+    console.log("NOIES");
       this.canvas;
       this.ctx;
       this.wWidth
@@ -15,6 +17,7 @@ class Noise {
       window.addEventListener('resize', this.resize.bind(this));
 
       this.setup();
+      HomePage.init();
   }
 
   createNoise() {

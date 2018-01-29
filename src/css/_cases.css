@@ -2,8 +2,14 @@
 .case-items { margin-top:10rem; }
 
   .case-container { position:relative; width:55vw; margin-bottom:25rem; }
-  .case-faded-text { position:absolute; width:100%; z-index:-3; height:58rem; top:25rem; left:0; padding-left:100%; font-size:17.2vw; color:#181818; text-align:center; animation:translate-off-canvas 20s linear infinite; }
-    .case-faded-text.duplicate { animation-delay:10s; }
+  .case-faded-text { position: absolute;
+    z-index: -3;
+    height: 58rem;
+    top: 25rem;
+    left: 0;
+    font-size: 27rem; padding-left:100%; color:#181818; text-align:center; animation:translate-off-canvas 20s linear infinite; }
+
+    .case-faded-text.duplicate { animation-delay:12s; }
     .case-faded-text.vrtbr, .case-faded-text.duplicate.vrtbr { top:25rem; }
     .case-faded-text.dynaway, .case-faded-text.duplicate.dynaway { top:90rem; }
 

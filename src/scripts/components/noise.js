@@ -1,7 +1,6 @@
 import HomePage from './homePage';
 class Noise {
   constructor(el) {    
-    console.log("NOIES");
       this.canvas;
       this.ctx;
       this.wWidth

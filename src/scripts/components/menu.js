@@ -13,25 +13,24 @@ class Menu {
   }
 
   open(e) {
-    if(this.menuActive){
+    if (this.hasClass(document.body, "mobile-menu-visible")){
       document.body.classList.remove("mobile-menu-visible");
-      this.textOpen.classList.remove("active");
-      this.textClosed.classList.add("active");
       this.menuActive = false;
-      e.currentTarget.classList.remove("active");
+
       this.el.classList.remove('is-visible');
       setTimeout(() => this.el.classList.add('is-hidden'), 800);
     }
     else {
       document.body.classList.add("mobile-menu-visible");
-      this.textClosed.classList.remove("active");
-      this.textOpen.classList.add("active");
-      
       this.menuActive = true;
-      this.openButton.classList.add("active");
+
       this.el.classList.remove('is-hidden')
       this.el.classList.add('is-visible');
     }
+  }
+
+  hasClass(element, cls) {
+    return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
   }
 
   static init(selector = ".mobile-menu-container", base = document) {

@@ -79,7 +79,8 @@ class Typewritter {
       {
         "text": "Web application development",
         "tag": "span",
-        "class": "intro-secondary-headline translate console-list-item"
+        "class": "intro-secondary-headline translate console-list-item",
+        "newLine": true
       },
       {
         "text": "",
@@ -96,7 +97,7 @@ class Typewritter {
         "tag": "a",
         "class": "intro-secondary-headline last contact-line",
         "href": "mailto:hello@obscurial.dk",
-        "newLine": "true"
+        "newLine": true
       },
       {
         "text": "",
@@ -112,7 +113,7 @@ class Typewritter {
 
       setTimeout(() => {
         this.typewritter(text, i + 1, newLine, line, cb);
-      }, 10);
+      }, 35);
     }
     else if(newLine === true) {
       setTimeout(() => {
@@ -125,22 +126,24 @@ class Typewritter {
   }
 
   startTypewritter(i) {
-    const line = document.createElement(this.data[i].tag);
-    const cursor = document.querySelector(".console-cursor");
+    if (i < this.data.length) { 
+      const line = document.createElement(this.data[i].tag);
+      const cursor = document.querySelector(".console-cursor");
 
-    if (this.data[i].class) {
-      line.className = this.data[i].class;
-    }
-    
-    if (this.data[i].href) {
-      line.href = this.data[i].href;
-    }
+      if (this.data[i].class) {
+        line.className = this.data[i].class;
+      }
 
-    document.querySelector(".text-container").insertBefore(line, cursor);
+      if (this.data[i].href) {
+        line.href = this.data[i].href;
+      }
 
-    this.typewritter(this.data[i].text, 0, this.data[i].newLine, line, () => {
-      this.startTypewritter(i + 1);
-    });
+      document.querySelector(".text-container").insertBefore(line, cursor);
+
+      this.typewritter(this.data[i].text, 0, this.data[i].newLine, line, () => {
+        this.startTypewritter(i + 1);
+      });
+    } 
   }
 
   static init() {

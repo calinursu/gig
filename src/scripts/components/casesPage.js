@@ -17,7 +17,6 @@ class CasesPage {
 
     this.caseImage.addEventListener('click', this.loadCase.bind(this));
     this.overlay.addEventListener('click', this.exitCase.bind(this));
-
   }
 
   loadCase(e) {
@@ -47,8 +46,6 @@ class CasesPage {
 
   exitCase(e) {
     this.caseImage.classList.remove('is-selected');
-    
-    
     this.text.classList.add('out');
 
     const background = this.contentContainer.querySelector('.is-visible .background');

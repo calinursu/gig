@@ -8,10 +8,10 @@ class Nav {
 
     this.el.addEventListener('click', this.loadPage.bind(this));
   }
-
-
+  
   loadPage(event) {
     event.preventDefault();
+    document.body.classList.remove("mobile-menu-visible");
 
     const activePage = this.pagesContainer.querySelector('.page.is-visible');
     const nextPage = this.pagesContainer.querySelector('.page[data-url="' + this.el.dataset.url + '"]');
@@ -34,7 +34,6 @@ class Nav {
         .forEach(page => page.classList.remove('is-visible'));
       }
 
-
       let animation = animationEvent(activePage);
 
       animation && activePage.addEventListener(animation, function showNextPage() {
@@ -46,12 +45,8 @@ class Nav {
         nextPage.classList.remove('is-hidden');
         window.scrollTo(0,0);
       });
-
-
-    }
-    
+    } 
   }
-
 
   static init(selector = ".main-menu-item", base = document) {
     base.querySelectorAll(selector).forEach(element => {

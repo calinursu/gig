@@ -14,9 +14,11 @@
     .main-elements-container.has-fade .secondary-menu-item { opacity:0; animation-name:enter-top; animation-delay:.1s; }
     .main-elements-container.has-fade .page-description { opacity:0; animation-name:enter-bottom; animation-delay:.1s; }
 
-    .menu-button-container { position:relative; float:right; margin-right:7rem; top:1.6rem; cursor:pointer; }
-      .menu-button-text { position:absolute; font-size:1.4rem; top:0; right:-0.6rem; opacity:0; width:0; }
-        .menu-button-text.active { opacity:1; }
+    .menu-button-container { position:relative; float:right; margin-right:1rem; top:.6rem; padding:1rem 6rem 1rem 2rem; cursor:pointer; }
+      .menu-button-text { position:absolute; font-size:1.4rem; top:.9rem; right:5.6rem; opacity:0; width:0; transition:opacity .3s; }
+        .menu-button-text.closed { opacity:1; }
+        .mobile-menu-visible .menu-button-text.closed { opacity:0; }
+        .mobile-menu-visible .menu-button-text.open { opacity:1; }
       .menu-button { position:relative; display:inline-block; height:1rem; margin-right:4rem; }
       .menu-button-top, .menu-button-bottom { position:absolute; width:2.3rem; height:.1rem; background:#fff; transition:transform .5s ease-out; }
         .menu-button-top { top:0; transform:translateX(-.6rem);  }
@@ -24,11 +26,8 @@
         .menu-button-container:hover .menu-button-top { transform:translateX(.6rem); }
         .menu-button-container:hover .menu-button-bottom { transform:translateX(-.6rem); }
 
-
-        .menu-button-container.active .menu-button-top { transform:rotateZ(45deg) scale(0.7) translate(5px,7px); }
-        .menu-button-container.active .menu-button-bottom { transform:rotateZ(-45deg) scale(.7) translate(3px,-3px); }
-        
-
+        .mobile-menu-visible .menu-button-top { transform:rotateZ(45deg) scale(0.7) translate(5px,7px); }
+        .mobile-menu-visible .menu-button-bottom { transform:rotateZ(-45deg) scale(.7) translate(3px,-3px); }
   /* Primary menu */
   /* .main-menu { position:fixed; left:3.5rem; top:50%; transform:translateY(-50%); }
     .main-menu-item, .secondary-menu-item { display:block; font-size:1.4rem; padding:.7rem 0; margin:.7rem 0; }
@@ -82,12 +81,6 @@
 @media all and (max-width:1024px) {
   .page-description { display:none; }
 } 
-
-@media all and (max-width:768px) {
-  .menu-button-container { margin:.7rem 2.5rem 0 0; }
-}
-
-
 
 @keyframes slide-down {
     0% { top:0; bottom:100%; }

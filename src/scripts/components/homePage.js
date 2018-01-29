@@ -2,7 +2,6 @@ import Typewritter from './typewritter';
 
 class HomePage {
   constructor(el) {
-    console.log("HOMEPAGE");
     this.el = el;
     this.introBox = this.el.querySelector(".intro-small-box");
 

@@ -2,9 +2,8 @@
 .case-items { margin-top:10rem; }
 
   .case-container { position:relative; width:55vw; margin-bottom:25rem; }
-  .case-faded-text { position:absolute; width:100%; z-index:-3; height:58rem; top:25rem; left:0; padding-left:100%; font-size:17.2vw; color:#181818; text-align:center; animation:translate-off-canvas 20s linear infinite; }
-    .case-faded-text.duplicate { animation-delay:10s; }
-    .case-faded-text.vrtbr, .case-faded-text.duplicate.vrtbr { top:25rem; }
+  .case-faded-text { position:absolute; z-index:-3; font-size:55rem; color:#181818; animation:translate-off-canvas 15s linear infinite; }
+    .case-faded-text.vrtbr, .case-faded-text.duplicate.vrtbr { top:20rem; }
     .case-faded-text.dynaway, .case-faded-text.duplicate.dynaway { top:90rem; }
 
     .case-image { cursor:pointer; padding-top:56.25%; background-position:center; background-size:cover; background-repeat:no-repeat; }
@@ -129,5 +128,5 @@
 
 @keyframes translate-off-canvas {
     0% { transform:translate3d(0%, 0, 0); }
-    100% { transform:translate3d(-100%, 0, 0); }
+    100% { transform:translate3d(-50%, 0, 0); }
 }

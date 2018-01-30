@@ -22,6 +22,8 @@ class Nav {
       //history.pushState(null, null, this.locationOrigin + '/' + this.el.dataset.url);
       this.currentPage = this.el.dataset.url;
 
+      const that = this;
+
       // verify if mobile menu is expanded, so the page animations will wait
       if(mobile !== null) {
         mobile.classList.remove('is-visible');
@@ -43,10 +45,11 @@ class Nav {
 
         nextPage.classList.add('is-visible');
         nextPage.classList.remove('is-hidden');
+        that.changePageDescription(nextPage);
         window.scrollTo(0,0);
       });
 
-      this.changePageDescription(nextPage);
+      
     } 
   }
 

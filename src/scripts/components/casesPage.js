@@ -13,13 +13,15 @@ class CasesPage {
     this.background = this.content.querySelector('.background');
     this.overlay = this.content.querySelector('.overlay');
 
-    this.masa = document.querySelector('.cases .section-title-container');
+    this.section = document.querySelector('.cases .section-title-container');
 
     this.caseImage.addEventListener('click', this.loadCase.bind(this));
     this.overlay.addEventListener('click', this.exitCase.bind(this));
   }
 
   loadCase(e) {
+    window.hasCaseOpen = true;
+
     this.caseImage.classList.add('is-selected');
     this.menu.classList.add('has-overlay');
     this.menu.classList.remove('has-fade');
@@ -38,13 +40,15 @@ class CasesPage {
 
       window.scrollTo(0,0);
       that.caseImage.classList.remove('is-selected');
-      that.masa.style.display = 'none';
+      that.section.style.display = 'none';
 
     }, false);
  
   }
 
   exitCase(e) {
+    window.hasCaseOpen = false;
+
     this.caseImage.classList.remove('is-selected');
     this.text.classList.add('out');
 
@@ -57,7 +61,7 @@ class CasesPage {
         that.text.removeEventListener(textAnimation, fadeOutText, false);
 
         window.scrollTo(0,0);
-        that.masa.style.display = 'block';
+        that.section.style.display = 'block';
         background.classList.add('out');
 
         let animation = animationEvent(background);

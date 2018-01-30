@@ -13,7 +13,7 @@ class Noise {
       this.canvas = document.querySelector('.with-noise');
       this.ctx = this.canvas.getContext('2d');
 
-      window.addEventListener('resize', this.resize.bind(this));
+      window.addEventListener('resize', this.reset.bind(this));
 
       this.setup();
       HomePage.init();
@@ -61,6 +61,8 @@ class Noise {
     this.canvas.width = this.wWidth;
     this.canvas.height = this.wHeight;
 
+    this.noiseData = [];
+
     for (let i = 0; i < 10; i++) {
       this.createNoise();
     }
@@ -68,26 +70,14 @@ class Noise {
     this.loop();
   };
 
-  resize() {
-    this.wWidth = window.innerWidth;
-    this.wHeight = window.innerHeight;
-
-    this.canvas.width = this.wWidth;
-    this.canvas.height = this.wHeight;
-  }
-
-
   // Reset
   reset() {
     window.addEventListener('resize', () => {
       window.clearTimeout(this.resizeThrottle);
-
-      const that = this;
-
-      resizeThrottle = window.setTimeout(() => {
-        window.clearTimeout(loopTimeout);
-        that.setup();
-      }, 200);
+      this.resizeThrottle = window.setTimeout(() => {
+        window.clearTimeout(this.loopTimeout);
+        this.setup();
+      }, 1000);
     }, false);
   };
 

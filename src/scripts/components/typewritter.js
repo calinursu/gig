@@ -1,109 +1,8 @@
 class Typewritter {
-  constructor() {
-    this.data = [
-      {
-        "text": "Obscurial",
-        "tag": "span",
-        "class": "intro-secondary-headline color-line"
-      },
-      { 
-        "text":" is a software consultancy company",
-        "tag":"span",
-        "class":"intro-secondary-headline",
-        "newLine": true
-      },
-      {
-        "text": "",
-        "tag": "div",
-        "class": "hr hide-desktop",
-      },
-      {
-        "text": "we",
-        "tag": "span",
-        "class": "intro-secondary-headline color-line"
-      },
-      {
-        "text": " craft great experiences and love internet technologies",
-        "tag": "span",
-        "class": "intro-secondary-headline",
-        "newLine":true
-      },
-      {
-        "text": "",
-        "tag": "div",
-        "class": "hr"
-      },
-      {
-        "text": "we ",
-        "tag": "span",
-        "class": "intro-secondary-headline color-line"
-      },
-      {
-        "text": " help businesses with",
-        "tag": "span",
-        "class": "intro-secondary-headline",
-        "newLine":true
-      },
-      {
-        "text": "",
-        "tag": "div",
-        "class": "pre-list"
-      },
-      {
-        "text": "Web application development",
-        "tag": "span",
-        "class": "intro-secondary-headline first translate same-line console-list-item"
-      },
-      {
-        "text": "",
-        "tag": "br",
-      },
-      {
-        "text": "Web application development",
-        "tag": "span",
-        "class": "intro-secondary-headline translate console-list-item"
-      },
-      {
-        "text": "",
-        "tag": "br",
-      },
-      {
-        "text": "Web application development",
-        "tag": "span",
-        "class": "intro-secondary-headline translate console-list-item"
-      },
-      {
-        "text": "",
-        "tag": "br",
-      },
-      {
-        "text": "Web application development",
-        "tag": "span",
-        "class": "intro-secondary-headline translate console-list-item",
-        "newLine": true
-      },
-      {
-        "text": "",
-        "tag": "br",
-      },
-      {
-        "text": "get in touch with us at ",
-        "tag": "a",
-        "class": "intro-secondary-headline last",
-        "href": "mailto:hello@obscurial.dk"
-      },
-      {
-        "text": "hello@obscurial.dk",
-        "tag": "a",
-        "class": "intro-secondary-headline last contact-line",
-        "href": "mailto:hello@obscurial.dk",
-        "newLine": true
-      },
-      {
-        "text": "",
-        "tag": "div",
-      }
-    ];
+  constructor(data, el, typingSpeed) {
+    this.el = el;
+    this.data = data;
+    this.typingSpeed = typingSpeed;
     this.startTypewritter(0, "h2", "intro-secondary-headline");
   }
 
@@ -113,7 +12,7 @@ class Typewritter {
 
       setTimeout(() => {
         this.typewritter(text, i + 1, newLine, line, cb);
-      }, 35);
+      }, this.typingSpeed);
     }
     else if(newLine === true) {
       setTimeout(() => {
@@ -127,27 +26,36 @@ class Typewritter {
 
   startTypewritter(i) {
     if (i < this.data.length) { 
-      const line = document.createElement(this.data[i].tag);
-      const cursor = document.querySelector(".console-cursor");
+      if(this.data[i].tag) {
+        const line = document.createElement(this.data[i].tag);
+        const cursor = document.querySelector(".console-cursor");
 
-      if (this.data[i].class) {
-        line.className = this.data[i].class;
+        if (this.data[i].class) {
+          line.className = this.data[i].class;
+        }
+
+        if (this.data[i].href) {
+          line.href = this.data[i].href;
+        }
+
+        this.el.insertBefore(line, cursor);
+
+        this.typewritter(this.data[i].text, 0, this.data[i].newLine, line, () => {
+          this.startTypewritter(i + 1);
+        });
       }
-
-      if (this.data[i].href) {
-        line.href = this.data[i].href;
+      else {
+        const line = this.el;
+        
+        this.typewritter(this.data[i].text, 0, this.data[i].newLine, line, () => {
+          this.startTypewritter(i + 1);
+        });
       }
-
-      document.querySelector(".text-container").insertBefore(line, cursor);
-
-      this.typewritter(this.data[i].text, 0, this.data[i].newLine, line, () => {
-        this.startTypewritter(i + 1);
-      });
     } 
   }
 
   static init() {
-    new Typewritter();
+    new Typewritter(this.el);
   }
 }
 

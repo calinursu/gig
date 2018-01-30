@@ -1,3 +1,4 @@
+import Typewritter from './typewritter';
 import animationEvent from './animationEvent';
 
 class Nav {
@@ -18,7 +19,6 @@ class Nav {
     const mobile = document.querySelector('.mobile-menu-container.is-visible');
 
     if(nextPage && !nextPage.classList.contains('is-visible')) {
-
       //history.pushState(null, null, this.locationOrigin + '/' + this.el.dataset.url);
       this.currentPage = this.el.dataset.url;
 
@@ -45,7 +45,21 @@ class Nav {
         nextPage.classList.remove('is-hidden');
         window.scrollTo(0,0);
       });
+
+      this.changePageDescription(nextPage);
     } 
+  }
+
+  changePageDescription(nextPage) {
+    const pageDescription = document.querySelector(".page-description .heading");
+    const pageDescriptionNumber = document.querySelector(".page-description .page-number");
+    const nextPageIndex = Array.from(document.querySelectorAll(".page")).indexOf(nextPage);
+    
+    pageDescription.innerHTML = "";
+    pageDescriptionNumber.innerHTML = "";
+
+    new Typewritter([{ "text": nextPage.dataset.url }], pageDescription, 60);
+    new Typewritter([{ "text": '0'+nextPageIndex.toString() }], pageDescriptionNumber, 80);
   }
 
   static init(selector = ".main-menu-item", base = document) {

@@ -1,12 +1,8 @@
-/* <<<<<<< HEAD
-  header { z-index:2; position:fixed; width:calc(100%); padding-top:3rem; padding-bottom:3rem; }
-======= */
-  header { position:fixed; width:calc(100%); padding-top:3rem; padding-bottom:3rem; }
+header { position:fixed; width:calc(100%); padding-top:3rem; padding-bottom:3rem; }
 
   .main-elements-container > header,
   .main-elements-container > nav, 
   .main-elements-container > div { z-index:3; }
-/* >>>>>>> b9f7064e89bbc5a3e9e5adf3fa665161d440957c */
 
   .main-elements-container .secondary-menu-item, .main-elements-container .page-description { animation-fill-mode:forwards; animation-duration:.3s; animation-delay:.5s; animation-timing-function:cubic-bezier(.785,.135,.15,.86); }
     .main-elements-container.has-overlay .secondary-menu-item { animation-name:exit-top; }
@@ -28,15 +24,7 @@
 
         .mobile-menu-visible .menu-button-top { transform:rotateZ(45deg) scale(0.7) translate(5px,7px); }
         .mobile-menu-visible .menu-button-bottom { transform:rotateZ(-45deg) scale(.7) translate(3px,-3px); }
-  /* Primary menu */
-  /* .main-menu { position:fixed; left:3.5rem; top:50%; transform:translateY(-50%); }
-    .main-menu-item, .secondary-menu-item { display:block; font-size:1.4rem; padding:.7rem 0; margin:.7rem 0; }
-      .secondary-menu-item { display:inline-block; margin-left:3.5rem; }
-      .mobile-menu-visible .secondary-menu-item { display:none; }
-======= */
-  .secondary-menu-item { display:inline-block; font-size:1.4rem; padding:.7rem 0; margin:.7rem 0 .7rem 3.5rem; }
-
-/* >>>>>>> b9f7064e89bbc5a3e9e5adf3fa665161d440957c */
+    .secondary-menu-item { display:inline-block; font-size:1.4rem; padding:.7rem 0; margin:.7rem 0 .7rem 3.5rem; }
 
   /* Mobile menu */
   .mobile-menu-container { position:fixed; top:0; left:0; right:0; bottom:0; width:100%; z-index:2; }
@@ -48,26 +36,19 @@
   .mobile-menu-container .background { position:absolute; top:0; left:0; right:0; bottom:0; width:100%; background-color:#232323; animation-name:slide-up; animation-delay:.3s; animation-duration:.5s; animation-fill-mode:forwards; animation-timing-function:cubic-bezier(.785,.135,.15,.86); }
   .mobile-menu-container.is-visible .background { animation-name:slide-down; animation-delay:0s; }
 
-/* <<<<<<< HEAD */
-    /* .mobile-menu-container .link { position:absolute; left:3rem; top:4.6rem; font-size:1.5rem; }
-    .mobile-menu-container .logo { position:absolute; left:50%; transform:translateX(-50%); top:3.2rem; font-size:1.3rem; opacity:.3; } */
+  .mobile-menu-container .logo { margin-top:3rem; }
+  .close-mobile-menu { position:absolute; right:2rem; top:2rem; cursor:pointer; padding:1.5rem 1rem; }
+    .close-mobile-menu span { display:block;  width:4rem; height:.2rem; background-color:white; }
 
-    .mobile-menu-container .logo { margin-top:3rem; }
-/* >>>>>>> b9f7064e89bbc5a3e9e5adf3fa665161d440957c */
-    
-    .close-mobile-menu { position:absolute; right:2rem; top:2rem; cursor:pointer; padding:1.5rem 1rem; }
-      .close-mobile-menu span { display:block;  width:4rem; height:.2rem; background-color:white; }
+  .mobile-menu { position:absolute; left:3rem; top:50%; transform:translateY(-50%); }
+    .mobile-main-menu a { display:block; font-size:2.5rem; padding:.7rem 0; margin:.7rem 0; }
 
-    .mobile-menu { position:absolute; left:3rem; top:50%; transform:translateY(-50%); }
-      .mobile-main-menu a { display:block; font-size:2.5rem; padding:.7rem 0; margin:.7rem 0; }
-
-      .mobile-secondary-menu { margin-top:2rem; }
-        .mobile-secondary-menu a { display:block; color:#aeaeae; font-size:1.8rem; padding:.7rem 0; }
-
-
+    .mobile-secondary-menu { margin-top:2rem; }
+      .mobile-secondary-menu a { display:block; color:#aeaeae; font-size:1.8rem; padding:.7rem 0; }
 
   .page-description { position:fixed; left:5.5rem; bottom:10rem; width:3rem; }
-    .heading { transform:rotate(-90deg); transform-origin:left top 0; font-size:1.5rem; position:absolute; left:-1.9rem; top:9rem; }
+    .page-description .heading { transform:rotate(-90deg); transform-origin:left top 0; font-size:1.5rem; position:absolute; left:-1.9rem; top:9rem; }
+    .page-description .heading:first-letter { text-transform:capitalize; }
     .page-number { font-size:1.6rem; }
       .page-number:after { content:''; background-color:white; width:.1rem; height:7rem; position:absolute; right:0; }
 

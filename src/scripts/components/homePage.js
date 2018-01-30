@@ -3,7 +3,114 @@ import Typewritter from './typewritter';
 class HomePage {
   constructor(el) {
     this.el = el;
+
+    const data = [
+      {
+        "text": "Obscurial",
+        "tag": "span",
+        "class": "intro-secondary-headline color-line"
+      },
+      {
+        "text": " is a software consultancy company",
+        "tag": "span",
+        "class": "intro-secondary-headline",
+        "newLine": true
+      },
+      {
+        "text": "",
+        "tag": "div",
+        "class": "hr hide-desktop",
+      },
+      {
+        "text": "we",
+        "tag": "span",
+        "class": "intro-secondary-headline color-line"
+      },
+      {
+        "text": " craft great experiences and love internet technologies",
+        "tag": "span",
+        "class": "intro-secondary-headline",
+        "newLine": true
+      },
+      {
+        "text": "",
+        "tag": "div",
+        "class": "hr"
+      },
+      {
+        "text": "we ",
+        "tag": "span",
+        "class": "intro-secondary-headline color-line"
+      },
+      {
+        "text": " help businesses with",
+        "tag": "span",
+        "class": "intro-secondary-headline",
+        "newLine": true
+      },
+      {
+        "text": "",
+        "tag": "div",
+        "class": "pre-list"
+      },
+      {
+        "text": "Web application development",
+        "tag": "span",
+        "class": "intro-secondary-headline first translate same-line console-list-item"
+      },
+      {
+        "text": "",
+        "tag": "br",
+      },
+      {
+        "text": "Web application development",
+        "tag": "span",
+        "class": "intro-secondary-headline translate console-list-item"
+      },
+      {
+        "text": "",
+        "tag": "br",
+      },
+      {
+        "text": "Web application development",
+        "tag": "span",
+        "class": "intro-secondary-headline translate console-list-item"
+      },
+      {
+        "text": "",
+        "tag": "br",
+      },
+      {
+        "text": "Web application development",
+        "tag": "span",
+        "class": "intro-secondary-headline translate console-list-item",
+        "newLine": true
+      },
+      {
+        "text": "",
+        "tag": "br",
+      },
+      {
+        "text": "get in touch with us at ",
+        "tag": "a",
+        "class": "intro-secondary-headline last",
+        "href": "mailto:hello@obscurial.dk"
+      },
+      {
+        "text": "hello@obscurial.dk",
+        "tag": "a",
+        "class": "intro-secondary-headline last contact-line",
+        "href": "mailto:hello@obscurial.dk",
+        "newLine": true
+      },
+      {
+        "text": "",
+        "tag": "div",
+      }
+    ];
+
     this.introBox = this.el.querySelector(".intro-small-box");
+    this.Typewritter = new Typewritter(data, this.el.querySelector(".text-container"), 35);
 
     this.introBox.addEventListener("transitionend", Typewritter.init);
 

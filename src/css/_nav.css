@@ -33,7 +33,7 @@ header { position:fixed; width:calc(100%); padding-top:3rem; padding-bottom:3rem
   .mobile-menu-container .mobile-menu-inner-container { animation-name:hide-text; visibility:hidden; opacity:0; position:relative; z-index:3; height:100%; animation-fill-mode:forwards; animation-duration:.3s; animation-timing-function:cubic-bezier(.785,.135,.15,.86); }
   .mobile-menu-container.is-visible .mobile-menu-inner-container { animation-name:show-text; animation-delay:.5s; }  
 
-  .mobile-menu-container .background { position:absolute; top:0; left:0; right:0; bottom:0; width:100%; background-color:#232323; animation-name:slide-up; animation-delay:.3s; animation-duration:.5s; animation-fill-mode:forwards; animation-timing-function:cubic-bezier(.785,.135,.15,.86); }
+  .mobile-menu-container .background { position:absolute; top:0; left:0; right:0; bottom:0; width:100%; background-color:#181818; animation-name:slide-up; animation-delay:.3s; animation-duration:.5s; animation-fill-mode:forwards; animation-timing-function:cubic-bezier(.785,.135,.15,.86); }
   .mobile-menu-container.is-visible .background { animation-name:slide-down; animation-delay:0s; }
 
   .mobile-menu-container .logo { margin-top:3rem; }
@@ -69,8 +69,8 @@ header { position:fixed; width:calc(100%); padding-top:3rem; padding-bottom:3rem
 }
 
 @keyframes slide-up {
-    0% { bottom:0; top:0; }
-    100% { top:0; bottom:100%; display:none; }
+    0% { top:0; bottom:0; }
+    100% { top:100%; bottom:0; display:none; }
 }
 
 @keyframes show-text {

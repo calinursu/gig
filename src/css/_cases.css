@@ -1,7 +1,7 @@
 
 .case-items { margin-top:10rem; }
 
-  .case-container { position:relative; width:55vw; margin-bottom:25rem; }
+  .case-container { position:relative; width:55vw; margin-bottom:35rem; }
   .case-faded-text { position:absolute; z-index:-3; font-size:55rem; color:#181818; animation:translate-off-canvas 15s linear infinite; }
     .case-faded-text.vrtbr, .case-faded-text.duplicate.vrtbr { top:20rem; }
     .case-faded-text.dynaway, .case-faded-text.duplicate.dynaway { top:90rem; }
@@ -63,14 +63,15 @@
 }
 
 @media all and (max-width:1024px) {
-  .case-container { width:100%; margin-bottom:5rem; } 
-    .case-text-container { width:62rem; position:relative; right:initial; transform:translate(6rem, -10rem); }
+  .case-container { max-width:70rem; width:90%; }
+    .case-image { height:38vh; padding-top:0; }
+    .case-text-container { left:4rem; bottom:-17rem; right:auto; top:auto; transform:none; }
       .case-excerpt { font-size:1.6rem; }
-    .case-button-container { position:relative; left:6rem; bottom:8rem; }
+    .case-button-container { display:none; position:relative; left:6rem; bottom:8rem; }
 }
 
 @media all and (max-width:768px) {
-  .case-text-container { width:85%; }
+  .case-text-container { width:94%; bottom:-15rem; }
     .case-excerpt { font-size:1.4rem; }
 
   .case-single .case-box { padding:0 3rem; }
@@ -78,10 +79,16 @@
     .text-card p { font-size:1.5rem; }
 }
 
+@media all and (max-width:630px) {
+  .case-container { width:100%; }
+    .case-image { height:28vh; }
+    .case-text-container { left:2rem; bottom:-17rem; }
+      .case-title { font-size:6rem; }
+      .case-subtitle { font-size:2rem; }
+}
+
 @media all and (max-width:540px) {
-  .case-text-container { transform:translate(2rem, -4rem); }
-    .case-title { font-size:6rem; }
-  .case-button-container { left:2rem; bottom:2rem; }
+  .case-text-container { left:1rem; }
 }
 
 

@@ -2,8 +2,10 @@ class Scroll {
   constructor(el) {
     this.el = el;
     this.windowScrollTop = 0;
+    this.speed = this.el.dataset.speed;
 
-    document.addEventListener('scroll', this.setTopScroll.bind(this));
+    if(window.innerWidth > 768)
+      document.addEventListener('scroll', this.setTopScroll.bind(this));
     
     this.move();
   }
@@ -12,7 +14,7 @@ class Scroll {
     const windowHeight = window.innerHeight,
           movement = -windowHeight / 2.5,
           start = 260,
-          stop = 1870,
+          stop = this.speed !== null ? this.speed * 180 : 1870,
           percent = (this.windowScrollTop - start) / (stop - start),
           destY = movement * percent,
           transform = this.el.style.transform;

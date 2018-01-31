@@ -31,8 +31,8 @@
         /*Single case*/
         .case-single-container { position:absolute; top:0; left:0; right:0; bottom:0; z-index:3; display:none; }
         .case-single-container.is-visible { display:block; }
-          .case-single { opacity:0; visibility:hidden; width:100%; height:100%; animation-duration:.5s; animation-delay:1.5s; animation-fill-mode:forwards; }
-          .case-single.is-visible { animation-name:case-visible; }
+          .case-single { opacity:0; visibility:hidden; display:none; width:100%; height:100%; animation-duration:.5s; animation-delay:1.5s; animation-fill-mode:forwards; }
+          .case-single.is-visible { animation-name:case-visible; display:block; }
 
             .case-single .case-single-content.out { animation:case-hidden .3s; animation-fill-mode:forwards; }
             .case-single .overlay { position:fixed; top:0; left:0; right:0; bottom:0; z-index:1; cursor:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pjxzdmcgc3Ryb2tlPSIjMDAwMDAwIiB2aWV3Qm94PSIwIDAgMzIgMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGxpbmUgc3Ryb2tlLXdpZHRoPSI0IiB4MT0iMiIgeDI9IjMwIiB5MT0iMiIgeTI9IjMwIi8+PGxpbmUgc3Ryb2tlLXdpZHRoPSI0IiB4MT0iMiIgeDI9IjMwIiB5MT0iMzAiIHkyPSIyIi8+PC9zdmc+), auto; }
@@ -80,15 +80,15 @@
 }
 
 @media all and (max-width:630px) {
-  .case-container { width:100%; }
+  .case-container { width:100%; margin-bottom:27rem; }
     .case-image { height:28vh; }
-    .case-text-container { left:2rem; bottom:-17rem; }
+    .case-text-container { left:2rem; bottom:-13rem; }
       .case-title { font-size:6rem; }
       .case-subtitle { font-size:2rem; }
 }
 
 @media all and (max-width:540px) {
-  .case-text-container { left:1rem; }
+  .case-text-container { left:1rem; bottom:-12rem; }
 }
 
 

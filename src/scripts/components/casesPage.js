@@ -30,17 +30,16 @@ class CasesPage {
 
     this.contentContainer.classList.add('is-visible');
     this.content.classList.add('is-visible');
-
+    
     this.text.classList.remove('out');
     this.background.classList.remove('out');
-
 
     const that = this;
     let animation = animationEvent(this.content);
     animation && this.content.addEventListener(animation, function showCase() {
       that.content.removeEventListener(animation, showCase, false);
 
-      window.scrollTo(0,0);
+      
       that.caseImage.classList.remove('is-selected');
       that.section.style.display = 'none';
 
@@ -54,7 +53,7 @@ class CasesPage {
     this.caseImage.classList.remove('is-selected');
     this.text.classList.add('out');
 
-    const background = this.contentContainer.querySelector('.is-visible .background');
+    const background = this.contentContainer.querySelector('.case-single.is-visible .background');
   
     let textAnimation = animationEvent(this.text);
     const that = this;
@@ -73,7 +72,7 @@ class CasesPage {
             that.contentContainer.classList.remove('is-visible');
             that.content.classList.remove('is-visible'); 
             that.menu.classList.remove('has-overlay'); 
-            that.menu.classList.add('has-fade');       
+            that.menu.classList.add('has-fade');    
 
         }, false);
 

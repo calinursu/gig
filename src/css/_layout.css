@@ -1,15 +1,17 @@
 main { position:relative; padding:15rem 0 0 23rem; box-sizing:border-box; }
-  .page { position:absolute; width:100%; min-height:100%; margin:0 auto; max-width:140rem; box-sizing:border-box; }
+  .page { min-height:100%; margin:0 auto; max-width:140rem; box-sizing:border-box; }
     .page.home { padding:0; }
-    .page.is-hidden { opacity:0; }
-    .page.is-visible {  opacity:1; }
+    .page.is-hidden { opacity:0; visibility:hidden; height:0; }
+    .page.is-visible {  opacity:1; visibility:visible; }
 
   .section-title-container { margin-bottom:10rem; }
     .section-title { font-size:3.5rem; margin-bottom:1rem; }
     .section-subtitle { font-size:1.6rem; }
 
-.fade-up { position:relative; transform:translateY(5rem); opacity:0; transition:transform .5s .6s, opacity .5s .6s; }    
-.is-visible .fade-up { transform:translate(0rem); opacity:1; }
+.fade-up { position:relative; transform:translateY(5rem); opacity:0; transition:transform .9s .4s, opacity .5s .4s; } 
+  .fade-up.second { transition-delay:.6s; }    
+  .fade-up.third { transition-delay:.8s; }    
+  .is-visible .fade-up { transform:translate(0rem); opacity:1; }
 
 /* @keyframes page-fade-in {
   from { opacity:0; visibility:hidden; }
@@ -20,6 +22,9 @@ main { position:relative; padding:15rem 0 0 23rem; box-sizing:border-box; }
   from { opacity:1; visibility:visible; }
   to { opacity:0; visibility:hidden;  }
 } */
+@media all and (min-width:1445px) {
+.page { width:60%; }
+}
 
 @media all and (max-width:1024px) {
   main { padding:11rem 0 0 0; }

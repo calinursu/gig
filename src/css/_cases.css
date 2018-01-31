@@ -2,7 +2,7 @@
 .case-items { margin-top:10rem; }
 
   .case-container { position:relative; width:55vw; margin-bottom:35rem; }
-  .case-faded-text { position:absolute; z-index:-3; font-size:55rem; color:#181818; animation:translate-off-canvas 15s linear infinite; }
+  .case-faded-text { position:absolute; z-index:-3; font-size:55rem; color:#272727; animation:translate-off-canvas 15s linear infinite; }
     .case-faded-text.vrtbr, .case-faded-text.duplicate.vrtbr { top:20rem; }
     .case-faded-text.dynaway, .case-faded-text.duplicate.dynaway { top:90rem; }
 

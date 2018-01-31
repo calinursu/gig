@@ -7,6 +7,10 @@ class Nav {
     this.pagesContainer = document.querySelector('.content');
     this.locationOrigin = window.location.origin;
 
+    // elements for case page, when you have a case open and you want to navigate back to cases
+    this.contentContainer = document.querySelector('.case-single-container');
+    this.section = document.querySelector('.cases .section-title-container');
+
     this.el.addEventListener('click', this.loadPage.bind(this));
   }
   
@@ -48,9 +52,21 @@ class Nav {
         that.changePageDescription(nextPage);
         window.scrollTo(0,0);
       });
-
       
-    } 
+    } else {
+
+      const content = this.contentContainer.querySelector('.case-single.is-visible');
+
+       mobile.classList.remove('is-visible');
+        setTimeout( () => {
+          mobile.classList.add('is-hidden');
+        }, 800 );
+
+      this.contentContainer.classList.remove('is-visible');
+      content.classList.remove('is-visible'); 
+      this.section.style.display = 'block';
+
+    }
   }
 
   changePageDescription(nextPage) {

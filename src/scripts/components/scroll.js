@@ -5,9 +5,8 @@ class Scroll {
     this.speed = this.el.dataset.speed;
 
     if(window.innerWidth > 768)
-      document.addEventListener('scroll', this.setTopScroll.bind(this));
-    
-    this.move();
+      document.addEventListener('scroll', this.setTopScroll.bind(this)),
+      this.move();
   }
 
   move() {
@@ -28,8 +27,8 @@ class Scroll {
   }
 
   setTopScroll(e) {
-        this.windowScrollTop = window.pageYOffset;
-    }
+      this.windowScrollTop = window.pageYOffset;
+  }
 
   static init(selector = ".move", base = document) {
     base.querySelectorAll(selector).forEach(element => {

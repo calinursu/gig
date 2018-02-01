@@ -61,7 +61,12 @@ header { position:fixed; width:calc(100%); padding-top:3rem; padding-bottom:3rem
 
 @media all and (max-width:1024px) {
   .page-description { display:none; }
+}
+@media all and (max-width:768px) {
+  .secondary-menu-item { display:none; }
+  .mobile-menu-visible .secondary-menu-item { display:inline-block; }
 } 
+
 
 @keyframes slide-down {
     0% { top:0; bottom:100%; }

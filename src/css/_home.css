@@ -30,7 +30,7 @@
         .intro-large-box .overlay { position:absolute; background:#090909eb; width:100%; height:100%; opacity:1; }
 			.intro-medium-box { display:block; width:40vw; height:46vh; max-width:54rem; position:absolute; left:23%; top:5rem; background-color:#1f1f1f; }
       .intro-small-box-container { position:absolute; opacity:.2; display:block; width:47vw; height:53rem; position:absolute; top:10rem; right:0; overflow:hidden; }
-        .intro-small-box { position:relative; background:#18b176; width:100%; height:100%; transform:translate3d(0, -100%, 0); transition:transform .7s;  }
+        .intro-small-box { position:relative; background:#18b176; width:100%; height:100%; transform:translate3d(0, -100%, 0); transition:transform .7s cubic-bezier(.785,.135,.15,.86);  }
           .intro-small-box.active { transform:translate3d(0, 0, 0); }
 
 @media all and (min-width:1025px) {

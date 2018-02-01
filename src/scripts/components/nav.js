@@ -12,6 +12,7 @@ class Nav {
     this.section = document.querySelector('.cases .section-title-container');
 
     this.el.addEventListener('click', this.loadPage.bind(this));
+    document.querySelector(".mobile-menu-container").addEventListener('transitionend', this.changePageDescription.bind(this));
   }
   
   loadPage(event) {
@@ -19,10 +20,10 @@ class Nav {
     document.body.classList.remove("mobile-menu-visible");
 
     const activePage = this.pagesContainer.querySelector('.page.is-visible');
-    const nextPage = this.pagesContainer.querySelector('.page[data-url="' + this.el.dataset.url + '"]');
+    this.nextPage = this.pagesContainer.querySelector('.page[data-url="' + this.el.dataset.url + '"]');
     const mobile = document.querySelector('.mobile-menu-container.is-visible');
 
-    if(nextPage && !nextPage.classList.contains('is-visible')) {
+    if (this.nextPage && !this.nextPage.classList.contains('is-visible')) {
       //history.pushState(null, null, this.locationOrigin + '/' + this.el.dataset.url);
       this.currentPage = this.el.dataset.url;
 
@@ -42,17 +43,15 @@ class Nav {
 
       let animation = animationEvent(activePage);
 
-      animation && activePage.addEventListener(animation, function showNextPage() {
-        activePage.removeEventListener(animation, showNextPage, false);
-
+      // animation && activePage.addEventListener(animation, function showNextPage() {
+        // activePage.removeEventListener(animation, showNextPage, false);
+        activePage.classList.remove('is-visible');
         activePage.classList.add('is-hidden');
 
-        nextPage.classList.add('is-visible');
-        nextPage.classList.remove('is-hidden');
-        that.changePageDescription(nextPage);
+        this.nextPage.classList.add('is-visible');
+        this.nextPage.classList.remove('is-hidden');
+        that.changePageDescription();
         window.scrollTo(0,0);
-      });
-      
     } else {
 
       const content = this.contentContainer.querySelector('.case-single.is-visible');
@@ -69,15 +68,15 @@ class Nav {
     }
   }
 
-  changePageDescription(nextPage) {
+  changePageDescription() {
     const pageDescription = document.querySelector(".page-description .heading");
     const pageDescriptionNumber = document.querySelector(".page-description .page-number");
-    const nextPageIndex = Array.from(document.querySelectorAll(".page")).indexOf(nextPage);
+    const nextPageIndex = Array.from(document.querySelectorAll(".page")).indexOf(this.nextPage);
     
     pageDescription.innerHTML = "";
     pageDescriptionNumber.innerHTML = "";
 
-    new Typewritter([{ "text": nextPage.dataset.url }], pageDescription, 60);
+    new Typewritter([{ "text": this.nextPage.dataset.url }], pageDescription, 60);
     new Typewritter([{ "text": '0'+nextPageIndex.toString() }], pageDescriptionNumber, 80);
   }
 

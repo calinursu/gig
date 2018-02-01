@@ -4,7 +4,7 @@
     .info-box.grey { width:52vw; padding:5rem; top:4rem; left:5vw; box-sizing:border-box; line-height:3.6rem; background-color:#232323; }
     .info-box.green { width:59vw; height:65rem; top:42rem; right:0; background-color:#105130; opacity:.7; background-image:url("../images/map-right.jpg"); background-size:cover; }
       .info-box.green { opacity:0; }
-      .is-visible .fade-up.info-box.green { opacity:.7; }
+      /* .is-visible .fade-up.info-box.green { opacity:.7; } */
     .info-box.transparent { width:48vw; height:67rem; padding:5vw; top:81rem; left:11vw; box-sizing:border-box; }
     .info-box.black { width:53vw; height:50rem; padding:5vw; top:101rem; left:0; margin-bottom:15rem; box-sizing:border-box; background-color:#000000a3; background-image:url("../images/map-left.jpg"); background-size:cover; opacity:.9; }
 

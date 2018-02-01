@@ -13,7 +13,7 @@ class Scroll {
     const windowHeight = window.innerHeight,
           movement = -windowHeight / 2.5,
           start = 260,
-          stop = this.speed !== null ? this.speed * 180 : 1870,
+          stop = this.speed ? this.speed * 180 : 1870,
           percent = (this.windowScrollTop - start) / (stop - start),
           destY = movement * percent,
           transform = this.el.style.transform;

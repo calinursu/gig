@@ -12,6 +12,8 @@ main { position:relative; padding:15rem 0 0 23rem; box-sizing:border-box; }
 .is-visible .fade-up { animation-name:fadeUp; animation-duration:.5s; animation-delay:.6s; animation-fill-mode:forwards; }  
   .fade-up.second { animation-delay:.8s; }    
   .fade-up.third { animation-delay:1s; }    
+  .fade-up.fourth { animation-delay:1.2s; }    
+  .fade-up.fifth { animation-delay:1.4s; }    
 
 @keyframes fadeUp {
   0% {

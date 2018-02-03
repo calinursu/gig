@@ -4,7 +4,7 @@ class HomePage {
   constructor(el) {
     this.el = el;
 
-    const data = [
+    this.data = [
       {
         "text": "Obscurial",
         "tag": "span",
@@ -110,11 +110,15 @@ class HomePage {
     ];
 
     this.introBox = this.el.querySelector(".intro-small-box");
-    this.Typewritter = new Typewritter(data, this.el.querySelector(".text-container"), 35);
+    
 
-    this.introBox.addEventListener("transitionend", Typewritter.init);
+    this.introBox.addEventListener("transitionend", this.startTypewritter.bind(this));
 
     this.animateHomeBox();
+  }
+
+  startTypewritter() {
+    this.Typewritter = new Typewritter(this.data, this.el.querySelector(".text-container"), 35);
   }
 
   animateHomeBox() {

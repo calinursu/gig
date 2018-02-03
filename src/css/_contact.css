@@ -1,0 +1,11 @@
+.contact { font-size:0; margin-top:7rem; }
+  .contact-item-group { display:inline-block; margin-bottom:7rem; font-size:2.4rem; line-height:2.5; vertical-align:top; box-sizing:border-box; }
+    .contact-item-group.left { width:35%; padding-right:4vw; }
+    .contact-item-group.right { width:65%; padding-right:10vw; }
+      .contact-item.last { margin-top:6rem; line-height:1.8; }
+
+  .contact-map { position:absolute; width:62rem; height:50rem; top:35rem; left:31rem; margin-bottom:30rem; background-image:url("../images/map-right.jpg"); background-size:cover; }
+    .contact-map .overlay { position:absolute; width:100%; height:100%; top:0; left:0; background:#393939; opacity:.1; }
+  .contact-map-text { position:absolute; bottom:-5rem; right:15rem; color:#54ff9a59; font-size:16rem; text-transform:uppercase; }
+    
+    

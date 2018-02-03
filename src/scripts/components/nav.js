@@ -1,5 +1,6 @@
 import Typewritter from './typewritter';
 import animationEvent from './animationEvent';
+import Utils from './utils';
 
 class Nav {
   constructor(el) {
@@ -12,7 +13,7 @@ class Nav {
     this.section = document.querySelector('.cases .section-title-container');
 
     this.el.addEventListener('click', this.loadPage.bind(this));
-    document.querySelector(".mobile-menu-container").addEventListener('transitionend', this.changePageDescription.bind(this));
+    // document.querySelector(".mobile-menu-container").addEventListener('animationend', this.changePageDescription.bind(this));
   }
   
   loadPage(event) {
@@ -53,7 +54,6 @@ class Nav {
         that.changePageDescription();
         window.scrollTo(0,0);
     } else {
-
       const content = this.contentContainer.querySelector('.case-single.is-visible');
 
        mobile.classList.remove('is-visible');
@@ -64,20 +64,21 @@ class Nav {
       this.contentContainer.classList.remove('is-visible');
       content.classList.remove('is-visible'); 
       this.section.style.display = 'block';
-
     }
   }
 
-  changePageDescription() {
-    const pageDescription = document.querySelector(".page-description .heading");
-    const pageDescriptionNumber = document.querySelector(".page-description .page-number");
-    const nextPageIndex = Array.from(document.querySelectorAll(".page")).indexOf(this.nextPage);
-    
-    pageDescription.innerHTML = "";
-    pageDescriptionNumber.innerHTML = "";
+  changePageDescription(e) {
+    // if (Utils.hasClass(e.currentTarget , "is-visible")) {
+      const pageDescription = document.querySelector(".page-description .heading");
+      const pageDescriptionNumber = document.querySelector(".page-description .page-number");
+      const nextPageIndex = Array.from(document.querySelectorAll(".page")).indexOf(this.nextPage);
 
-    new Typewritter([{ "text": this.nextPage.dataset.url }], pageDescription, 60);
-    new Typewritter([{ "text": '0'+nextPageIndex.toString() }], pageDescriptionNumber, 80);
+      pageDescription.innerHTML = "";
+      pageDescriptionNumber.innerHTML = "";
+
+      new Typewritter([{ "text": this.nextPage.dataset.url }], pageDescription, 60);
+      new Typewritter([{ "text": '0' + nextPageIndex.toString() }], pageDescriptionNumber, 80);
+    // }
   }
 
   static init(selector = ".main-menu-item", base = document) {

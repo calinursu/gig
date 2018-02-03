@@ -15,7 +15,10 @@ header { position:fixed; width:calc(100%); padding-top:3rem; padding-bottom:3rem
         .mobile-menu-visible .menu-button-text.closed { opacity:0; }
         .mobile-menu-visible .menu-button-text.open { opacity:1; }
       .menu-button { position:relative; display:inline-block; height:1rem; margin-right:4rem; }
-      .menu-button-top, .menu-button-bottom { position:absolute; width:2.3rem; height:.1rem; background:#fff; transition:transform .5s ease-out; }
+      .menu-button-top, .menu-button-bottom { position:absolute; width:2.3rem; height:.1rem; background-color:white; transition:transform .5s ease-out; }
+        .has-overlay .menu-button-top, .has-overlay .menu-button-bottom { background-color:black; }
+        .has-overlay .menu-button-container { color:black; }
+
         .menu-button-top { top:0; transform:translateX(-.6rem);  }
         .menu-button-bottom { bottom:0; transform:translateX(.6rem); }
           .menu-button-container:hover .menu-button-top { transform:translateX(.6rem); }

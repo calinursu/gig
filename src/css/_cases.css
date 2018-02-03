@@ -3,9 +3,11 @@
 
   .case-container { position:relative; width:55vw; margin-bottom:35rem; }
     .case-container.detach { z-index:-1; }
-  .case-faded-text { position:absolute; z-index:-3; font-size:55rem; color:#272727; animation:translate-off-canvas 15s linear infinite; }
-    .case-faded-text.vrtbr, .case-faded-text.duplicate.vrtbr { top:20rem; }
-    .case-faded-text.dynaway, .case-faded-text.duplicate.dynaway { top:98rem; }
+
+  .case-faded-text-container { position:absolute; overflow:hidden; z-index:-3; left:0; width:100%; }
+  .case-faded-text { display:inline-block; font-size:55rem; color:#272727; animation:translate-off-canvas 15s linear infinite; }
+    .case-faded-text-container.vrtbr{ top:20rem; }
+    .case-faded-text-container.dynaway { top:98rem; }
 
     .case-image { cursor:pointer; padding-top:56.25%; background-position:center; background-size:cover; background-repeat:no-repeat; }
 
@@ -90,6 +92,10 @@
 
 @media all and (max-width:540px) {
   .case-text-container { left:1rem; bottom:-12rem; }
+  .case-single .case-box { padding:0 2rem; }
+    .text-card { min-width:34rem; padding:3rem; }
+
+  .case-faded-text-container { display:none; }
 }
 
 
@@ -111,7 +117,7 @@
 }
 @keyframes scale-forward {
     0% { transform:scale(1); }
-    100% { transform:scale(8.4); }
+    100% { transform:scale(10); }
 }
 
 @keyframes exit-top {

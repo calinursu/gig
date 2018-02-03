@@ -74,7 +74,7 @@ class Nav {
     this.menuClosing = false;
   }
 
-  static init(selector = ".main-menu-item", base = document) {
+  static init(selector = ".menu-item", base = document) {
     base.querySelectorAll(selector).forEach(element => {
       new Nav(element);
     });

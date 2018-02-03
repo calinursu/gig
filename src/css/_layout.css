@@ -36,7 +36,7 @@ main { position:relative; padding:15rem 0 0 23rem; box-sizing:border-box; }
 }
 
 @media all and (min-width:1445px) {
-.page { width:60%; }
+  .page { width:90%; }
 }
 
 @media all and (max-width:1024px) {

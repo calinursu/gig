@@ -7,6 +7,7 @@ class Nav {
     this.el = el; 
     this.pagesContainer = document.querySelector('.content');
     this.locationOrigin = window.location.origin;
+    this.menuClosing = false;
 
     // elements for case page, when you have a case open and you want to navigate back to cases
     this.contentContainer = document.querySelector('.case-single-container');
@@ -30,29 +31,20 @@ class Nav {
 
       const that = this;
 
-      // verify if mobile menu is expanded, so the page animations will wait
-      if(mobile !== null) {
-        mobile.classList.remove('is-visible');
-        setTimeout( () => {
-          mobile.classList.add('is-hidden');
-          activePage.classList.remove('is-visible');
-        }, 800 );
-      } else {
-        Array.from(this.pagesContainer.querySelectorAll('.page'))
-        .forEach(page => page.classList.remove('is-visible'));
-      }
+      mobile.classList.remove('is-visible');
+      setTimeout( () => {
+        mobile.classList.add('is-hidden');
+        activePage.classList.remove('is-visible');
+        that.changePageDescription();
+      }, 800 );
 
       let animation = animationEvent(activePage);
+      activePage.classList.remove('is-visible');
+      activePage.classList.add('is-hidden');
 
-      // animation && activePage.addEventListener(animation, function showNextPage() {
-        // activePage.removeEventListener(animation, showNextPage, false);
-        activePage.classList.remove('is-visible');
-        activePage.classList.add('is-hidden');
-
-        this.nextPage.classList.add('is-visible');
-        this.nextPage.classList.remove('is-hidden');
-        that.changePageDescription();
-        window.scrollTo(0,0);
+      this.nextPage.classList.add('is-visible');
+      this.nextPage.classList.remove('is-hidden');
+      window.scrollTo(0,0);
     } else {
       const content = this.contentContainer.querySelector('.case-single.is-visible');
 
@@ -68,17 +60,18 @@ class Nav {
   }
 
   changePageDescription(e) {
-    // if (Utils.hasClass(e.currentTarget , "is-visible")) {
-      const pageDescription = document.querySelector(".page-description .heading");
-      const pageDescriptionNumber = document.querySelector(".page-description .page-number");
-      const nextPageIndex = Array.from(document.querySelectorAll(".page")).indexOf(this.nextPage);
+    console.log("changePageDescription");
+    
+    const pageDescription = document.querySelector(".page-description .heading");
+    const pageDescriptionNumber = document.querySelector(".page-description .page-number");
+    const nextPageIndex = Array.from(document.querySelectorAll(".page")).indexOf(this.nextPage);
 
-      pageDescription.innerHTML = "";
-      pageDescriptionNumber.innerHTML = "";
+    pageDescription.innerHTML = "";
+    pageDescriptionNumber.innerHTML = "";
 
-      new Typewritter([{ "text": this.nextPage.dataset.url }], pageDescription, 60);
-      new Typewritter([{ "text": '0' + nextPageIndex.toString() }], pageDescriptionNumber, 80);
-    // }
+    new Typewritter([{ "text": this.nextPage.dataset.url }], pageDescription, 60);
+    new Typewritter([{ "text": '0' + nextPageIndex.toString() }], pageDescriptionNumber, 80);  
+    this.menuClosing = false;
   }
 
   static init(selector = ".main-menu-item", base = document) {

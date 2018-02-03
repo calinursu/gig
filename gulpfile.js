@@ -41,6 +41,7 @@ const source = require('vinyl-source-stream');
 const concat = require("gulp-concat");
 const del = require("del");
 const reload = browserSync.reload;
+const history = require('connect-history-api-fallback');
 
 gulp.task('css', (cb) => {
 	gulp.src(config.mainCss)

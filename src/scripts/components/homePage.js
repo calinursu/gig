@@ -54,7 +54,7 @@ class HomePage {
         "class": "pre-list"
       },
       {
-        "text": "Web application development",
+        "text": "Software development",
         "tag": "span",
         "class": "intro-secondary-headline first translate same-line console-list-item"
       },
@@ -63,7 +63,7 @@ class HomePage {
         "tag": "br",
       },
       {
-        "text": "Web application development",
+        "text": "Digitization of Business Processes",
         "tag": "span",
         "class": "intro-secondary-headline translate console-list-item"
       },
@@ -72,7 +72,7 @@ class HomePage {
         "tag": "br",
       },
       {
-        "text": "Web application development",
+        "text": "Integration",
         "tag": "span",
         "class": "intro-secondary-headline translate console-list-item"
       },
@@ -81,7 +81,7 @@ class HomePage {
         "tag": "br",
       },
       {
-        "text": "Web application development",
+        "text": "Data handling",
         "tag": "span",
         "class": "intro-secondary-headline translate console-list-item",
         "newLine": true

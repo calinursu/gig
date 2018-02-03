@@ -14,6 +14,7 @@ body { font-family:"tech", Arial, sans-serif; position:relative; height:100vh; b
 button { font-family:"tech", Arial, sans-serif; }
 
 body { overflow-x:hidden; }
+  body.mobile-menu-visible { overflow:hidden; }
 main { width:100%; min-height:100%; }
 canvas { position:fixed; z-index:-2; }
 p { font-size:2.1rem; }
@@ -49,3 +50,4 @@ p { font-size:2.1rem; }
 
 
 
+ 

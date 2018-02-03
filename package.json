@@ -8,6 +8,7 @@
     "url": "git+https://github.com/PaulMacinic/obscurial.git"
   },
   "dependencies": {
+    "connect-history-api-fallback": "^1.5.0",
     "gulp-babel": "^6.1.2",
     "gulp-cli": "^1.2.2"
   },

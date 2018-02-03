@@ -10,8 +10,8 @@ main { position:relative; padding:15rem 0 0 23rem; box-sizing:border-box; }
 
 .fade-up { transform:translateY(5rem); opacity:0; } 
 .is-visible .fade-up { animation-name:fadeUp; animation-duration:.5s; animation-delay:.6s; animation-fill-mode:forwards; }  
-  .fade-up.second { animation-delay:.8s; }    
-  .fade-up.third { animation-delay:1s; }    
+  .fade-up.second { animation-delay:.8s; }
+  .fade-up.third { animation-delay:1s; }
 
 @keyframes fadeUp {
   0% {

@@ -1,5 +1,4 @@
 header { position:fixed; width:calc(100%); padding-top:3rem; padding-bottom:3rem; }
-
   .main-elements-container > header,
   .main-elements-container > nav, 
   .main-elements-container > div { z-index:3; }

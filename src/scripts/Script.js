@@ -10,4 +10,5 @@ window.addEventListener('load', () => {
   Nav.init();
   CasesPage.init();
   Noise.init();
+  document.body.classList.add("app-loaded");
 });

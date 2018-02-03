@@ -30,7 +30,7 @@ class Scroll {
       this.windowScrollTop = window.pageYOffset;
   }
 
-  static init(selector = ".move", base = document) {
+  static init(selector = '.move', base = document) {
     base.querySelectorAll(selector).forEach(element => {
       new Scroll(element);
     });

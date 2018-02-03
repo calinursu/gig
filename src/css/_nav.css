@@ -1,7 +1,7 @@
 header { position:fixed; width:calc(100%); padding-top:3rem; padding-bottom:3rem; }
   .main-elements-container > header,
   .main-elements-container > nav, 
-  .main-elements-container > div { z-index:3; }
+  .main-elements-container > div { z-index:4; }
 
   .main-elements-container .secondary-menu-item, .main-elements-container .page-description { animation-fill-mode:forwards; animation-duration:.3s; animation-delay:.5s; animation-timing-function:cubic-bezier(.785,.135,.15,.86); }
     .main-elements-container.has-overlay .secondary-menu-item { animation-name:exit-top; }
@@ -16,8 +16,10 @@ header { position:fixed; width:calc(100%); padding-top:3rem; padding-bottom:3rem
         .mobile-menu-visible .menu-button-text.open { opacity:1; }
       .menu-button { position:relative; display:inline-block; height:1rem; margin-right:4rem; }
       .menu-button-top, .menu-button-bottom { position:absolute; width:2.3rem; height:.1rem; background-color:white; transition:transform .5s ease-out; }
-        .has-overlay .menu-button-top, .has-overlay .menu-button-bottom { background-color:black; }
-        .has-overlay .menu-button-container { color:black; }
+        
+        /* menu style when case is open */
+        .has-overlay .menu-button-top, .has-overlay .menu-button-bottom { background-color:#18b176; }
+        .has-overlay .menu-button-container { color:#18b176; }
 
         .menu-button-top { top:0; transform:translateX(-.6rem);  }
         .menu-button-bottom { bottom:0; transform:translateX(.6rem); }
@@ -29,7 +31,7 @@ header { position:fixed; width:calc(100%); padding-top:3rem; padding-bottom:3rem
     .secondary-menu-item { display:inline-block; font-size:1.4rem; padding:.7rem 0; margin:.7rem 0 .7rem 3.5rem; }
 
   /* Mobile menu */
-  .mobile-menu-container { position:fixed; top:0; left:0; right:0; bottom:0; width:100%; z-index:2; }
+  .mobile-menu-container { position:fixed; top:0; left:0; right:0; bottom:0; width:100%; z-index:3; }
   .mobile-menu-container.is-hidden { display:none; }
 
   .mobile-menu-container .mobile-menu-inner-container { animation-name:hide-text; visibility:hidden; opacity:0; position:relative; z-index:3; height:100%; animation-fill-mode:forwards; animation-duration:.3s; animation-timing-function:cubic-bezier(.785,.135,.15,.86); }

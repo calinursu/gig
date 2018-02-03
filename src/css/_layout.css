@@ -8,7 +8,7 @@ main { position:relative; padding:15rem 0 0 23rem; box-sizing:border-box; }
     .section-title { font-size:3.5rem; margin-bottom:1rem; }
     .section-subtitle { font-size:1.6rem; }
 
-.fade-up { position:relative; transform:translateY(5rem); opacity:0; } 
+.fade-up { transform:translateY(5rem); opacity:0; } 
 .is-visible .fade-up { animation-name:fadeUp; animation-duration:.5s; animation-delay:.6s; animation-fill-mode:forwards; }  
   .fade-up.second { animation-delay:.8s; }    
   .fade-up.third { animation-delay:1s; }    
@@ -20,7 +20,7 @@ main { position:relative; padding:15rem 0 0 23rem; box-sizing:border-box; }
   }
   100% {
       transform: translateY(0);
-      opacity: 1;
+      opacity:1;
   }
 }
 

@@ -18,6 +18,7 @@ class Nav {
   }
   
   loadPage(event) {
+    document.querySelector(".text-container").classList.add("fade-up");
     event.preventDefault();
     document.body.classList.remove("mobile-menu-visible");
 

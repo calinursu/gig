@@ -1,5 +1,5 @@
 
-.case-items { margin-top:10rem; }
+.case-items { margin-top:10rem; padding-bottom:5rem; }
 
   .case-container { position:relative; width:55vw; margin-bottom:35rem; }
     .case-container.detach { z-index:-1; }
@@ -93,7 +93,7 @@
 }
 
 @media all and (max-width:630px) {
-  .case-container { width:100%; margin-bottom:27rem; }
+  .case-container { width:100%; }
     .case-image { height:28vh; }
     .case-text-container { left:2rem; bottom:-13rem; }
       .case-title { font-size:6rem; }
@@ -101,7 +101,7 @@
 }
 
 @media all and (max-width:540px) {
-  .case-text-container { width:80%; left:3rem; bottom:-12rem; }
+  .case-text-container { width:80%; left:3rem; bottom:auto; top:13rem; }
   .case-single .case-box { padding:0 2rem; }
     .text-card { min-width:34rem; padding:3rem; }
 

@@ -26,7 +26,9 @@ main { position:relative; padding:15rem 0 0 23rem; box-sizing:border-box; }
   .page-description { opacity:0; transform:translateY(1rem); }
     .app-loaded header, .app-loaded .page-description { opacity:1; transform:translateY(0); }
     
-  
+  @media all and (max-width:540px) {
+    .content { padding:7rem 0 0 0; }
+  }
 
 @keyframes fadeUp {
   0% {

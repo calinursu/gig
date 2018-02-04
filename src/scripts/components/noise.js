@@ -1,4 +1,3 @@
-import HomePage from './homePage';
 class Noise {
   constructor(el) {    
       this.canvas;
@@ -17,8 +16,6 @@ class Noise {
 
       if(window.innerWidth > 768)
         this.setup();
-      
-      HomePage.init();
   }
 
   createNoise() {

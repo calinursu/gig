@@ -110,18 +110,21 @@ class HomePage {
     ];
 
     this.introBox = this.el.querySelector(".intro-small-box");
+    this.preloader = document.querySelector(".preloader");
     
-
+    this.preloader.addEventListener("transitionend", this.animateHomeBox.bind(this));
     this.introBox.addEventListener("transitionend", this.startTypewritter.bind(this));
-
-    this.animateHomeBox();
   }
 
   startTypewritter() {
-    this.Typewritter = new Typewritter(this.data, this.el.querySelector(".text-container"), 35);
+    new Typewritter(this.data, this.el.querySelector(".text-container-content"), 35);
   }
 
   animateHomeBox() {
+    this.preloader.remove();
+    const heading = document.querySelector(".page-description .heading");
+    heading.innerHTML = "";
+    new Typewritter([{ "text": "Home" }], heading, 90);
     this.introBox.classList.add("active");
   }
 

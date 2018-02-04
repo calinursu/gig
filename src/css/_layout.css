@@ -20,10 +20,11 @@ main { position:relative; padding:15rem 0 0 23rem; box-sizing:border-box; }
   .app-loaded .preloader-cursor { opacity:0; visibility:hidden; }
     .preloader-cursor { position:relative; top:1rem; opacity:1; }
 
-  header { transition:opacity .3s, transform .3s; }
+  header, .page-description { transition:opacity .3s, transform .3s; }
 
   header { opacity:0; transform:translateY(-1rem); }
-    .app-loaded header { opacity:1; transform:translateY(0); }
+  .page-description { opacity:0; transform:translateY(1rem); }
+    .app-loaded header, .app-loaded .page-description { opacity:1; transform:translateY(0); }
     
   
 

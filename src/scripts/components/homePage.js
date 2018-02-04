@@ -122,9 +122,6 @@ class HomePage {
 
   animateHomeBox() {
     this.preloader.remove();
-    const heading = document.querySelector(".page-description .heading");
-    heading.innerHTML = "";
-    new Typewritter([{ "text": "Home" }], heading, 90);
     this.introBox.classList.add("active");
   }
 

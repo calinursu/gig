@@ -99,7 +99,7 @@
 }
 
 @media all and (max-width:540px) {
-  .case-text-container { left:1rem; bottom:-12rem; }
+  .case-text-container { width:80%; left:3rem; bottom:-12rem; }
   .case-single .case-box { padding:0 2rem; }
     .text-card { min-width:34rem; padding:3rem; }
 

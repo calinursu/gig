@@ -4,8 +4,24 @@
     .contact-item-group.right { width:65%; padding-right:10vw; }
       .contact-item.last { margin-top:6rem; line-height:1.8; }
 
-  .contact-map { position:absolute; width:62rem; height:50rem; top:35rem; left:31rem; margin-bottom:30rem; background-image:url("../images/map-right.jpg"); background-size:cover; }
+  .contact-map { position:absolute; width:62rem; height:50rem; top:20vw; left:3vw; margin-bottom:30rem; background-image:url("../images/map-left.jpg"); background-size:cover; }
     .contact-map .overlay { position:absolute; width:100%; height:100%; top:0; left:0; background:#393939; opacity:.1; }
-  .contact-map-text { position:absolute; bottom:-5rem; right:15rem; color:#54ff9a59; font-size:16rem; text-transform:uppercase; }
+  .contact-map-text { position:absolute; bottom:-8rem; left:-4vw; color:#8cffbb59; font-size:16rem; text-transform:uppercase; }
+
+@media all and (max-width:1024px) {
+  .contact-item-group.left, .contact-item-group.right { width:100%; display:block; } 
+  .contact { width:80%; font-size:14rem; }
+}
+
+@media all and (max-width:768px) {
+  .contact { margin:0 2.5rem; }
+    .contact-item-group.left, .contact-item-group.right { width:100%; font-size:1.8rem; line-height:2; margin-bottom:5rem; padding:0; }
+    .contact-item.last { margin-top:5rem; line-height:2; }
+
+    .contact-map { width:100%; top:39vw; left:0; margin-bottom:10rem; }
+      .contact-map-text { left:1rem; bottom:-6rem; font-size:18vw; }
+}  
     
-    
+@media all and (min-width:1366px){
+  .contact-map { top:9rem; left:6rem; }
+}

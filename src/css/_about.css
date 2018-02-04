@@ -22,13 +22,13 @@
 
 @media all and (max-width:1024px) {
   .info-box.grey { width:64vw; padding:4vw; top:4rem; left:5vw; }
-  .info-box.green { width:69vw; height:55rem; top:42rem; }
+  .info-box.green { width:84vw; height:55rem; top:42rem; }
   .info-box.black { width:65vw; height:49rem; top:93rem; }
 }
 
 @media all and (max-width:768px) {
   .info-box.grey { width:75vw; }
-    .info-box.black { width:76vw; height:49rem; }
+    .info-box.black { width:84vw; height:40rem; }
 
   .services { font-size:1.8rem; }
 }

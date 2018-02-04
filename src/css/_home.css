@@ -25,6 +25,7 @@
       .preloader-cursor { background-color:#18b176; }
 
       .hr { padding:3.5rem 0; }
+      .color-line { display:inline-block; padding:1rem; background:white; color:black; }
     
       .intro-box-container { position: absolute;
     top: 0;

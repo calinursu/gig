@@ -24,7 +24,7 @@ class HomePage {
       {
         "text": "we",
         "tag": "span",
-        "class": "intro-secondary-headline color-line"
+        "class": "intro-secondary-headline"
       },
       {
         "text": " craft great experiences and love internet technologies",
@@ -40,7 +40,7 @@ class HomePage {
       {
         "text": "we ",
         "tag": "span",
-        "class": "intro-secondary-headline color-line"
+        "class": "intro-secondary-headline"
       },
       {
         "text": " help businesses with",

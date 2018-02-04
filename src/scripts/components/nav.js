@@ -14,14 +14,19 @@ class Nav {
     this.contentContainer = document.querySelector('.case-single-container');
     this.section = document.querySelector('.cases .section-title-container');
 
+    // homepage fadeup when navigating
+    this.homePage = document.querySelector('.page.home');
+    this.homePageText = this.homePage.children[0];
+    this.homePageBox = this.homePage.children[1];
+
     this.el.addEventListener('click', this.loadPage.bind(this));
     // document.querySelector(".mobile-menu-container").addEventListener('animationend', this.changePageDescription.bind(this));
   }
   
   loadPage(event) {
-    document.querySelector(".text-container").classList.add("fade-up");
+
     event.preventDefault();
-    document.body.classList.remove("mobile-menu-visible");
+    document.body.classList.remove('mobile-menu-visible');
 
     const activePage = this.pagesContainer.querySelector('.page.is-visible');
     this.nextPage = this.pagesContainer.querySelector('.page[data-url="' + this.el.dataset.url + '"]');
@@ -35,6 +40,10 @@ class Nav {
       this.contentContainer.classList.remove('is-visible');
       content.classList.remove('is-visible'); 
     }
+
+    // Homepage fadeup
+    this.homePageText.classList.add('fade-up');
+    this.homePageBox.classList.add('fade-up', 'second');
  
 
     if (this.nextPage && !this.nextPage.classList.contains('is-visible')) {

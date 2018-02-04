@@ -3,7 +3,7 @@ class Typewritter {
     this.el = el;
     this.data = data;
     this.typingSpeed = typingSpeed;
-    this.startTypewritter(0, "h2", "intro-secondary-headline");
+    this.startTypewritter(0);
   }
 
   typewritter(text, i, newLine, line, cb) {

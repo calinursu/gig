@@ -10,7 +10,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	
 </head>
-<body>
+<body class="app-loading">
   <canvas class="with-noise"></canvas>
 
   <div class="main-elements-container">
@@ -52,9 +52,13 @@
   </div>
 
 	<main class="content">
+    
     <section class="page home is-visible" data-url="home">
       <div class="text-container">
-        <span class="console-cursor"></span>
+        <div class="preloader-cursor"></div>
+        <div class="text-container-content">
+          <span class="console-cursor"></span>
+        </div>
       </div>
       <div class="intro-box-container">
         <!-- <span class="intro-large-box">
@@ -248,7 +252,7 @@
       </div>
     </section>
 	</main>
-
+  <div class="preloader"></div>
   <script src="scripts/all.js"></script>
 </body>
 </html>

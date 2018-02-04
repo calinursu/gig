@@ -1,5 +1,5 @@
 
-.case-items { margin-top:10rem; }
+.case-items { margin-top:10rem; padding-bottom:5rem; }
 
   .case-container { position:relative; width:55vw; margin-bottom:35rem; }
     .case-container.detach { z-index:-1; }
@@ -21,7 +21,8 @@
       .case-subtitle { margin-bottom:2rem; font-size:2.4rem; color:#3ae285; }
       .case-excerpt { font-size:1.8rem; line-height:2.8rem; }
     
-      .case-button-container { position:absolute; width:22rem; padding:1.8rem 0; left:15rem; bottom:-4.5rem; font-size:1.5rem; box-sizing:border-box; text-align:center; border:.2rem solid #3ae285; background:none; color:#3ae285; cursor:pointer; transition: background 1s, width 1s, height 1s; }
+      .case-button-container { position:absolute; width:22rem; padding:1.8rem 0; left:15rem; bottom:-4.5rem; font-size:1.5rem; box-sizing:border-box; text-align:center; border:.2rem solid #3ae285; background:none; color:#3ae285; cursor:pointer; }
+      .case-button-container.mobile { display:none; position:static; margin-top:3rem; }
 
       .case-preview { transition:opacity 1s; }
         .case-expanded .case-preview { opacity:0; }
@@ -77,6 +78,7 @@
     .case-text-container { left:4rem; bottom:-17rem; right:auto; top:auto; transform:none; }
       .case-excerpt { font-size:1.6rem; }
     .case-button-container { display:none; position:relative; left:6rem; bottom:8rem; }
+    .case-button-container.mobile { display:block; }
 }
 
 @media all and (max-width:768px) {
@@ -91,7 +93,7 @@
 }
 
 @media all and (max-width:630px) {
-  .case-container { width:100%; margin-bottom:27rem; }
+  .case-container { width:100%; }
     .case-image { height:28vh; }
     .case-text-container { left:2rem; bottom:-13rem; }
       .case-title { font-size:6rem; }
@@ -99,11 +101,13 @@
 }
 
 @media all and (max-width:540px) {
-  .case-text-container { width:80%; left:3rem; bottom:-12rem; }
+  .case-text-container { width:80%; left:3rem; bottom:auto; top:13rem; }
   .case-single .case-box { padding:0 2rem; }
     .text-card { min-width:34rem; padding:3rem; }
 
   .case-faded-text-container { display:none; }
+
+  .case-button-container.mobile { padding:1.1rem 0; width:15rem; font-size:1.3rem; }
 }
 
 

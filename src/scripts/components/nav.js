@@ -61,6 +61,7 @@ class Nav {
         }, 800 );
       } else {
         activePage.classList.remove('is-visible');
+        that.changePageDescription();
       }
      
 
@@ -96,7 +97,7 @@ class Nav {
     pageDescriptionNumber.innerHTML = "";
 
     new Typewritter([{ "text": this.nextPage.dataset.url }], pageDescription, 60);
-    new Typewritter([{ "text": '0' + nextPageIndex.toString() }], pageDescriptionNumber, 80);  
+    new Typewritter([{ "text": '0' + nextPageIndex }], pageDescriptionNumber, 80);  
     this.menuClosing = false;
   }
 

@@ -35,7 +35,6 @@
 
 @media all and (max-width:540px) {  
   .info-box.grey { position:relative; width:100%; top:0; left:0; padding:3.78rem; }
-  .info-box.green { right:-3rem; }
   .info-box.transparent { position:relative; top:15rem; }
 }
 

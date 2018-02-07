@@ -23,7 +23,7 @@
 
 @media all and (max-width:1024px) {
   .info-box.grey { width:64vw; padding:4vw; top:4rem; left:5vw; }
-  .info-box.green { width:84vw; height:55rem; top:42rem; }
+  .info-box.green { width:84vw; height:55rem; top:42rem; right:-3.5rem; }
   .info-box.black { width:65vw; height:49rem; top:102rem; }
 }
 
@@ -37,6 +37,7 @@
 @media all and (max-width:540px) {  
   .info-box.grey { position:relative; width:100%; top:0; left:0; padding:3.78rem; }
   .info-box.transparent { position:relative; top:15rem; }
+     .services-headline { font-size:2.6rem; }
 }
 
 @media all and (max-width:420px) {  

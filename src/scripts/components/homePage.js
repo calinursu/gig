@@ -11,7 +11,12 @@ class HomePage {
         "class": "intro-secondary-headline color-line"
       },
       {
-        "text": " is a software consultancy company",
+        "text": " is a software consultancy ",
+        "tag": "span",
+        "class": "intro-secondary-headline after-color",
+      },
+      {
+        "text": "company",
         "tag": "span",
         "class": "intro-secondary-headline after-color",
         "newLine": true
@@ -92,9 +97,8 @@ class HomePage {
       },
       {
         "text": "get in touch with us at ",
-        "tag": "a",
-        "class": "intro-secondary-headline last",
-        "href": "mailto:hello@obscurial.dk"
+        "tag": "span",
+        "class": "intro-secondary-headline last before-contact-line"
       },
       {
         "text": "hello@obscurial.dk",

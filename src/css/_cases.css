@@ -59,7 +59,7 @@
 
               .image-center-container {  }
                 .image-center-container:after { content:''; clear:both; display:block; }
-                .image-center { display:block; width:100%; max-width:80rem; height:60rem; margin:0 auto; }
+                .image-center { display:block; width:100%; max-width:80rem; height:auto; margin:0 auto; }
 
               .image-right-container { position:relative; }
                 .image-right-container:after { content:''; clear:both; display:block; }

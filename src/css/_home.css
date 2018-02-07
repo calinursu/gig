@@ -10,22 +10,24 @@
 
     .intro-list { font-size:1.8rem; margin:5rem 0; list-style:none; }
 			.console-list-item { position:relative; padding-left:3.5rem; font-size:2.2rem; }
-        .console-list-item:before { content:"*"; display:block; width:2rem; height:2.8rem; position:absolute; left:0; top:50%; transform:translateY(-50%); color:#18b176; }
+        .console-list-item:before { content:"*"; display:block; width:2rem; height:1.8rem; position:absolute; left:0; top:50%; transform:translateY(-50%); color:#18b176; }
         .console-list-item.first { margin-top:5rem; }
         .console-list-item.last { margin-bottom:5rem; }
 
       .console-break { margin-top:1.8rem; }
       .contact-line { color:#18b176; }
-        .last.contact-line { margin-left:1.5rem; }
+        .before-contact-line { display:inline-block; margin-right:1.5rem; }
       
       .intro-secondary-headline.translate { display:inline-block; position:relative; margin:0 0 1.5rem 32.5rem; }
       .intro-secondary-headline.translate.same-line { margin-left:5.2rem; }
 
-      .console-cursor, .preloader-cursor { width:1.5rem; height:.2rem; display:inline-block; margin:0 0 -.3rem .3rem; background:#fff; animation:blink .7s infinite; }
-      .preloader-cursor { background-color:#18b176; }
+      .console-cursor { position: relative; display:inline-block; position:relative; }
+      .console-cursor:after, .preloader-cursor { content:""; position:absolute; width:1.5rem; height:.2rem; display:inline-block; margin:1rem 0 -.3rem .3rem; background:#fff; animation:blink .7s infinite; }
+    
 
       .hr { padding:3.5rem 0; }
-      .color-line { display:inline-block; padding:1rem; background:white; color:black; }
+      .color-line { line-height:3.5;  background:white; padding:1rem; color:black; }
+      /* .after-color { line-height:3.5; } */
     
       .intro-box-container { position: absolute; top:0; left:0; right:0; }
       .intro-large-box { opacity:.6; display:block; position:absolute; max-width:180rem; min-height:83rem; left:5rem; right:5rem; top:10rem; bottom:10rem; background-color:#232323; background:url("../images/antenna.jpg"); background-size:cover; background-position:center; }
@@ -52,7 +54,7 @@
 
 @media all and (max-width:1024px) {
   .text-container { padding:0; width:90%; margin:1rem auto; }
-  .intro-secondary-headline.translate, .intro-secondary-headline.translate.same-line { display:inline-block; margin:0; }
+  .intro-secondary-headline.translate, .intro-secondary-headline.translate.same-line { display:inline-block; margin:.6rem 0 0; }
   .hr { padding:1rem 0; }
   .pre-list { margin-top:3rem; }
 
@@ -70,11 +72,11 @@
 @media all and (max-width:540px) {
 	.text-container { width:87%; position:relative; transform:none; min-height:50rem; padding:0; }
     .intro-secondary-headline { font-size:1.6rem; }
-    .intro-secondary-headline.last { margin:2rem 0; }
+    .intro-secondary-headline.last { margin:2rem 1.3rem 2rem 0; }
     .intro-secondary-headline.contact-line { margin:0 0 0 .6rem; }
 
     .console-list-item { padding-left:1.5rem; }
-      .console-list-item:before { height:1.3rem; }
+      .console-list-item:before { height:1.3rem; top:1rem; }
 
     .intro-small-box-container { width:30rem; height:30vh; top:10rem; }
 

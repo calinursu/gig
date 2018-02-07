@@ -17,7 +17,7 @@ class Typewritter {
     else if(newLine === true) {
       setTimeout(() => {
         cb();
-      }, 400);
+      }, 500);
     }
     else {
       cb();

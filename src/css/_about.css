@@ -5,13 +5,14 @@
     .info-box.green { width:59vw; height:65rem; top:42rem; right:0; background-color:#105130; opacity:.7; background-image:url("../images/map-right.jpg"); background-size:cover; }
       .info-box.green { opacity:0; }
       /* .is-visible .fade-up.info-box.green { opacity:.7; } */
-    .info-box.transparent { width:48vw; height:67rem; padding:5vw; top:81rem; left:11vw; box-sizing:border-box; }
-    .info-box.black { width:53vw; height:50rem; padding:5vw; top:101rem; left:0; margin-bottom:15rem; box-sizing:border-box; background-color:#000000a3; background-image:url("../images/map-left.jpg"); background-size:cover; opacity:.9; }
+    .info-box.transparent { width:78.4vw; height:67rem; padding:5vw; top:100rem; left:11vw; box-sizing:border-box; }
+    .info-box.black { width:53vw; height:50rem; padding:5vw; top:120rem; left:0; margin-bottom:15rem; box-sizing:border-box; background-color:#000000a3; background-image:url("../images/map-left.jpg"); background-size:cover; opacity:.9; }
 
       .info-box .overlay { position:absolute; width:100%; height:100%; top:0; left:0; }
         .info-box.green .overlay { background:#24c174; opacity:.5; }
         .info-box.black .overlay { background:#000; opacity:.5; }
 
+  .services-headline { position:relative; font-size:3.5rem; top:-3rem; }
   .services { font-size:2rem; list-style:none; line-height:4.2rem; }
 
 @media all and (min-width:1440px) {
@@ -22,8 +23,8 @@
 
 @media all and (max-width:1024px) {
   .info-box.grey { width:64vw; padding:4vw; top:4rem; left:5vw; }
-  .info-box.green { width:84vw; height:55rem; top:42rem; }
-  .info-box.black { width:65vw; height:49rem; top:93rem; }
+  .info-box.green { width:84vw; height:55rem; top:42rem; right:-3.5rem; }
+  .info-box.black { width:65vw; height:49rem; top:102rem; }
 }
 
 @media all and (max-width:768px) {
@@ -36,12 +37,13 @@
 @media all and (max-width:540px) {  
   .info-box.grey { position:relative; width:100%; top:0; left:0; padding:3.78rem; }
   .info-box.transparent { position:relative; top:15rem; }
+     .services-headline { font-size:2.6rem; }
 }
 
 @media all and (max-width:420px) {  
   .info-box.grey { padding:2.5rem; }
   .info-box.green { top:62rem; }
-  .info-box.transparent { width:23rem; }
+  .info-box.transparent { width:28rem; }
   .info-box.black { top:113rem; }
 }
 

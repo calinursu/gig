@@ -12,6 +12,7 @@
         .info-box.green .overlay { background:#24c174; opacity:.5; }
         .info-box.black .overlay { background:#000; opacity:.5; }
 
+  .services-headline { position:relative; font-size:3.5rem; top:-3rem; }
   .services { font-size:2rem; list-style:none; line-height:4.2rem; }
 
 @media all and (min-width:1440px) {

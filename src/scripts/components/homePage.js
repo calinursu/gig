@@ -13,7 +13,7 @@ class HomePage {
       {
         "text": " is a software consultancy company",
         "tag": "span",
-        "class": "intro-secondary-headline",
+        "class": "intro-secondary-headline after-color",
         "newLine": true
       },
       {
@@ -63,7 +63,7 @@ class HomePage {
         "tag": "br",
       },
       {
-        "text": "Digitization of Business Processes",
+        "text": "Web application Development & Integration",
         "tag": "span",
         "class": "intro-secondary-headline translate console-list-item"
       },
@@ -72,7 +72,7 @@ class HomePage {
         "tag": "br",
       },
       {
-        "text": "Integration",
+        "text": "Digitization of Business Processes",
         "tag": "span",
         "class": "intro-secondary-headline translate console-list-item"
       },

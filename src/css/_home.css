@@ -21,11 +21,12 @@
       .intro-secondary-headline.translate { display:inline-block; position:relative; margin:0 0 1.5rem 32.5rem; }
       .intro-secondary-headline.translate.same-line { margin-left:5.2rem; }
 
-      .console-cursor, .preloader-cursor { width:1.5rem; height:.2rem; display:inline-block; margin:0 0 -.3rem .3rem; background:#fff; animation:blink .7s infinite; }
-      .preloader-cursor { background-color:#18b176; }
+      .console-cursor { position:relative; width:1rem; height:1rem; }
+      .console-cursor:after, .preloader-cursor { position:absolute; width:1.5rem; height:.2rem; display:inline-block; margin:1rem 0 -.3rem .3rem; background:#fff; animation:blink .7s infinite; }
 
       .hr { padding:3.5rem 0; }
-      .color-line { display:inline-block; padding:1rem; background:white; color:black; }
+      .color-line { line-height:3.5; background:white; padding:1rem; color:black; }
+      /* .after-color { line-height:3.5; } */
     
       .intro-box-container { position: absolute; top:0; left:0; right:0; }
       .intro-large-box { opacity:.6; display:block; position:absolute; max-width:180rem; min-height:83rem; left:5rem; right:5rem; top:10rem; bottom:10rem; background-color:#232323; background:url("../images/antenna.jpg"); background-size:cover; background-position:center; }

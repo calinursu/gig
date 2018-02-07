@@ -6,7 +6,8 @@
 
   .contact-map { position:absolute; width:62rem; height:50rem; top:20vw; left:3vw; margin-bottom:30rem; background-image:url("../images/map-left.jpg"); background-size:cover; background-position:center center; }
     .contact-map .overlay { position:absolute; width:100%; height:100%; top:0; left:0; background:#393939; opacity:.1; }
-  .contact-map-text { position:absolute; bottom:-8rem; left:-4vw; color:#8cffbb59; font-size:16rem; }
+  .contact-map-text-container { height:100%; }
+    .contact-map-text { position:absolute; bottom:-8rem; left:-4vw; color:#8cffbb59; font-size:16rem; }
 
 @media all and (max-width:1024px) {
   .contact-item-group.left, .contact-item-group.right { width:100%; display:block; } 

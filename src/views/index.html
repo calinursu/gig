@@ -11,7 +11,7 @@
 	
 </head>
 <body class="app-loading">
-  <!-- <canvas class="with-noise"></canvas> -->
+  <canvas class="with-noise"></canvas>
 
   <div class="main-elements-container">
     <header>
@@ -26,7 +26,6 @@
         <span class="menu-button-text closed active">Menu</span>
       </div>
     </header>
-
     
     <div class="page-description">
       <h1 class="heading">Home</h1>
@@ -52,7 +51,6 @@
   </div>
 
 	<main class="content">
-    
     <section class="page home is-visible" data-url="home">
       <div class="text-container">
         <div class="preloader-cursor"></div>
@@ -61,10 +59,6 @@
         </div>
       </div>
       <div class="intro-box-container">
-        <!-- <span class="intro-large-box">
-          <div class="overlay black"></div>
-        </span>
-        <span class="intro-medium-box"></span> -->
         <div class="intro-small-box-container">
           <div class="intro-small-box"></span>
         </div>
@@ -126,7 +120,9 @@
                   have fun together.</div>
                   <button class="case-button-container mobile">Explore case</button>
               </div>
-              <button class="case-button-container"><span>Explore case</span></button>
+              <div class="move" data-speed="50">
+                <button class="case-button-container"><span>Explore case</span></button>
+              </div>
               <span class="layers">
                 <span class="layer"></span>
                 <span class="layer"></span>
@@ -143,7 +139,9 @@
                   have fun together.</div>
                   <button class="case-button-container mobile">Explore case</button>
               </div>
-              <button class="case-button-container"><span>Explore case</span></button>
+              <div class="move" data-speed="50">
+                <button class="case-button-container"><span>Explore case</span></button>
+              </div>
               <span class="layers">
                 <span class="layer"></span>
                 <span class="layer"></span>
@@ -237,7 +235,9 @@
       <div class="move" data-speed="20">
         <div class="contact-map fade-up fourth">
           <div class="overlay"></div>
-          <div class="contact-map-text fade-up fifth">Obscurial</div>
+          <div class="move contact-map-text-container" data-speed="30">
+            <div class="contact-map-text fade-up fifth">Obscurial</div>
+          </div>
         </div>
       </div>
       <div class="contact-item-group left fade-up">

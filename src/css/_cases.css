@@ -8,6 +8,7 @@
   .case-faded-text { display:inline-block; font-size:55rem; color:#272727; animation:translate-off-canvas 15s linear infinite; }
     .case-faded-text-container.vrtbr{ top:20rem; }
     .case-faded-text-container.dynaway { top:98rem; }
+    .case-faded-text-container.gdpr { top:176rem; }
 
     .case-image { cursor:pointer; padding-top:56.25%; background-position:center; background-size:cover; background-repeat:no-repeat; }
 
@@ -25,8 +26,8 @@
       .case-button-container.mobile { display:none; position:relative; margin-top:3rem; top:auto; bottom:auto; }
           .case-button-container span { position:relative; z-index:1; }
         .case-button-container:after { content:''; background-color:#3ae285; position:absolute; z-index:-1; top:0; left:0; bottom:0; right:100%; display:block; transition:left .5s cubic-bezier(0.77, 0, 0.175, 1), right .5s cubic-bezier(0.77, 0, 0.175, 1); }
-        .case-button-container:hover { color:black; transition:color .7s; transition-delay:.3s; }
-        .case-button-container:hover:after { left:0; right:0; }
+        .case-button-container:hover, .case-container:hover .case-button-container { color:black; transition:color .7s; transition-delay:.3s; }
+        .case-button-container:hover:after, .case-container:hover .case-button-container:after { left:0; right:0; }
 
       .case-preview { transition:opacity 1s; }
         .case-expanded .case-preview { opacity:0; }

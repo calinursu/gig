@@ -26,7 +26,7 @@
       .case-button-container.mobile { display:none; position:relative; margin-top:3rem; top:auto; bottom:auto; }
           .case-button-container span { position:relative; z-index:1; }
         .case-button-container:after { content:''; background-color:#3ae285; position:absolute; z-index:-1; top:0; left:0; bottom:0; right:100%; display:block; transition:left .5s cubic-bezier(0.77, 0, 0.175, 1), right .5s cubic-bezier(0.77, 0, 0.175, 1); }
-        .case-button-container:hover, .case-container:hover .case-button-container { color:black; transition:color .7s; transition-delay:.3s; }
+        .case-button-container:hover, .case-container:hover .case-button-container { color:black; transition:color .7s; transition-delay:.2s; }
         .case-button-container:hover:after, .case-container:hover .case-button-container:after { left:0; right:0; }
 
       .case-preview { transition:opacity 1s; }

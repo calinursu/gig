@@ -9,7 +9,7 @@
     .info-box.black { width:53vw; height:50rem; padding:5vw; top:120rem; left:0; margin-bottom:15rem; box-sizing:border-box; background-color:#000000a3; background-image:url("../images/map-left.jpg"); background-size:cover; opacity:.9; }
 
       .info-box .overlay { position:absolute; width:100%; height:100%; top:0; left:0; }
-        .info-box.green .overlay { background:#24c174; opacity:.5; }
+        .info-box.green .overlay { background:#3ae285; opacity:.5; }
         .info-box.black .overlay { background:#000; opacity:.5; }
 
   .services-headline { position:relative; font-size:3.5rem; top:-3rem; }

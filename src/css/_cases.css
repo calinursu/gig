@@ -61,7 +61,7 @@
 
               .image-center-container {  }
                 .image-center-container:after { content:''; clear:both; display:block; }
-                .image-center { display:block; width:74%; max-width:110rem; height:auto; margin:0 auto; }
+                .image-center { display:block; width:74%; max-width:110rem; height:auto; margin:0 auto 5rem auto; }
 
               .image-right-container { position:relative; }
                 .image-right-container:after { content:''; clear:both; display:block; }

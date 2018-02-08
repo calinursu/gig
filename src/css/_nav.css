@@ -46,7 +46,7 @@ header { position:fixed; width:calc(100%); padding-top:3rem; padding-bottom:3rem
 
   .mobile-menu { position:absolute; left:3rem; top:50%; transform:translateY(-50%); }
     .mobile-main-menu a { display:block; font-size:2.5rem; padding:.7rem 0; margin:.7rem 0; transition:color .8s; }
-    .mobile-main-menu .main-menu-item:hover { color:#18b176; }
+    .mobile-main-menu .main-menu-item:hover { color:#3ae285; }
 
     .mobile-secondary-menu { margin-top:2rem; }
       .mobile-secondary-menu a { display:block; color:#aeaeae; font-size:1.8rem; padding:.7rem 0; }

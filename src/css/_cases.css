@@ -43,7 +43,7 @@
           .case-single { opacity:0; visibility:hidden; display:none; width:100%; height:100%; animation-duration:.5s; animation-delay:1.8s; animation-fill-mode:forwards; }
           .case-single.is-visible { animation-name:case-visible; display:block; }
 
-            .case-single-image { background-size:cover; }
+            .case-single-image { background-size:cover; background-position:center center; }
               .case-single-image.hero { height:60rem; }
 
             .case-single .case-single-content.out { animation:case-hidden .3s; animation-fill-mode:forwards; }

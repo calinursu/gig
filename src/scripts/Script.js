@@ -4,6 +4,7 @@ import Nav from './components/nav';
 import CasesPage from './components/casesPage';
 import Noise from './components/noise';
 import HomePage from './components/homePage';
+import MessageContainer from './components/messageContainer';
 
 window.addEventListener('load', () => {
   Scroll.init();
@@ -12,6 +13,7 @@ window.addEventListener('load', () => {
   CasesPage.init();
   Noise.init();
   HomePage.init();
+  MessageContainer.init();
   document.body.classList.add("app-loaded");
 });
 

@@ -8,7 +8,6 @@
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 	<link rel="stylesheet" href="css/style.css" type="text/css" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	
 </head>
 <body class="app-loading">
   <canvas class="with-noise"></canvas>
@@ -16,7 +15,7 @@
   <div class="main-elements-container">
     <header>
       <a href="" class="logo secondary-menu-item menu-item" data-url="home">Obscurial</a>
-      <!-- <a href="" class="logo secondary-menu-item menu-item" data-url="home">Hire us</a> -->
+      <a href="" class="logo secondary-menu-item menu-item" data-url="hireus">Hire us</a>
       <div class="menu-button-container open-mobile-menu">
         <span class="menu-button">
           <span class="menu-button-top"></span>    
@@ -312,6 +311,24 @@
         <div class="contact-item fade-up third last">Can we help you with the concept or implementation of your digital strategy?</div>
         <div class="contact-item fade-up third">We would love to build something great together</div>
       </div>
+    </section>
+
+    <section class="page contact is-hidden" data-url="hireus">
+      <template id="message-sender-template">
+        <div class="message from-sender">
+          <div class="message-text"></div>
+          <!-- <button>click</button> -->
+        </div>
+      </template>
+      <template id="message-receiver-template">
+        <div class="message from-receiver">
+          <div class="message-text"></div>
+          <!-- <button>click</button> -->
+        </div>
+      </template>
+      
+      <div class="messages"></div>
+      <div class="sender">Sender</div>
     </section>
 	</main>
   <div class="preloader"></div>

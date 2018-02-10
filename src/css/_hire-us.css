@@ -1,0 +1,6 @@
+.sender {position: absolute;width: 100vw; left: 0; bottom: 0; border-top: .1rem solid green;color:#000; height:15rem; background-color:#fff; }
+    .sender span, .sender div { font-size:2rem; }
+    .message { clear: both; padding: .6rem; color: white; border-radius: 1rem; font-size:3rem; }
+    .from-sender { float: left; }
+    .from-receiver { float: right; background-color: rgb(69, 200, 87); opacity: 0; transform: translateY(1rem); transition: opacity .5s, transform .5s; }
+      .from-receiver.active { opacity: 1; transform: translateY(0); }

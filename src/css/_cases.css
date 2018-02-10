@@ -47,7 +47,8 @@
               .case-single-image.hero { height:60rem; }
 
             .case-single .case-single-content.out { animation:case-hidden .3s; animation-fill-mode:forwards; }
-            .case-single .overlay { position:fixed; top:0; left:0; right:0; bottom:0; z-index:1;  cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACGklEQVRoQ+2ZW0oEMRBF7+CH69FFiOKHqLgbRUVcjvhAcQm6JQVRCjoQY5Kq1CMy6PxOd3JOKo+q9Apr/lutOT/+hMAGgI9fihTbNxeBKwBbAI4BvE2W2ARwB+AVwGWr754AwZ8uLz5Nlkjwu0v/Fy2JlkAOn+RnSZTwqf+qRE2gBj9LogXflCgFaNHcA9jvzPeoSHDwhPQA4CjfVGoRoIZuJktI4U8AvOeD21oDMyXU8CTS24VmSJjgOQH6P1LCDC8RiJJwgZcKeEu4wY8IeEm4wo8KWCXc4TUCWokQeK3AqAQ9T1llSsxqhzydsD8OKUn2y6XTvTYkW+wzAEpPdjoNqeEtEUg8EoneIJjgPQSk08l12khyIcn0y58ZjYR55FPnljVQSpLELYA9xv5xqe6+ZZWjIxYlQCPbW7DULy3sQ68a2ysCkn0+H2S3oshDYBQ+ibhIWAW08G4SFgEJPC1YOsh6C9sUCa2ABD5tldRHWI2tERiBT1ul5JxQRWJUQAM/knYMS4wIWODDJKQCHvAhEhIBT3h3CU4gAt5VgrvYCqukFgvz7tS7WoyGd4lE63J3FrxZona9Tsd/SAHO5PzS6XTAXa+fA6CvIWFlYEekJ/EJ4AzAtaSkrEm4lYGKSFThuaI+l5gFX1sTTXhOgP4niW3tpZO2zi222Jdy2kimUP4M+7HZCNp7ne2bO4kD2Xya/hfwGUd9K18UXc8x0/pMmgAAAABJRU5ErkJggg==), auto;}
+            .case-single .overlay { position:fixed; top:0; left:0; right:0; bottom:0; z-index:1; cursor:url(../images/x.png), auto; }
+
             .case-single .background { position:fixed; top:0; left:0; right:0; bottom:0; z-index:-1; background-color:#f1f1f1; }
             .case-single .background.out { animation:slide-up .6s; animation-fill-mode:forwards; }
 
@@ -60,7 +61,7 @@
 
               .image-center-container {  }
                 .image-center-container:after { content:''; clear:both; display:block; }
-                .image-center { display:block; width:74%; max-width:110rem; height:auto; margin:0 auto; }
+                .image-center { display:block; width:74%; max-width:110rem; height:auto; margin:0 auto 5rem auto; }
 
               .image-right-container { position:relative; }
                 .image-right-container:after { content:''; clear:both; display:block; }
@@ -108,11 +109,17 @@
 @media all and (max-width:540px) {
   .case-text-container { width:80%; left:3rem; bottom:auto; top:13rem; }
   .case-single .case-box { padding:0 2rem; }
-    .text-card { min-width:34rem; padding:3rem; }
+    .text-card { width:100%; min-width:auto; max-width:initial; padding:3rem; margin:0; position:relative; top:-3rem; }
 
   .case-faded-text-container { display:none; }
 
   .case-button-container.mobile { padding:1.1rem 0; width:15rem; font-size:1.3rem; }
+
+  .case-single-image.hero { height:40rem; }
+    .case-single[data-name="gdprnu"] .case-single-image.hero { background-position:71% 50%; }
+  .case-single .description-container { padding:2rem 0; }
+  .case-single-image.right { margin-top:0; width:100%; height:27rem; float:none; }
+  .case-single-center-text { margin:10rem auto; }
 }
 
 

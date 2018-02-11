@@ -2,7 +2,7 @@ import Message from "./message";
 import Answer from "./answer";
 
 class MessageContainer {
-  constructor() {
+  constructor(el) {
     this.messages = [];
     this.activeMessage;
     this.choice = document.querySelector(".sender");
@@ -38,7 +38,13 @@ class MessageContainer {
         }
     ];
 
-    const message = new Message(this.messagesData[0].text, 0, this, this.messagesData[0].options, this.messagesData[0].auto, this.messagesData[0].userFill);
+    this.resetHtml();
+    this.choice.addEventListener("animationend", this.init.bind(this), { once:true });
+  }
+
+  resetHtml() {
+    this.choice.innerHTML = "";
+    this.messageList.innerHTML = "";
   }
 
   nextMessage() {
@@ -55,14 +61,11 @@ class MessageContainer {
   }
 
   insertAnswer() {
-    // const template = this.el.cloneNode();
-    // template.innerHTML = `${this.activeMessage.text} ${this.activeMessage.userInput}`;
     new Answer(this);
-    // this.nextMessage();
   }
 
-  static init() {
-    new MessageContainer();
+  init() {
+    new Message(this.messagesData[0].text, 0, this, this.messagesData[0].options, this.messagesData[0].auto, this.messagesData[0].userFill)
   }
 }
 

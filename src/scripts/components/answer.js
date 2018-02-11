@@ -8,7 +8,7 @@ class Answer {
   }
 
   addAnswer(){
-    this.el.innerHTML = `${this.messageContainer.activeMessage.text} ${this.messageContainer.activeMessage.userInput}`;
+    this.el.innerHTML = `${this.messageContainer.activeMessage.text} <span class="highlight">${this.messageContainer.activeMessage.userInput}</span>`;
     this.messageContainer.messageList.appendChild(this.el);
     setTimeout(() => { this.el.classList.add("active"); }, 0);
   }

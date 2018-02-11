@@ -2,12 +2,13 @@ import Typewritter from './typewritter';
 import animationEvent from './animationEvent';
 import Utils from './utils';
 
-class Nav {
-  constructor(el) {
+class NavItem {
+  constructor(el, nav) {
     this.el = el; 
     this.pagesContainer = document.querySelector('.content');
     this.locationOrigin = window.location.origin;
     this.menu = document.querySelector('.main-elements-container');
+    this.nav = nav;
 
     // elements for case page, when you have a case open and you want to navigate back to cases
     this.contentContainer = document.querySelector('.case-single-container');
@@ -22,12 +23,11 @@ class Nav {
     this.pageDescriptionNumber = document.querySelector(".page-description .page-number");
 
     this.el.addEventListener('click', this.loadPage.bind(this));
-    document.querySelector(".hire-us").addEventListener('click', this.onHireUsClick.bind(this));
     // document.querySelector(".mobile-menu-container").addEventListener('animationend', this.changePageDescription.bind(this));
   }
   
   loadPage(event) {
-
+    if(this.el.dataset.url === "hireus") { this.onHireUsClick(event); }
     event.preventDefault();
     document.body.classList.remove('mobile-menu-visible');
 
@@ -89,8 +89,9 @@ class Nav {
     }
   }
 
-  onHireUsClick() {
-    
+  onHireUsClick(e) {
+    e.preventDefault();
+    this.nav.onHireUsClick(); 
   }
 
   changePageDescription(e) {
@@ -104,6 +105,6 @@ class Nav {
   }
 }
 
-export default Nav;
+export default NavItem;
 
 

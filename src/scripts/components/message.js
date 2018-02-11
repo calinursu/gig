@@ -21,7 +21,7 @@ class Message {
   choiceTemplateWithOption(args) {
     return `
       <div class="user-choice">
-        <div>${this.text}</div>
+        <span>${this.text}</span>
         <span class="user-input"></span>
         ${args.map((arg, index) => `<button class="send" data-index=${index}>${arg}</button>`).join("")}
       </div>`;
@@ -31,8 +31,8 @@ class Message {
     return `
       <div class="user-choice">
         <span>${this.text}</span>
-        <span><input type="text"></span>
-        <button class="send">SEND</button>
+        <span><input class="choice-input" type="text"></span>
+        <button class="send">></button>
       </div>`;
   }
 

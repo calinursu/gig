@@ -15,12 +15,13 @@ class CasesPage {
 
     this.text = this.content.querySelector('.case-single-content');
     this.background = this.content.querySelector('.background');
-    this.overlay = this.content.querySelector('.close-case');
+    this.closeCaseButtons = this.content.querySelectorAll('.close-case');
 
     this.section = document.querySelector('.cases .section-title-container');
 
     this.caseImage.addEventListener('click', this.loadCase.bind(this));
-    this.overlay.addEventListener('click', this.exitCase.bind(this));
+    
+    this.closeCaseButtons.forEach(button => button.addEventListener('click', this.exitCase.bind(this)));
   
   }
 

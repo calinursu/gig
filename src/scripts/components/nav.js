@@ -1,11 +1,16 @@
 import NavItem from './navItem';
 class Nav {
   constructor(el) {
-    
+    this.navItemList = []; 
+
+    this.init();
   }
 
-  static init() {
-    document.querySelectorAll(".menu-item").forEach(el => new NavItem(el));
+  init() {
+    document.querySelectorAll(".menu-item").forEach((el) => {
+      const navItem = new NavItem(el);
+      this.navItemList.push(navItem);
+    }); 
   }
 }
 

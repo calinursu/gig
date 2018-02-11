@@ -7,9 +7,9 @@ import HomePage from './components/homePage';
 import MessageContainer from './components/messageContainer';
 
 window.addEventListener('load', () => {
+  new Nav();
   Scroll.init();
   Menu.init();
-  Nav.init();
   CasesPage.init();
   Noise.init();
   HomePage.init();

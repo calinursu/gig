@@ -6,9 +6,9 @@ class Message {
     this.text = text;
     this.index = index;
     this.messageContainer = messageContainer;
-    this.options = options || null;
-    this.auto = auto || null;
-    this.userFill = userFill || null;
+    this.options = options;
+    this.auto = auto;
+    this.userFill = userFill;
     this.userInput = null;
 
     this.addMessage();
@@ -37,12 +37,13 @@ class Message {
   }
 
   addMessage() {
-    new Typewritter([{ "text": this.text }], this.el.querySelector(".message-text"), 25, this.pushMessage.bind(this));
-
+    
     if (this.auto) {
       this.messageContainer.messageList.appendChild(this.el);
+      this.messageContainer.messageList.scrollTop = this.el.offsetTop + 700;
+      new Typewritter([{ "text": this.text }], this.el.querySelector(".message-text"), 25, this.pushMessage.bind(this));
     }
-    else { 
+    else {
       this.messageContainer.choice.innerHTML = this.userFill ? this.choiceTemplateWithText() : this.choiceTemplateWithOption(this.options);
       this.messageContainer.choice.querySelector(".user-choice").classList.add("active");
     }
@@ -57,6 +58,7 @@ class Message {
   }
 
   onSendClick(e) {
+    this.pushMessage();
     this.auto = true;
     this.userInput = this.options ? this.options[e.currentTarget.dataset.index] : this.messageContainer.choice.querySelector("input").value;
     this.messageContainer.choice.innerHTML = "";

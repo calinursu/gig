@@ -1,11 +1,11 @@
 import Message from "./message";
+import Answer from "./answer";
 
 class MessageContainer {
   constructor() {
-    this.el = document.importNode(document.querySelector("#message-receiver-template").content, true).querySelector('.message');
     this.messages = [];
     this.activeMessage;
-    this.senderElement = document.querySelector(".sender");
+    this.choice = document.querySelector(".sender");
     this.messageList = document.querySelector(".messages");
 
     this.messagesData = [
@@ -55,11 +55,10 @@ class MessageContainer {
   }
 
   insertAnswer() {
-    const template = this.el.cloneNode();
-    template.innerHTML = `${this.activeMessage.text} ${this.activeMessage.userInput}`;
-    this.messageList.appendChild(template);
-    setTimeout(() => { template.classList.add("active"); }, 0);
-    this.nextMessage();
+    // const template = this.el.cloneNode();
+    // template.innerHTML = `${this.activeMessage.text} ${this.activeMessage.userInput}`;
+    new Answer(this);
+    // this.nextMessage();
   }
 
   static init() {

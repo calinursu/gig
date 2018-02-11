@@ -46,7 +46,7 @@
   </div>
 
 	<main class="content">
-    <section class="page home is-visible" data-url="home">
+    <section class="page home is-hidden" data-url="home">
       <div class="text-container">
         <div class="preloader-cursor"></div>
         <div class="text-container-content">
@@ -313,22 +313,20 @@
       </div>
     </section>
 
-    <section class="page contact is-hidden" data-url="hireus">
-      <template id="message-sender-template">
-        <div class="message from-sender">
+    <section class="page contact is-visible" data-url="hireus">
+      <template id="question-template">
+        <div class="message question">
           <div class="message-text"></div>
-          <!-- <button>click</button> -->
         </div>
       </template>
-      <template id="message-receiver-template">
-        <div class="message from-receiver">
+      <template id="answer-template">
+        <div class="message answer">
           <div class="message-text"></div>
-          <!-- <button>click</button> -->
         </div>
       </template>
       
       <div class="messages"></div>
-      <div class="sender">Sender</div>
+      <div class="sender"></div>
     </section>
 	</main>
   <div class="preloader"></div>

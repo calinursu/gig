@@ -2,7 +2,7 @@ import Typewritter from "./typewritter"
 
 class Message {
   constructor(text, index, messageContainer, options, auto, userFill) {
-    this.el = document.importNode(document.querySelector("#message-sender-template").content, true).querySelector('.message');
+    this.el = document.importNode(document.querySelector("#question-template").content, true).querySelector('.message');
     this.text = text;
     this.index = index;
     this.messageContainer = messageContainer;
@@ -18,39 +18,34 @@ class Message {
     }
   }
 
-  templateWithOption(args) {
+  choiceTemplateWithOption(args) {
     return `
-      <div>${this.text}</div>
-      <span class="user-input"></span>
-      ${args.map((arg, index) => `<button class="send" data-index=${index}>${arg}</button>`).join("")}`;
+      <div class="user-choice">
+        <div>${this.text}</div>
+        <span class="user-input"></span>
+        ${args.map((arg, index) => `<button class="send" data-index=${index}>${arg}</button>`).join("")}
+      </div>`;
   }
 
-  templateWithText() {
+  choiceTemplateWithText() {
     return `
-      <span>${this.text}</span>
-      <span><input type="text"></span>
-      <button class="send">SEND</button>`;
-  }
-
-  template() {
-    return `<div>${this.text}</div>`;
+      <div class="user-choice">
+        <span>${this.text}</span>
+        <span><input type="text"></span>
+        <button class="send">SEND</button>
+      </div>`;
   }
 
   addMessage() {
-    // this.el.querySelector(".message-text").innerHTML = this.text;
-    new Typewritter([{ "text": this.text }], this.el.querySelector(".message-text"), 25);
+    new Typewritter([{ "text": this.text }], this.el.querySelector(".message-text"), 25, this.pushMessage.bind(this));
 
     if (this.auto) {
       this.messageContainer.messageList.appendChild(this.el);
     }
-    if (this.options && !this.auto) {
-      this.messageContainer.senderElement.innerHTML = this.templateWithOption(this.options);
+    else { 
+      this.messageContainer.choice.innerHTML = this.userFill ? this.choiceTemplateWithText() : this.choiceTemplateWithOption(this.options);
+      this.messageContainer.choice.querySelector(".user-choice").classList.add("active");
     }
-    if (this.userFill && !this.auto) {
-      this.messageContainer.senderElement.innerHTML = this.templateWithText();
-    }
-
-    this.pushMessage();
   }
 
   pushMessage() {
@@ -63,7 +58,8 @@ class Message {
 
   onSendClick(e) {
     this.auto = true;
-    this.userInput = this.options ? this.options[e.currentTarget.dataset.index] : this.messageContainer.senderElement.querySelector("input").value;
+    this.userInput = this.options ? this.options[e.currentTarget.dataset.index] : this.messageContainer.choice.querySelector("input").value;
+    this.messageContainer.choice.innerHTML = "";
     this.messageContainer.insertAnswer();
   }
 

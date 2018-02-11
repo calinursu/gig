@@ -1,9 +1,10 @@
 class Typewritter {
-  constructor(data, el, typingSpeed) {
+  constructor(data, el, typingSpeed, endCb) {
     this.el = el;
     this.data = data;
     this.typingSpeed = typingSpeed;
     this.startTypewritter(0);
+    this.endCb = endCb;
   }
 
   typewritter(text, i, newLine, line, cb) {
@@ -52,6 +53,9 @@ class Typewritter {
         });
       }
     } 
+    else {
+      if(this.endCb) this.endCb();
+    }
   }
 
   static init() {

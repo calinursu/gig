@@ -19,6 +19,7 @@ class MessageContainer {
         },
         {
           "text": "My name is",
+          "auto": false,
           "userFill": true
         },
         {
@@ -31,11 +32,12 @@ class MessageContainer {
           "auto": false,
         },
         {
-          "text": "That sounds great. Can you give us more details",
+          "text": "That sounds great. Can you give us more details?",
           "auto": true,
         },
         {
           "text": "Yes, I need",
+          "auto": false,
           "userFill": true
         },
         {
@@ -97,7 +99,7 @@ class MessageContainer {
   }
 
   init() {
-    new Message(this.messagesData[0].text, 0, this, this.messagesData[0].options, this.messagesData[0].auto, this.messagesData[0].userFill)
+    new Message(this.messagesData[0].text, 0, this, this.messagesData[0].options, this.messagesData[0].auto, this.messagesData[0].userFill);
   }
 }
 

@@ -15,7 +15,7 @@ class CasesPage {
 
     this.text = this.content.querySelector('.case-single-content');
     this.background = this.content.querySelector('.background');
-    this.overlay = this.content.querySelector('.overlay');
+    this.overlay = this.content.querySelector('.close-case');
 
     this.section = document.querySelector('.cases .section-title-container');
 
@@ -55,7 +55,7 @@ class CasesPage {
   }
 
   exitCase(e) {
-    window.hasCaseOpen = false;
+    e.preventDefault();
 
     this.otherCases.forEach(other => other.classList.remove('detach'));
     this.caseImage.classList.remove('is-selected');

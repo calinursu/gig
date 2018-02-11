@@ -10,32 +10,64 @@ class MessageContainer {
 
     this.messagesData = [
         {
-          "text": "Hey Calin. What can we help you with?",
+          "text": "Hello, we are Obscurial",
           "auto": true
         },
         {
-          "text": "You can help me with",
-          "options": ["stuff", "a website"],
-          "auto": false
-        },
-        {
-          "text": "What else?",
+          "text": "What brings you to us?",
           "auto": true
         },
         {
-          "text": "I would also like",
-          "auto": false,
+          "text": "My name is",
           "userFill": true
         },
         {
-          "text": "Do you want to suck a big one?",
+          "text": "What can we help you with?",
+          "auto": true
+        },
+        {
+          "text": "Obscurial can help me with",
+          "options": ["Web application development", "Software Development", "Machine learning", "SEO", "Web Optimization"],
+          "auto": false,
+        },
+        {
+          "text": "That sounds great. Can you give us more details",
           "auto": true,
         },
         {
-          "text": "Yes, I would like a",
-          "options": ["big one", "small one"],
+          "text": "Yes, I need",
+          "userFill": true
+        },
+        {
+          "text": "Do you have a deadline for this project?",
+          "auto": true,
+        },
+        {
+          "text": "It would be great if we could have it done within",
+          "options": ["1 month", "3 months", "6 months", "a year"],
           "auto": false,
-        }
+        },
+        {
+          "text": "How would a budget for this project look like?",
+          "auto": true,
+        },
+        {
+          "text": "The budget for the project is",
+          "options": ["50,000dkk and up", "between 200,000dkk to 500,000dkk", "more than 500,000dkk", "To be decided"],
+          "auto": false,
+        },
+        {
+          "text": "Sounds abslutely awesome! We'll get back to you in 2 days",
+          "auto": true,
+        },
+        {
+          "text": "Here's my email address",
+          "userFill":true
+        },
+        {
+          "text": "Got it, talk to you soon :)",
+          "auto": true,
+        },
     ];
 
     this.resetHtml();

@@ -89,7 +89,7 @@
 
 @media all and (max-width:768px) {
   .case-text-container { width:94%; bottom:-15rem; }
-    .case-excerpt { font-size:1.4rem; }
+    .case-excerpt { font-size:1.5rem; }
 
   .case-single .case-box { padding:0 3rem; }
     .case-single .secondary-headline { font-size:1.8rem; }

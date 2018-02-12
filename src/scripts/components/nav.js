@@ -10,6 +10,10 @@ class Nav {
   onHireUsClick() {
     this.app.onHireUsClick();
   }
+  
+  changePageDescription(page) {
+    this.app.changePageDescription(page);
+  }
 
   init() {
     document.querySelectorAll(".menu-item").forEach((el) => {

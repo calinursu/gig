@@ -5,12 +5,15 @@ import CasesPage from './casesPage';
 import Noise from './noise';
 import HomePage from './homePage';
 import MessageContainer from './messageContainer';
+import PageDescription from './pageDescription';
 
 class App {
   constructor(el) { 
     this.el = el;
     this.nav = new Nav(this);
+    this.pages = this.el.querySelectorAll(".page");
     this.activePage = this.el.querySelector(".page.is-visible");
+    this.pageDescription = new PageDescription(this.el.querySelector(".page-description"), this);
     
     Scroll.init();
     Menu.init();
@@ -23,6 +26,7 @@ class App {
 
   onHireUsClick() {
     const hireUsPage = this.el.querySelector(".page.hire-us");
+    const pageDescription = this.el.querySelector(".page-description");
     
     this.activePage = this.el.querySelector(".page.is-visible");
     this.activePage.classList.remove("is-visible");
@@ -30,12 +34,17 @@ class App {
 
     hireUsPage.classList.remove("is-hidden");
     hireUsPage.classList.add("is-visible");
+    this.pageDescription.toggleFade();
 
-    new MessageContainer();
+    new MessageContainer(this);
   }
 
   updateActivePage() {
     this.activePage = this.el.querySelector(".page.is-visible");
+  }
+
+  changePageDescription(page) {
+    this.pageDescription.changePageDescription(page);
   }
 }
 

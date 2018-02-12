@@ -14,7 +14,7 @@ class Noise {
 
       //window.addEventListener('resize', this.reset.bind(this));
 
-      if(window.innerWidth > 768)
+      // if(window.innerWidth > 767)
         this.setup();
   }
 

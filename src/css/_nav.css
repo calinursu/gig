@@ -68,6 +68,15 @@ header { position:fixed; width:calc(100%); padding-top:3rem; padding-bottom:3rem
   .mobile-menu-visible .secondary-menu-item { animation-name:show-text; animation-delay:.5s; }
 } 
 
+@media all and (max-width:767px) {
+  .menu-item.hire-us { display:none; }
+} 
+
+@media all and (max-width:540px) {
+  .secondary-menu-item { margin-left:2.5rem; }
+  .menu-button-container { margin-right:0; }
+} 
+
 @keyframes slide-down {
     0% { top:0; bottom:100%; }
     100% { bottom:0; top:0; }

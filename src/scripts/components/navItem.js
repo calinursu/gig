@@ -33,6 +33,7 @@ class NavItem {
 
     const activePage = this.pagesContainer.querySelector('.page.is-visible');
     this.nextPage = this.pagesContainer.querySelector('.page[data-url="' + this.el.dataset.url + '"]');
+    this.nav.nextPage = this.nextPage;
     const mobile = document.querySelector('.mobile-menu-container.is-visible');
 
     this.menu.classList.remove('has-overlay');
@@ -60,11 +61,11 @@ class NavItem {
         setTimeout( () => {
           mobile.classList.add('is-hidden');
           activePage.classList.remove('is-visible');
-          that.changePageDescription();
+          this.nav.changePageDescription(this.nextPage);
         }, 800 );
       } else {
         activePage.classList.remove('is-visible');
-        that.changePageDescription();
+        this.nav.changePageDescription(this.nextPage);
       }
      
 
@@ -91,17 +92,9 @@ class NavItem {
 
   onHireUsClick(e) {
     e.preventDefault();
+    this.nextPage = this.pagesContainer.querySelector('.page[data-url="' + this.el.dataset.url + '"]'); // ugly hack,please refactor
     this.nav.onHireUsClick(); 
-  }
-
-  changePageDescription(e) {
-    const nextPageIndex = Array.from(document.querySelectorAll(".page")).indexOf(this.nextPage);
-
-    this.pageDescription.innerHTML = "";
-    this.pageDescriptionNumber.innerHTML = "";
-
-    new Typewritter([{ "text": this.nextPage.dataset.url }], this.pageDescription, 60);
-    new Typewritter([{ "text": '0' + nextPageIndex }], this.pageDescriptionNumber, 80);  
+    this.nav.changePageDescription(this.nextPage);
   }
 }
 

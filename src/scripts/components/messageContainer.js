@@ -2,9 +2,11 @@ import Message from "./message";
 import Answer from "./answer";
 
 class MessageContainer {
-  constructor(el) {
+  constructor(app) {
     this.messages = [];
     this.activeMessage;
+    this.app = app;
+
     this.choice = document.querySelector(".sender");
     this.messageList = document.querySelector(".messages");
 
@@ -50,7 +52,7 @@ class MessageContainer {
           "auto": false,
         },
         {
-          "text": "How would a budget for this project look like?",
+          "text": "What's the budget for this project?",
           "auto": true,
         },
         {
@@ -59,7 +61,7 @@ class MessageContainer {
           "auto": false,
         },
         {
-          "text": "Sounds abslutely awesome! We'll get back to you in 2 days",
+          "text": "Sounds awesome! How can we reach you?",
           "auto": true,
         },
         {
@@ -67,12 +69,13 @@ class MessageContainer {
           "userFill":true
         },
         {
-          "text": "Got it, talk to you soon :)",
+          "text": "Got it, we will get back to you maximum in 2days :)",
           "auto": true,
-        },
+        }
     ];
 
     this.resetHtml();
+    this.choice.classList.remove("outro");
     this.choice.addEventListener("animationend", this.init.bind(this), { once:true });
   }
 
@@ -89,7 +92,8 @@ class MessageContainer {
         new Message(this.messagesData[activeIndex].text, activeIndex, this, this.messagesData[activeIndex].options, this.messagesData[activeIndex].auto, this.messagesData[activeIndex].userFill);
       }
       else {
-        return
+        this.app.pageDescription.toggleFade();
+        this.choice.classList.add("outro");
       }
     }
   }

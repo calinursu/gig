@@ -23,7 +23,7 @@ main { position:relative; padding:15rem 0 0 23rem; box-sizing:border-box; }
   header, .page-description { transition:opacity .3s, transform .3s; }
 
   header { opacity:0; transform:translateY(-1rem); }
-  .page-description { opacity:0; transform:translateY(1rem); }
+  .page-description, .app-loaded .page-description.fade-out { opacity:0; transform:translateY(1rem); }
     .app-loaded header, .app-loaded .page-description { opacity:1; transform:translateY(0); }
 
 @keyframes fadeUp {

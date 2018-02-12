@@ -1,15 +1,16 @@
 .sender { position:absolute; width:100vw; left:0; bottom:0; color:#000; height:20rem; padding-left:23rem; background-color:#fff; font-size:2rem; opacity:0; transform:translate3d(0, 100%, 0); animation:fade-up-from-bottom cubic-bezier(.785,.135,.15,.86) 1s .3s forwards; box-sizing:border-box; }
     .user-choice { position:relative; width:100%; top:50%; font-size:2rem; }
       .choice-input { border:none; border-bottom:.1rem dotted #000; font-size:2rem; }
+    .sender.outro { animation:fade-up-from-bottom-reverse forwards 1s .3s; transform:translateY(0); opacity:1; }
 
 .messages-container { width:90%; height:55rem; overflow:hidden; }
-  .messages { width:100%; height:100%; overflow-y:scroll; padding:0 3rem 5rem 0; box-sizing:border-box; }
-    .message { clear:both; margin-bottom:3rem; color: white; border-radius: 1rem; font-size:2.1rem; line-height:2.8; }
+  .messages { width:calc(100% + 2.5rem); height:100%; overflow-y:scroll; padding:0 3rem 5rem 0; box-sizing:border-box; }
+    .message { clear:both; color: white; border-radius: 1rem; font-size:2.1rem; line-height:2.8; }
       .message-text { height:6rem }
   .question { float: left; }
-  .answer { float: right; opacity: 0; transform: translateY(1rem); animation:fade-up-hire-us .5s forwards; }
+  .answer { float:right; margin:5rem 0; opacity:0; transform:translateY(1rem); animation:fade-up-hire-us .5s forwards; }
     .answer.active { opacity:1; }
-
+  
   .send { position:relative; padding:1rem; vertical-align:middle; margin-right:1rem; font-size:2rem; background:transparent; border:.1rem solid #000; box-shadow:none; cursor:pointer; overflow:hidden; }
   .highlight { border-bottom:.1rem dashed #3ae285; }
 
@@ -27,23 +28,27 @@
 }
 
 @media all and (max-width:768px) {
-  .messages { padding:0 1rem; line-height:1.8; }
+  .messages { width:100%; padding:0 1rem; line-height:1.8; }
 }
 
 @media all and (max-width:540px) {
   .messages, .sender { padding:0 3.5rem; }
 }
 
-
-
 @keyframes fade-up-hire-us {
   0% { opacity:0; transform:translateY(1rem); }
   100% { opacity:1; transform:translateY(-50%); }
 }
 
+
 @keyframes fade-up-from-bottom {
   0% { opacity:0; transform:translateY(100%); }
   100% { opacity:1; transform:translateY(0%); }
+}
+
+@keyframes fade-up-from-bottom-reverse {
+  0% { opacity:1; transform:translateY(0%); }
+  100% { opacity:0; transform:translateY(100%); }
 }
 
 .user-choice { display:none; opacity:0; animation:fade-up-hire-us .5s .1s cubic-bezier(.785,.135,.15,.86) forwards; }

@@ -4,10 +4,7 @@ header { position:fixed; width:calc(100%); padding-top:3rem; padding-bottom:3rem
   .main-elements-container > div { z-index:4; }
 
   .main-elements-container .secondary-menu-item, .main-elements-container .page-description { animation-fill-mode:forwards; animation-duration:.3s; animation-delay:.5s; animation-timing-function:cubic-bezier(.785,.135,.15,.86); }
-    .main-elements-container.has-overlay .secondary-menu-item { animation-name:exit-top; }
-    .main-elements-container.has-overlay .page-description { animation-name:exit-bottom; }
-    .main-elements-container.has-fade .secondary-menu-item { opacity:0; animation-name:enter-top; animation-delay:.1s; }
-    .main-elements-container.has-fade .page-description { opacity:0; animation-name:enter-bottom; animation-delay:.1s; }
+    
 
     .menu-button-container { position:relative; float:right; margin-right:1rem; top:.6rem; padding:1rem 6rem 1rem 2rem; cursor:pointer; }
       .menu-button-text { position:absolute; font-size:1.4rem; top:.8rem; right:5.6rem; opacity:0; width:0; transition:opacity .3s; }
@@ -67,6 +64,12 @@ header { position:fixed; width:calc(100%); padding-top:3rem; padding-bottom:3rem
   .secondary-menu-item { opacity:0; }
   .mobile-menu-visible .secondary-menu-item { animation-name:show-text; animation-delay:.5s; }
 } 
+@media all and (min-width:768px) {
+  .main-elements-container.has-overlay .secondary-menu-item { animation-name:exit-top; }
+  .main-elements-container.has-overlay .page-description { animation-name:exit-bottom; }
+  .main-elements-container.has-fade .secondary-menu-item { opacity:0; animation-name:enter-top; animation-delay:.1s; }
+  .main-elements-container.has-fade .page-description { opacity:0; animation-name:enter-bottom; animation-delay:.1s; }
+}
 
 @media all and (max-width:767px) {
   .menu-item.hire-us { display:none; }

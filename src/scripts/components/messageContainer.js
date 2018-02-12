@@ -12,7 +12,7 @@ class MessageContainer {
 
     this.messagesData = [
         {
-          "text": "Hello, we are Obscurial",
+          "text": "Hello, we are Obscurial.",
           "auto": true
         },
         {
@@ -69,7 +69,7 @@ class MessageContainer {
           "userFill":true
         },
         {
-          "text": "Got it, we will get back to you maximum in 2days :)",
+          "text": "Got it, we will get back to you max. in 2 days 🙌",
           "auto": true,
         }
     ];

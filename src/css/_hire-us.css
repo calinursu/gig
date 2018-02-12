@@ -4,7 +4,7 @@
     .sender.outro { animation:fade-up-from-bottom-reverse forwards 1s .3s; transform:translateY(0); opacity:1; }
 
 .messages-container { width:90%; height:55rem; overflow:hidden; }
-  .messages { width:calc(100% + 2.5rem); height:100%; overflow-y:scroll; padding:0 3rem 5rem 0; box-sizing:border-box; }
+  .messages { width:calc(100% + 2.5rem); height:100%; overflow-y:scroll; padding:0 3rem 8rem 0; box-sizing:border-box; }
     .message { clear:both; color: white; border-radius: 1rem; font-size:2.1rem; line-height:2.8; }
       .message-text { height:6rem }
   .question { float: left; }
@@ -28,7 +28,7 @@
 }
 
 @media all and (max-width:768px) {
-  .messages { width:100%; padding:0 1rem; line-height:1.8; }
+  .messages { width:100%; padding:0 1rem 5rem; line-height:1.8; }
 }
 
 @media all and (max-width:540px) {

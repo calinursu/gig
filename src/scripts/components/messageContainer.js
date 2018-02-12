@@ -69,7 +69,7 @@ class MessageContainer {
           "userFill":true
         },
         {
-          "text": "Got it, we will get back to you max. in 2 days 🙌",
+          "text": "Got it, we will get back to you in max. 2 days 🙌",
           "auto": true,
         }
     ];

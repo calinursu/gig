@@ -21,7 +21,7 @@ let config = {
 	fontsSource: "src/css/fonts/**/*",
 	fontsOutput: "dist/css/fonts",
 
-	debug: true
+	debug: false
 }
 
 const gulp = require('gulp');
@@ -38,16 +38,16 @@ const fs = require("fs");
 const uglify = require('gulp-uglify');
 const buffer = require('vinyl-buffer');
 const source = require('vinyl-source-stream');
-const concat = require("gulp-concat");
 const del = require("del");
 const reload = browserSync.reload;
-const history = require('connect-history-api-fallback');
+const minifyCSS = require('gulp-minify-css');
 
 gulp.task('css', (cb) => {
 	gulp.src(config.mainCss)
 		.pipe(gulpif(config.debug, sourcemaps.init()))
 		.pipe(plumber())
-		.pipe(postcss([ require('precss'), require('autoprefixer') ]) )
+    .pipe(postcss([ require('precss'), require('autoprefixer') ]) )
+    .pipe(minifyCSS())
 		.pipe(gulpif(config.debug, sourcemaps.write()))
 		.pipe(gulp.dest(config.outputBase + config.cssOutput))
 		.pipe(browserSync.stream());

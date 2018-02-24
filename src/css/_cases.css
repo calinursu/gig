@@ -48,7 +48,7 @@
               .case-single-image.hero { height:60rem; }
 
             .case-single .case-single-content.out { animation:case-hidden .3s; animation-fill-mode:forwards; }
-            .case-single .overlay { position:fixed; top:0; left:0; right:0; bottom:0; z-index:1; cursor:url(../images/x.png), auto; }
+            .case-single .overlay { position:fixed; top:0; left:0; right:0; bottom:0; z-index:1; cursor:url(http://res.cloudinary.com/dqwtlmis3/image/upload/q_auto/f_auto/x.png), auto; }
 
             .case-single .background { position:fixed; top:0; left:0; right:0; bottom:0; z-index:-1; background-color:#f1f1f1; }
             .case-single .background.out { animation:slide-up .6s; animation-fill-mode:forwards; }

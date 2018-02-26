@@ -30,7 +30,7 @@
       /* .after-color { line-height:3.5; } */
     
       .intro-box-container { position: absolute; top:0; left:0; right:0; }
-      .intro-large-box { opacity:.6; display:block; position:absolute; max-width:180rem; min-height:83rem; left:5rem; right:5rem; top:10rem; bottom:10rem; background-color:#232323; background:url("http://res.cloudinary.com/dqwtlmis3/image/upload/q_auto/f_auto/antenna.jpg"); background-size:cover; background-position:center; }
+      .intro-large-box { opacity:.6; display:block; position:absolute; max-width:180rem; min-height:83rem; left:5rem; right:5rem; top:10rem; bottom:10rem; background-color:#232323; background:url("https://res.cloudinary.com/dqwtlmis3/image/upload/q_auto/f_auto/antenna.jpg"); background-size:cover; background-position:center; }
         .intro-large-box .overlay { position:absolute; background:#090909eb; width:100%; height:100%; opacity:1; }
 			.intro-medium-box { display:block; width:40vw; height:46vh; max-width:54rem; position:absolute; left:23%; top:5rem; background-color:#1f1f1f; }
       .intro-small-box-container { position:absolute; opacity:.2; display:block; width:47vw; height:53rem; position:absolute; top:10rem; right:0; overflow:hidden; }

@@ -18,6 +18,10 @@
   .user-choice { position:relative; width:90%; margin:0 auto; max-width:140rem; left:-.7rem; box-sizing:border-box; max-width:140rem; }
 }
 
+@media all and (max-width:1280px) {
+  .messages { padding-bottom:22rem; }
+}
+
 @media all and (max-width:1024px) {
   .message { font-size:1.8rem; }
   .sender{ padding-left:3.5rem; }

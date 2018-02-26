@@ -116,8 +116,8 @@ class HomePage {
     this.introBox = this.el.querySelector(".intro-small-box");
     this.preloader = document.querySelector(".preloader");
     
-    this.preloader.addEventListener("transitionend", this.animateHomeBox.bind(this));
-    this.introBox.addEventListener("transitionend", this.startTypewritter.bind(this));
+    this.preloader.addEventListener("transitionend", this.animateHomeBox.bind(this), {once:true} );
+    this.introBox.addEventListener("transitionend", this.startTypewritter.bind(this), { once:true });
   }
 
   startTypewritter() {

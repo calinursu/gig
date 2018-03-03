@@ -68,7 +68,7 @@ class HomePage {
         "tag": "br",
       },
       {
-        "text": "Web application Development & Integration",
+        "text": "Web & Mobile application development",
         "tag": "span",
         "class": "intro-secondary-headline translate console-list-item"
       },
@@ -86,7 +86,7 @@ class HomePage {
         "tag": "br",
       },
       {
-        "text": "Data handling",
+        "text": "Data handling & Tracking",
         "tag": "span",
         "class": "intro-secondary-headline translate console-list-item",
         "newLine": true

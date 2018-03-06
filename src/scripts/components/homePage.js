@@ -101,10 +101,10 @@ class HomePage {
         "class": "intro-secondary-headline last before-contact-line"
       },
       {
-        "text": "hello@obscurial.dk",
+        "text": "info@obscurial.dk",
         "tag": "a",
         "class": "intro-secondary-headline last contact-line",
-        "href": "mailto:hello@obscurial.dk",
+        "href": "mailto:info@obscurial.dk",
         "newLine": true
       },
       {

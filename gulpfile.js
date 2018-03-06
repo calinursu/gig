@@ -21,7 +21,7 @@ let config = {
 	fontsSource: "src/css/fonts/**/*",
 	fontsOutput: "dist/css/fonts",
 
-	debug: false
+	debug: true
 }
 
 const gulp = require('gulp');
@@ -58,7 +58,6 @@ gulp.task('scripts', () => {
 	const fs = require('fs');
 	const browserify = require('browserify');
 	const buffer = require('vinyl-buffer');
-	const uglify = require('gulp-uglify');
 	const source = require('vinyl-source-stream');
 
 	return browserify({

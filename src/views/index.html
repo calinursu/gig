@@ -20,9 +20,21 @@
 
   <div class="main-elements-container">
     <header>
+      <div class="menu-container">
+        <div class="mobile-menu-inner-container">
+          <div class="mobile-menu">
+            <nav class="mobile-main-menu">
+              <a href="" class="main-menu-item menu-item" data-url="about">About us</a>
+              <a href="" class="main-menu-item menu-item" data-url="work">Work</a>
+              <a href="" class="main-menu-item menu-item" data-url="contact">Contact</a>
+            </nav>
+          </div>
+        </div>
+        <div class="background"></div>
+      </div>
       <a href="" class="logo secondary-menu-item menu-item" data-url="home">Obscurial</a>
       <a href="" class="logo secondary-menu-item menu-item hire-us" data-url="hireus">Hire us</a>
-      <div class="menu-button-container open-mobile-menu">
+      <div class="menu-button-container">
         <span class="menu-button">
           <span class="menu-button-top"></span>    
           <span class="menu-button-bottom"></span>
@@ -38,35 +50,22 @@
     </div>
   </div>
 
-  <div class="mobile-menu-container is-hidden">
-    <div class="mobile-menu-inner-container">
-      <div class="mobile-menu">
-        <nav class="mobile-main-menu">
-          <a href="" class="main-menu-item menu-item" data-url="about">About us</a>
-          <a href="" class="main-menu-item menu-item" data-url="work">Work</a>
-          <a href="" class="main-menu-item menu-item" data-url="contact">Contact</a>
-        </nav>
-      </div>
-    </div>
-    <div class="background"></div>
-  </div>
-
 	<main class="content">
     <section class="page home is-visible" data-url="home">
-      <div class="text-container">
+      <div class="text-container fade-up second">
         <div class="preloader-cursor"></div>
         <div class="text-container-content">
           <span contenteditable="true" class="console-cursor"></span>
         </div>
       </div>
-      <div class="intro-box-container">
+      <div class="intro-box-container fade-up">
         <div class="intro-small-box-container">
           <div class="intro-small-box"></span>
         </div>
       </div>
     </section>
 
-    <section class="page hire-us is-hidden clearfix" data-url="hireus">
+    <section class="page hire-us clearfix" data-url="hireus">
       <template id="question-template">
         <div class="message question">
           <div class="message-text"></div>
@@ -85,7 +84,7 @@
       <div class="sender"></div>
     </section>
 
-    <section class="page about box-wide is-hidden" data-url="about">
+    <section class="page about box-wide" data-url="about">
       <div class="section-title-container fade-up">
         <div class="section-title">Making the web better</div>
         <div class="section-subtitle">Software studio web at heart</div>
@@ -131,7 +130,7 @@
       </div>
     </section>
 
-    <section class="page cases is-hidden" data-url="work">
+    <section class="page cases" data-url="work">
       <div class="section-title-container box-wide fade-up">
         <div class="section-title">Technology with purpose</div>
         <div class="section-subtitle">Succesful stories from our past</div>
@@ -334,7 +333,7 @@
       </div>
     </section>  
 
-    <section class="page contact is-hidden" data-url="contact">
+    <section class="page contact" data-url="contact">
       <div class="move" data-speed="20">
         <div class="contact-map fade-up fourth">
           <div class="overlay"></div>
@@ -356,8 +355,12 @@
         <div class="contact-item fade-up third">We would love to build something great together</div>
       </div>
     </section>
-	</main>
+  </main>
+  
   <div class="preloader"></div>
+
+  <div class="page-transition"></div>
+
   <script src="scripts/all.js"></script>
     <!-- Hotjar Tracking Code for www.obscurial.dk -->
     <script>

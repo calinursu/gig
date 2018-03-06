@@ -7,8 +7,9 @@ class PageDescription {
     this.visible = true;
   }
 
-  changePageDescription(page) {
-    const nextPageIndex = Array.from(this.app.pages).indexOf(page);
+  changePageDescription() {
+    const page = this.app.activePage;
+    const nextPageIndex = this.app.pages.indexOf(page);
 
     const text = this.el.querySelector(".heading");
     const number = this.el.querySelector(".page-number");

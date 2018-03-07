@@ -9,7 +9,7 @@ let config = {
 	cssName: "style.css",
 
 	scriptsName: "all.js",
-	scriptsSource: ['src/scripts/**/*.js'], 
+  scriptsSource: ['src/scripts/**/*.js'], 
 	startScript: "src/scripts/Script.js", // "main" file from which the bundle is created
 	scriptsOutput: "scripts/",
 
@@ -21,7 +21,7 @@ let config = {
 	fontsSource: "src/css/fonts/**/*",
 	fontsOutput: "dist/css/fonts",
 
-	debug: true
+	debug: false
 }
 
 const gulp = require('gulp');
@@ -41,6 +41,7 @@ const source = require('vinyl-source-stream');
 const del = require("del");
 const reload = browserSync.reload;
 const minifyCSS = require('gulp-minify-css');
+const htmlmin = require('gulp-htmlmin');
 
 gulp.task('css', (cb) => {
 	gulp.src(config.mainCss)
@@ -74,7 +75,8 @@ gulp.task('scripts', () => {
 
 gulp.task('views', (cb) => {
 	return gulp
-		.src(config.viewsSource)
+    .src(config.viewsSource)
+    .pipe(htmlmin({ collapseWhitespace:true }))
 		.pipe(gulp.dest("dist"))
 		.pipe(reload({ stream:true }));
 	cb();

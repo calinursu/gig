@@ -10,7 +10,8 @@
   "dependencies": {
     "connect-history-api-fallback": "^1.5.0",
     "gulp-babel": "^6.1.2",
-    "gulp-cli": "^1.2.2"
+    "gulp-cli": "^1.2.2",
+    "gulp-htmlmin": "^4.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",

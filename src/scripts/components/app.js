@@ -1,23 +1,27 @@
 import Scroll from './scroll';
-import Menu from './menu';
 import Nav from './nav';
 import CasesPage from './casesPage';
 import Noise from './noise';
 import HomePage from './homePage';
 import MessageContainer from './messageContainer';
 import PageDescription from './pageDescription';
+import VoiceRecognition from './voiceRecognition';
+import Console from './console';
 
 class App {
   constructor(el) { 
     this.el = el;
+
     this.nav = new Nav(this.el.querySelector("header"), this);
+    this.pageDescription = new PageDescription(this.el.querySelector(".page-description"), this);
+    this.voiceRecognition = new VoiceRecognition(this);
+    this.console = new Console(document.querySelector(".console"), this);
+
     this.pages = Array.from(this.el.querySelectorAll(".page"));
     this.activePage = this.el.querySelector(".page.is-visible");
-    this.pageDescription = new PageDescription(this.el.querySelector(".page-description"), this);
     this.transitionEl = this.el.querySelector(".page-transition");
     
     Scroll.init();
-    Menu.init();
     CasesPage.init();
     Noise.init();
     HomePage.init();
@@ -33,7 +37,6 @@ class App {
   }
 
   pageTransiton(url) {
-    if (this.activePage.dataset.url === url) { return; }
     this.transitionEl.classList.add("is-visible");
     setTimeout(() => {this.showPage(url);}, 500);
   }
@@ -47,10 +50,14 @@ class App {
 
     this.activePage = this.pages.filter(p => p.dataset.url === url)[0];
     this.activePage.classList.add("is-visible");
+    setTimeout(() => { this.pageDescription.changePageDescription(); }, 800);
   }
 
   goToPage(url) {
+    if (this.activePage.dataset.url === url) { return; }
     if(!this.pageDescription.visible){this.pageDescription.toggleFade();}
+    if(url === "hireus") { this.onHireUsClick(); }
+
     if(this.nav.menuActive) {
       this.nav.toggleMenu();
       this.showPage(url);
@@ -59,8 +66,6 @@ class App {
       this.pageTransiton(url);
     }
     
-    setTimeout(() => { this.pageDescription.changePageDescription(); }, 800);
-  
     //REFACTOR THIS !!
     const contentContainer = document.querySelector('.case-single-container');
     const content = contentContainer.querySelector('.case-single.is-visible');
@@ -69,6 +74,18 @@ class App {
       content.classList.remove('is-visible');
     }
     this.el.querySelector(".main-elements-container").classList.remove('has-overlay');
+  }
+
+  onSpeechStart() {
+    this.nav.onSpeechStart();
+  }
+
+  onSpeechMatch() {
+    this.nav.onSpeechMatch();
+  }
+
+  onSpeechError() {
+    this.nav.onSpeechError();
   }
 }
 

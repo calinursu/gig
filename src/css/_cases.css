@@ -5,7 +5,7 @@
     .case-container.detach { z-index:-1; }
 
   .case-faded-text-container { position:absolute; overflow:hidden; z-index:-3; left:0; width:100%; }
-  .case-faded-text { display:inline-block; font-size:55rem; color:#272727; animation:translate-off-canvas 15s linear infinite; }
+  .case-faded-text { display:inline-block; font-size:55rem; color:#272727; animation:translate-off-canvas 40s linear infinite; }
     .case-faded-text-container.vrtbr{ top:20rem; }
     .case-faded-text-container.dynaway { top:98rem; }
     .case-faded-text-container.gdpr { top:176rem; }

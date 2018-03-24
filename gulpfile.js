@@ -21,8 +21,8 @@ let config = {
 	fontsSource: "src/css/fonts/**/*",
 	fontsOutput: "dist/css/fonts",
 
-	debug: false
-}
+	debug:true
+};
 
 const gulp = require('gulp');
 const gulpif = require('gulp-if');
@@ -101,7 +101,8 @@ gulp.task('browser-sync', () => {
 	browserSync.init({
 	    server: {
 	      baseDir: 'dist'
-      }
+      },
+      https:true
 	});
 });
 

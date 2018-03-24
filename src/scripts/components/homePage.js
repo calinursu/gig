@@ -121,7 +121,7 @@ class HomePage {
   }
 
   startTypewritter() {
-    new Typewritter(this.data, this.el.querySelector(".text-container-content"), 35);
+    new Typewritter(this.data, this.el.querySelector(".console-content"), 35);
   }
 
   animateHomeBox() {

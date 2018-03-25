@@ -33,7 +33,7 @@ p { font-size:2.1rem; }
 .section-content-wrapper { padding:0 10rem; }
 
 @media all and (max-width:1024px) { 
-  html { -webkit-text-size-adjust:100%; } .hide-mobile { display:none; } 
+  html { -webkit-text-size-adjust:100%; } .hide-mobile { display:none !important; } 
 }
 
 @media all and (max-width:768px) { 

@@ -13,9 +13,9 @@ class Nav {
     this.menuButton.addEventListener("click", this.toggleMenu.bind(this));
   }
 
-  onHireUsClick() {
-    this.app.onHireUsClick();
-  }
+  // onHireUsClick() {
+  //   this.app.onHireUsClick();
+  // }
 
   onOpenMenuClick() {
     this.toggleMenu();
@@ -30,7 +30,7 @@ class Nav {
 
   onNavItemClick(item) {
     this.app.goToPage(item.el.dataset.url);
-    if(item.el.dataset.url === "hireus") { this.app.onHireUsClick(); }
+    // if(item.el.dataset.url === "hireus") { this.onHireUsClick(); }
   }
 
   onSpeechStart() {

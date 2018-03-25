@@ -37,7 +37,6 @@ class Message {
   }
 
   addMessage() {
-    
     if (this.auto) {
       this.messageContainer.messageList.appendChild(this.el);
       this.messageContainer.messageList.scrollTop = this.el.offsetTop + 700;

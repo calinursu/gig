@@ -54,7 +54,7 @@ class Typewritter {
       }
     } 
     else {
-      if(this.endCb) this.endCb();
+      if(this.endCb) { this.endCb(); }
     }
   }
 

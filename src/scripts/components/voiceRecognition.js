@@ -6,7 +6,7 @@ class VoiceRecognition {
     const SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent
 
     this.words = ['home', 'about', 'work', 'contact', "hireus" ];
-    this.grammar = '#JSGF V1.0; grammar words; public <word> = ' + this.words.join(' | ') + ' ;'
+    this.grammar = '#JSGF V1.0; grammar words; public <word> = ' + this.words.join(' | ') + ' ;';
     this.readyToMatch = true;
 
     this.recognition = new SpeechRecognition();
@@ -21,14 +21,10 @@ class VoiceRecognition {
 
     this.counter = 0;
 
-    // document.body.addEventListener("click", this.start.bind(this));
     this.recognition.onresult = this.onResult.bind(this);
     this.recognition.onend = this.start.bind(this);
     this.recognition.onspeechstart = this.onSpeechStart.bind(this);
-    // this.recognition.onerror = this.x;
-    // this.recognition.nomatch = this.x;
     this.recognition.onsoundend = this.onSpeechError.bind(this);
-    
   }
 
   start() {
@@ -46,7 +42,7 @@ class VoiceRecognition {
   }
 
   onResult(event) {
-    this.counter++
+    this.counter++;
     const last = event.results.length - 1;
     const word = event.results[last][0].transcript;
     const trimmedWord = word.replace(/\s/g, '').toLowerCase();

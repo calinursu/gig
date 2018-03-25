@@ -6,7 +6,6 @@ import HomePage from './homePage';
 import MessageContainer from './messageContainer';
 import PageDescription from './pageDescription';
 import VoiceRecognition from './voiceRecognition';
-import Console from './console';
 
 class App {
   constructor(el) { 
@@ -14,8 +13,11 @@ class App {
 
     this.nav = new Nav(this.el.querySelector("header"), this);
     this.pageDescription = new PageDescription(this.el.querySelector(".page-description"), this);
-    this.voiceRecognition = new VoiceRecognition(this);
-    this.console = new Console(document.querySelector(".console"), this);
+    this.homepage = new HomePage(this.el.querySelector(".page.home"), this);
+    if(window.innerWidth>1024) {
+      this.voiceRecognition = new VoiceRecognition(this);
+    }
+   
 
     this.pages = Array.from(this.el.querySelectorAll(".page"));
     this.activePage = this.el.querySelector(".page.is-visible");
@@ -24,10 +26,8 @@ class App {
     Scroll.init();
     CasesPage.init();
     Noise.init();
-    HomePage.init();
 
     this.transitionEl.addEventListener("animationend", this.removeTransition.bind(this));
-    
     document.body.classList.add("app-loaded");
   }
 

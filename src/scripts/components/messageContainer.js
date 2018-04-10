@@ -93,7 +93,14 @@ class MessageContainer {
       }
       else {
         this.app.pageDescription.toggleFade();
-        this.choice.classList.add("outro");
+        fetch("https://us-central1-crypto-truck-119913.cloudfunctions.net/addMessage", {
+          body: JSON.stringify({"data":this.messages.filter(m => m.userInput !== null).map(m => m.userInput)}), // must match 'Content-Type' header
+          headers: {
+            'content-type': 'application/json'
+          },
+          mode: 'cors',
+          method: 'POST',
+        })
       }
     }
   }

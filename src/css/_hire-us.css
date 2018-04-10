@@ -19,7 +19,7 @@
 }
 
 @media all and (max-width:1280px) {
-  .messages { padding-bottom:22rem; }
+  .messages { padding-bottom:30rem; }
 }
 
 @media all and (max-width:1024px) {

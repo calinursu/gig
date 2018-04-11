@@ -38,6 +38,7 @@ class VoiceRecognition {
   }
 
   onSpeechError() {
+    this.recognition.stop();
     this.app.onSpeechMatch();
   }
 
@@ -58,6 +59,7 @@ class VoiceRecognition {
     }
 
     if (this.readyToMatch && this.words.includes(match)) {
+      this.recognition.stop();
       this.app.onSpeechMatch();
       this.app.goToPage(match);
     }

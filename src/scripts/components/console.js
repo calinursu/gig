@@ -134,7 +134,7 @@ class Console {
   }
 
   startTypewritter() {
-    new Typewritter(this.data, this.content, 35, this.onTerminalIntroEnd.bind(this));
+    new Typewritter(this.data, this.content, 0, this.onTerminalIntroEnd.bind(this));
   }
 
   onTerminalIntroEnd() {
@@ -174,6 +174,7 @@ class Console {
     //REFACTOR
     if(this.commands[0] === this.input.innerText) {
       new Typewritter([{ "text": "voice navigation activated. Use speech to navigate", "tag":"div", "class":"feedback" }], this.content, 25);
+      debugger
       this.homepage.app.voiceRecognition.start();
     }
     else if(this.commands[1] === this.input.innerText) {

@@ -14,7 +14,7 @@ class VoiceRecognition {
 
     speechRecognitionList.addFromString(this.grammar, 1);
     this.recognition.grammars = speechRecognitionList;
-    this.recognition.continuous = true;
+    this.recognition.continuous = false;
     this.recognition.lang = 'en-US';
     // this.recognition.interimResults = true;
     this.recognition.maxAlternatives = 1;
@@ -22,7 +22,7 @@ class VoiceRecognition {
     this.counter = 0;
 
     this.recognition.onresult = this.onResult.bind(this);
-    // this.recognition.onend = this.start.bind(this);
+    this.recognition.onend = this.start.bind(this);
     this.recognition.onspeechstart = this.onSpeechStart.bind(this);
     this.recognition.onsoundend = this.onSpeechError.bind(this);
   }

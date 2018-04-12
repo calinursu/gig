@@ -134,7 +134,7 @@ class Console {
   }
 
   startTypewritter() {
-    new Typewritter(this.data, this.content, 0, this.onTerminalIntroEnd.bind(this));
+    new Typewritter(this.data, this.content, 35, this.onTerminalIntroEnd.bind(this));
   }
 
   onTerminalIntroEnd() {

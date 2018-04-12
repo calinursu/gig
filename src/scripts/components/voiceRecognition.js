@@ -16,7 +16,7 @@ class VoiceRecognition {
     this.recognition.grammars = speechRecognitionList;
     this.recognition.continuous = false;
     this.recognition.lang = 'en-US';
-    // this.recognition.interimResults = true;
+    this.recognition.interimResults = false;
     this.recognition.maxAlternatives = 1;
 
     this.counter = 0;

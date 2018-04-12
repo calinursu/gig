@@ -21,7 +21,7 @@ let config = {
 	fontsSource: "src/css/fonts/**/*",
 	fontsOutput: "dist/css/fonts",
 
-	debug:true
+	debug:false
 };
 
 const gulp = require('gulp');

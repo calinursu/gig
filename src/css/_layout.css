@@ -29,7 +29,7 @@ main { position:relative; padding:15rem 0 0 23rem; box-sizing:border-box; }
   .page-description, .app-loaded .page-description.fade-out { opacity:0; transform:translateY(1rem); }
     .app-loaded header, .app-loaded .page-description { opacity:1; transform:translateY(0); }
 
-    .page-transition { position:fixed; width:100vw; height:100vh; top:0; background:#fff; transform:translate3d(0, -100%, 0); z-index:1; }
+    .page-transition { position:fixed; width:100vw; height:100vh; top:0; background:#fff; transform:translate3d(0, -100%, 0); z-index:4; }
     .page-transition.is-visible { animation:slide-out-viewport 1s cubic-bezier(.785,.135,.15,.86) forwards;  }
 
 @keyframes fadeUp {

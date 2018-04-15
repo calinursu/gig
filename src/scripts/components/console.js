@@ -174,9 +174,8 @@ class Console {
     //REFACTOR
     if(this.commands[0] === this.input.innerText) {
       new Typewritter([
-        { "text": "voice navigation activated", "tag":"div", "class":"feedback" },
-        { "text": "available voice commands", "tag":"div", "class":"feedback" }, 
-        { "text": "- about - work - hire us - contact - home", "tag":"div", "class":"feedback" }], this.content, 25);
+        { "text": "voice navigation activated. Available voice commands:", "tag":"div", "class":"feedback" },
+        { "text": "- about - work - hire us - contact - home", "tag":"div", "class":"feedback" }], this.content, 35);
       this.homepage.app.voiceRecognition.start();
     }
     else if(this.commands[1] === this.input.innerText) {

@@ -52,7 +52,7 @@ header { position:fixed; width:calc(100%); padding-top:3rem; padding-bottom:3rem
       .active .voice-control-ring { display:block; }
   .voice-control.active { display:inline-block; opacity:1; animation:pulse .8s 1s infinite; }
     .voice-control.green { background-color:#3ae285; }
-    .voice-control.red { background-color:red; }
+    .voice-control.red { background-color:#d32f2f; }
 
 @media all and (min-width:1446px) {
   nav .menu-item { width:45rem; }

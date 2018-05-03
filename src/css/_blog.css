@@ -1,0 +1,85 @@
+.blog-article { width:100%; height:100%; color:#000; font-family:'Times New Roman', Times, serif; -webkit-font-smoothing: antialiased; }
+  section { margin-bottom:9rem; }
+  strong { font-weight:bold; }
+  header { z-index:1; }
+  blockquote { float:left; width:40rem; margin:1rem 4rem 0 -30rem; padding:4.4rem; font-size:2.1rem; box-sizing:border-box; color:white; line-height:2; font-style:italic; box-shadow:0 16px 50px -8px rgba(0, 0, 0, 0.2); background:rgba(26, 199, 121, 0.99); }
+    
+    .blog header { position:absolute; }
+    .back-to-home { float:right; font-size:1.6rem; margin-right:3.5rem; padding-bottom:1rem; color:#10f176; border-bottom:.1rem solid #10f176; }
+
+    .article-image { position:fixed; width:100%; height:100%; top:0; background-image:url(https://res.cloudinary.com/dqwtlmis3/image/upload/q_auto/f_auto/c_fill,w_1920/v1525207132/voice.jpg); background-size:cover; opacity:0; transition:opacity 1s; }
+      .page-loaded .article-image { opacity:1; }
+
+    .article-content { position:absolute; max-width:120rem; width:90%; right:0; top:15rem; padding:12rem 16rem; opacity:0; box-sizing:border-box; background:#fff; transition:transform .8s .5s, opacity .8s .4s; transform:translateY(5rem);  }
+      .page-loaded .article-content { opacity:1; transform:translate3d(0,0,0); }
+    
+    .article-title { font-size:8rem; margin-bottom:2rem; line-height:1.3; opacity:0; }
+    .article-publisher { display:inline-block; margin-bottom:10rem; font-size:2rem; line-height:1.8; letter-spacing:.2px; }
+    
+    .article-date-numbers{  font-size:1.8rem; }
+
+    .article-text p { font-size:2rem; line-height:1.8; letter-spacing:.2px; margin-bottom:4rem; }
+      .page-loaded .fade-up.article-one { opacity:0; animation:fade-up .6s .7s forwards; }
+      .page-loaded .fade-up.article-two { opacity:0; animation:fade-up .6s .8s forwards; }
+      .page-loaded .fade-up.article-three { opacity:0; animation:fade-up .6s .9s forwards; }
+      .page-loaded .fade-up.article-four { opacity:0; animation:fade-up .6s 1s forwards; }
+      .article-text h3 { font-size:3.5rem; margin-bottom:2rem; }
+      
+    .article-link { padding-bottom:.3rem; color:#02ab5f; border-bottom:.15rem solid #02ab5f99; word-wrap:break-word; }
+
+    .article-list-item { position:relative; padding-left:2rem; font-size:2rem; line-height:1.8; }
+      .article-list-item:before { content:""; position:absolute; width:.5rem; height:.5rem; top:1.4rem; left:0; background:#000; border-radius:50%; }
+  
+    .first-paragraph::first-letter { float:left; line-height:1; font-size:7.4rem; margin-right:.05rem; color:#02ab5f99; }
+
+    .blog-article .voice-control { display:block; display: inline-block; opacity:1; animation:pulse .8s 1s infinite; background-color:#000; }
+      .blog-article .voice-control-ring { display:block; border-color:#000; animation-iteration-count:infinite; }
+
+      .inline-paragraph { display:inline-block; position:relative; }
+        .inline-paragraph:after { content:""; width:1rem; height:1rem; position:absolute; border-radius:50%; animation:pulse .8s 1s infinite; opacity:1; bottom:12px; transform:translateX(2rem); }
+          .inline-paragraph.red:after { background:#d32f2f; }
+          .inline-paragraph.green:after { background:#3ae285; }
+
+    .article-contact-input { width:19rem; font-family:serif; font-size:2rem; text-align:center; border:none; border-bottom:.15rem solid #02ab5f99; border-radius:0; }
+
+@media all and (min-width:1550px) {
+  .article-content { left:50%; transform:translate3d(-50%, 5rem, 0); }  
+    .page-loaded .article-content { opacity:1; transform:translate3d(-50%, 0, 0); } 
+}      
+
+@media all and (max-width:1400px) {
+  blockquote { margin-left:-21vw; }  
+}
+
+@media all and (max-width:1100px) {
+  .article-content { width:85%; padding:10vw; }  
+}
+
+@media all and (max-width:968px) {
+  blockquote { width:100%; margin:0 0 4rem; padding:4vw; }
+    .first-paragraph::first-letter { font-size:7rem; }
+}
+
+@media all and (max-width:768px) {
+  .article-title { font-size:5rem; }  
+}
+
+@media all and (max-width:540px) {
+  section { margin-bottom:6rem; }
+  .article-content { width:95%; padding:8vw; }
+    .article-title { font-size:13vw; margin-bottom:3rem; }
+}
+
+@keyframes fade-up {
+  0% {
+      transform: translateY(5rem);
+      opacity: 0;
+  }
+
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+

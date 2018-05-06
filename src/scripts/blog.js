@@ -3,7 +3,7 @@ import Scroll from './components/scroll';
 
 window.addEventListener('load', () => {
   document.body.classList.add('page-loaded');
-  new Tracking();
+  // new Tracking();
   Scroll.init();
 });
 

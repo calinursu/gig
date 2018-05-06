@@ -131,6 +131,7 @@ class Console {
 
     this.el.addEventListener("click", this.onConsoleClick.bind(this));
     this.el.addEventListener("keydown", this.onKeyDown.bind(this));
+    if(this.homepage.app.subpage === true) { new Typewritter(this.data, this.content, 0, this.onTerminalIntroEnd.bind(this)); };
   }
 
   startTypewritter() {

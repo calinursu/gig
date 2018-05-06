@@ -2,7 +2,7 @@ main { position:relative; padding:15rem 0 0 23rem; box-sizing:border-box; }
   .page { display:none; min-height:100%; margin:0 auto; max-width:140rem; box-sizing:border-box; }
     .page.home { padding:0; }
     .page.is-hidden { display:none; opacity:0; visibility:hidden; height:0; }
-    .page.is-visible { display:block; opacity:1; visibility:visible; }
+    .app-loaded .page.is-visible { display:block; opacity:1; visibility:visible; }
 
   .section-title-container { margin-bottom:10rem; }
     .section-title { font-size:3.5rem; margin-bottom:1rem; }
@@ -21,7 +21,6 @@ main { position:relative; padding:15rem 0 0 23rem; box-sizing:border-box; }
 .app-loaded .preloader { background-color:transparent; }
   .preloader { width:100vw; height:100vh; position:absolute; top:0; left:0; background-color:rgb(26, 26, 26); transition:background .5s; }
   .app-loaded .preloader-cursor { opacity:0; visibility:hidden; }
-    .preloader-cursor { position:relative; top:1rem; opacity:1; }
 
   header, .page-description { transition:opacity .3s, transform .3s; }
 

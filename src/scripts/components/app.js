@@ -11,24 +11,38 @@ class App {
   constructor(el) { 
     this.el = el;
 
+    this.activePage = this.el.querySelector(".page.is-visible");
+    this.transitionEl = this.el.querySelector(".page-transition");
+    this.subpage = this.activePage.dataset.url !== "home";
+    
+    this.transitionEl.addEventListener("animationend", this.removeTransition.bind(this));
+    
+    Noise.init();
+    document.body.classList.add("app-loaded");
+    this.loadBackgroundData();
+  }
+
+  async loadBackgroundData() {
+    const response = await fetch('/main.html');
+    const data = await response.text();
+    const temp = document.createElement('div');
+    temp.innerHTML = data; 
+    const pages = Array.from(temp.querySelectorAll(".page")).filter(p => p.dataset.url != this.activePage.dataset.url);
+    pages.forEach(p => this.el.querySelector("main").appendChild(p));
+    this.el = document.body;
+
+    this.init();
+  }
+
+  init() {
+    this.pages = Array.from(this.el.querySelectorAll(".page"));
     this.nav = new Nav(this.el.querySelector("header"), this);
     this.pageDescription = new PageDescription(this.el.querySelector(".page-description"), this);
     this.homepage = new HomePage(this.el.querySelector(".page.home"), this);
-    if(window.innerWidth>1024) {
-      this.voiceRecognition = new VoiceRecognition(this);
-    }
-   
 
-    this.pages = Array.from(this.el.querySelectorAll(".page"));
-    this.activePage = this.el.querySelector(".page.is-visible");
-    this.transitionEl = this.el.querySelector(".page-transition");
-    
+    if (window.innerWidth > 1024) this.voiceRecognition = new VoiceRecognition(this);
     Scroll.init();
     CasesPage.init();
-    Noise.init();
-
-    this.transitionEl.addEventListener("animationend", this.removeTransition.bind(this));
-    document.body.classList.add("app-loaded");
   }
 
   onHireUsClick() {

@@ -1,61 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>Obscurial | Software consulting</title>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Copenhagen Web development consulting delivering high performance solutions. We get excited about remarkable ideas and we enjoy the journey of creating technology.">
-  <link rel="alternate" href="https://obscurial.dk" hreflang="en-dk" />
-	<link rel="icon" type="image/x-icon" href="images/favicon.ico">
-	<link rel="stylesheet" href="css/style.css" type="text/css" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta property="og:image" content="https://obscurial.dk/logo.jpg" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://obscurial.dk" />
-  <meta property="og:title" content="Obscurial | Software consulting" />
-  <meta property="og:description" content="Copenhagen Web development studio delivering high performance solutions. We get excited about remarkable ideas and enjoy the journey of creating technology." />
-</head>
-<body>
-  <canvas class="with-noise"></canvas>
-
-  <div class="main-elements-container">
-    <header>
-      <div class="menu-container">
-        <div class="menu-inner-container">
-          <div class="nav-container">
-            <nav>
-              <a href="#" class="menu-item" data-url="about">About us</a>
-              <a href="#" class="menu-item" data-url="work">Work</a>
-              <a href="#" class="menu-item" data-url="contact">Contact</a>
-            </nav>
-          </div>
-        </div>
-        <div class="background"></div>
-      </div>
-      <a href="" class="logo secondary-menu-item menu-item" data-url="home">Obscurial</a>
-      <a href="" class="secondary-menu-item menu-item hire-us" data-url="hireus">Hire us</a>
-      <span class="voice-control">
-        <div class="voice-control-ring"></div>
-      </span>
-      <div class="menu-button-container">
-        <span class="menu-button">
-          <span class="menu-button-top"></span>    
-          <span class="menu-button-bottom"></span>
-        </span>
-        <span class="menu-button-text open">Close</span>
-        <span class="menu-button-text closed active">Menu</span>
-      </div>
-    </header>
-    
-    <div class="page-description">
-      <h1 class="heading">Home</h1>
-      <span class="page-number">00</span>
-    </div>
-  </div>
-
-	<main class="content">
-    <section class="page home is-visible" data-url="home">
+<main class="content">
+    <section class="page home" data-url="home">
       <div class="console fade-up second">
+        <div class="preloader-cursor"></div>
         <div class="console-content">
           <span contenteditable="true" class="console-cursor"></span>
         </div>
@@ -408,42 +354,4 @@
         <div class="contact-item fade-up third">We would love to build something great together</div>
       </div>
     </section>
-  </main>
-  
-  <div class="preloader"></div>
-
-  <div class="page-transition"></div>
-
-  <script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "Organization",
-    "name":"Obscurial Consulting",
-    "url": "https://obscurial.dk",
-    "logo": ["https://www.obscurial.dk/logo.jpg"],
-    "contactPoint": [
-      { "@type": "ContactPoint",
-        "telephone": "+45 5027 6973",
-        "email":"info@obscurial.dk",
-        "contactType": "sales"
-      }
-    ],
-    "areaServed":"Copenhagen",
-    "description":"Who are these guys? Obscurial consulting is a Copenhagen Web development studio delivering high performance solutions you can trust. We get excited about remarkable ideas and we enjoy the journey of creating technology. Our experience stretches across the entire tech spectrum but our main focus has always been on web software and rich internet applications. We build everything in house and our solutions are platform agnostic, excepting for the core browser technologies. We 💚 the Web",
-    "location": {
-    "logo": ["https://www.obscurial.dk/logo.jpg"],
-    "image": ["https://www.obscurial.dk/logo.jpg"],
-    "name":"Obscurial Consulting",
-    "telephone": "+45 5027 6973",
-      "@type": "LocalBusiness",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "København",
-        "addressRegion": "København",
-        "postalCode": "2300 Kbh S"
-      }}
-  }
-  </script>
-  <script src="scripts/all.js"></script>
-</body>
-</html>
+</main>

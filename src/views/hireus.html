@@ -49,22 +49,28 @@
     
     <div class="page-description">
       <h1 class="heading">Home</h1>
-      <span class="page-number">00</span>
+      <span class="page-number">01</span>
     </div>
   </div>
 
 	<main class="content">
-    <section class="page home is-visible" data-url="home">
-      <div class="console fade-up second">
-        <div class="console-content">
-          <span contenteditable="true" class="console-cursor"></span>
+    <section class="page hire-us clearfix is-visible" data-url="hireus">
+      <template id="question-template">
+        <div class="message question">
+          <div class="message-text"></div>
         </div>
-      </div>
-      <div class="intro-box-container fade-up">
-        <div class="intro-small-box-container">
-          <div class="intro-small-box"></span>
+      </template>
+      <template id="answer-template">
+        <div class="message answer">
+          <div class="message-text"></div>
         </div>
+      </template>
+    
+      <div class="messages-container">
+        <div class="messages"></div>
       </div>
+    
+      <div class="sender"></div>
     </section>
   </main>
   

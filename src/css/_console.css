@@ -19,10 +19,6 @@
     .intro-secondary-headline.translate { display:inline-block; position:relative; margin:0 0 1.5rem 30rem; }
     .intro-secondary-headline.translate.same-line { margin-left:5.2rem; }
 
-    .console-cursor { position:relative; display:inline-block; font-size:2rem; margin-top:.3rem; caret-color:transparent; }
-      .console-cursor:after, .preloader-cursor { content:""; position:absolute; width:1.5rem; height:.2rem; bottom:0; right:0; transform:translateX(130%); display:inline-block; margin:1rem 0 -.3rem .3rem; background:#fff; animation:blink .7s infinite; }
-      .preloader-cursor { left:25rem; top:27rem; }
-
     .hr { padding:3.5rem 0; }
     .color-line { line-height:3.5;  background:white; padding:1rem; color:black; }
     .user-input, .feedback { margin-bottom:2.5rem; font-size:2rem; line-height:1.3; }

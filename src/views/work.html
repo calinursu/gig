@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Obscurial | Software consulting</title>
+	<title>Our work - Obscurial | Software consulting</title>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Copenhagen Web development consulting delivering high performance solutions. We get excited about remarkable ideas and we enjoy the journey of creating technology.">
@@ -12,8 +12,22 @@
   <meta property="og:image" content="https://obscurial.dk/logo.jpg" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://obscurial.dk" />
-  <meta property="og:title" content="Obscurial | Software consulting" />
+  <meta property="og:title" content="Our work - Obscurial | Software consulting" />
   <meta property="og:description" content="Copenhagen Web development studio delivering high performance solutions. We get excited about remarkable ideas and enjoy the journey of creating technology." />
+  <style>
+    .console-cursor { position:relative; display:inline-block; font-size:2rem; margin-top:.3rem; caret-color:transparent; }
+      .console-cursor:after, .preloader-cursor { content:""; position:absolute; width:1.5rem; height:.2rem; bottom:0; right:0; transform:translateX(130%); display:inline-block; margin:1rem 0 -.3rem .3rem; background:#fff; animation:blink .7s infinite; }
+      .preloader-cursor { left:25rem; top:27rem; }
+
+    .app-loaded .preloader { background-color:transparent; }
+    .preloader { width:100vw; height:100vh; position:absolute; top:0; left:0; background-color:rgb(26, 26, 26); transition:background .5s; }
+    .app-loaded .preloader-cursor { opacity:0; visibility:hidden; }
+
+    @media all and (max-width:1024px) {
+      .console-cursor { margin-top:0; }
+      .preloader-cursor { left:10rem; top:20rem; }
+    }
+  </style>
 </head>
 <body>
   <canvas class="with-noise"></canvas>
@@ -24,16 +38,16 @@
         <div class="menu-inner-container">
           <div class="nav-container">
             <nav>
-              <a href="#" class="menu-item" data-url="about">About us</a>
-              <a href="#" class="menu-item" data-url="work">Work</a>
-              <a href="#" class="menu-item" data-url="contact">Contact</a>
+              <a class="menu-item" data-url="about">About us</a>
+              <a class="menu-item" data-url="work">Work</a>
+              <a class="menu-item" data-url="contact">Contact</a>
             </nav>
           </div>
         </div>
         <div class="background"></div>
       </div>
-      <a href="" class="logo secondary-menu-item menu-item" data-url="home">Obscurial</a>
-      <a href="" class="secondary-menu-item menu-item hire-us" data-url="hireus">Hire us</a>
+      <a class="logo secondary-menu-item menu-item" data-url="home">Obscurial</a>
+      <a class="secondary-menu-item menu-item hire-us" data-url="hireus">Hire us</a>
       <span class="voice-control">
         <div class="voice-control-ring"></div>
       </span>
@@ -295,5 +309,29 @@
   }
   </script>
   <script src="scripts/all.js"></script>
+  <!-- Matomo -->
+  <script type="text/javascript">
+    var _paq = _paq || [];
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+
+    function embedTrackingCode() {
+      var u = "https://www.obscurial.dk/piwik/";
+      _paq.push(["setTrackerUrl", u + "piwik.php"]);
+      _paq.push(["setSiteId", "1"]);
+
+      var d = document, g = d.createElement("script"), s = d.getElementsByTagName("script")[0]; g.type = "text/javascript";
+      g.defer = true; g.async = true; g.src = u + "piwik.js"; s.parentNode.insertBefore(g, s);
+    }
+
+    if (window.addEventListener) {
+      window.addEventListener("load", embedTrackingCode, false);
+    } else if (window.attachEvent) {
+      window.attachEvent("onload", embedTrackingCode);
+    } else {
+      embedTrackingCode();
+    }
+  </script>
+  <!-- End Matomo Code -->
 </body>
 </html>

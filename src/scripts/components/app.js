@@ -20,6 +20,10 @@ class App {
     Noise.init();
     document.body.classList.add("app-loaded");
     this.loadBackgroundData();
+
+    window.onpopstate = function (e) {
+      window.location.replace(window.location.href);
+    };
   }
 
   async loadBackgroundData() {
